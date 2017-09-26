@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#E91E63</color>
+    <color name="colorPrimaryDark">#C2185B</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!-- Background -->
+    <color name="background_dark">#343434</color>
+
+    <!-- Toolbar -->
+    <color name="toolbar_title">#ffffff</color>
+
+    <!-- Adapter Verb -->
+    <color name="adapter_verb">#4f4f4f</color>
+    <color name="adapter_verb_transcription">#4f4f4f</color>
+    <color name="adapter_verb_example">#818181</color>
+
+</resources>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/settings_category_notification_title">
+
+        <!-- Verb Notification state -->
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="@string/settings_switchPreference_verbNotificationState_key"
+            android:summary="@string/settings_switchPreference_verbNotificationState_summary"
+            android:title="@string/settings_switchPreference_verbNotificationState_title" />
+
+        <!-- Verb Notification time range -->
+        <ListPreference
+            android:dependency="@string/settings_switchPreference_verbNotificationState_key"
+            android:entries="@array/settings_listPreference_verbNotificationTime_entries"
+            android:entryValues="@array/settings_listPreference_verbNotificationTime_entryValues"
+            android:key="@string/settings_listPreference_verbNotificationTime_key"
+            android:summary="@string/settings_listPreference_verbNotificationTime_summary"
+            android:title="@string/settings_listPreference_verbNotificationTime_title" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

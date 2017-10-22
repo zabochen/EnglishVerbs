@@ -14,7 +14,7 @@
 
         <!-- Image -->
         <ImageView
-            android:id="@+id/adapterVerb_image"
+            android:id="@+id/itemAdapterVerbList_verbImage"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_alignParentLeft="true"
@@ -30,8 +30,8 @@
             android:layout_centerVertical="true"
             android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
-            android:layout_toEndOf="@id/adapterVerb_image"
-            android:layout_toRightOf="@id/adapterVerb_image"
+            android:layout_toEndOf="@id/itemAdapterVerbList_verbImage"
+            android:layout_toRightOf="@id/itemAdapterVerbList_verbImage"
             android:orientation="vertical">
 
             <!-- Verb Group -->
@@ -41,9 +41,9 @@
                 android:layout_marginBottom="5dp"
                 android:orientation="horizontal">
 
-                <!-- Verb -->
+                <!-- Verb Name -->
                 <TextView
-                    android:id="@+id/adapterVerb_verb"
+                    android:id="@+id/itemAdapterVerbList_verbName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
@@ -54,7 +54,7 @@
 
                 <!-- Verb Transcription -->
                 <TextView
-                    android:id="@+id/adapterVerb_verbTranscription"
+                    android:id="@+id/itemAdapterVerbList_verbTranscription"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
@@ -67,7 +67,7 @@
 
             <!-- Verb Example -->
             <TextView
-                android:id="@+id/adapterVerb_verbExample"
+                android:id="@+id/itemAdapterVerbList_verbExample"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"

@@ -22,26 +22,6 @@
             </intent-filter>
         </activity>
 
-        <!-- Activity VerbFull -->
-        <activity
-            android:name=".view.verbfull.VerbFullActivity"
-            android:parentActivityName=".view.main.MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
-        <!-- Activity Setting -->
-        <activity
-            android:name=".view.setting.SettingActivity"
-            android:parentActivityName=".view.main.MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
     </application>
 
 </manifest>

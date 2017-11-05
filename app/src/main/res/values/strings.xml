@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">English Verbs</string>
 
-
     <!-- Setting Activity -->
     <string name="settingActivity_title">Settings</string>
 

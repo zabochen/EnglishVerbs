@@ -4,12 +4,15 @@ class Constants {
 
     companion object {
 
-        // File
+        // Verbs File
         @JvmStatic val VERBS_JSON_FILE_PATH: String = "englishVerbs.json"
 
         // Realm Database
         @JvmStatic val REALM_DATABASE_NAME: String = "english_verbs.realm"
         @JvmStatic val REALM_DATABASE_VERSION: Long = 0
+
+        // Intents
+        @JvmStatic val INTENT_VERB_SELECTED_POSITION: String = "intent_verb_selected_position"
 
     }
 

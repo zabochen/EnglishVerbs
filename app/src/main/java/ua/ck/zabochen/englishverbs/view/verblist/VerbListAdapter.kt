@@ -5,13 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import kotlinx.android.synthetic.main.item_adapter_verb_list.view.*
-import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.info
 import ua.ck.zabochen.englishverbs.R
 import ua.ck.zabochen.englishverbs.model.realm.Verb
 
-class VerbListAdapter(verbList: ArrayList<Verb>) : RecyclerView.Adapter<VerbListAdapter.VerbListViewHolder>(),
-        AnkoLogger {
+class VerbListAdapter(verbList: ArrayList<Verb>) : RecyclerView.Adapter<VerbListAdapter.VerbListViewHolder>() {
 
     private var mVerbList: ArrayList<Verb> = verbList
 
@@ -26,7 +23,6 @@ class VerbListAdapter(verbList: ArrayList<Verb>) : RecyclerView.Adapter<VerbList
     }
 
     override fun getItemCount(): Int {
-        info("${mVerbList.size}")
         return if (!mVerbList.isEmpty()) mVerbList.size else 0
     }
 
@@ -35,6 +31,9 @@ class VerbListAdapter(verbList: ArrayList<Verb>) : RecyclerView.Adapter<VerbList
         fun bind(verb: Verb) {
             itemView.itemAdapterVerbList_verbName.text = verb.verb
             itemView.itemAdapterVerbList_verbTranscription.text = verb.verbTranscription
+            if (!verb.verbExamples.isEmpty()) {
+                itemView.itemAdapterVerbList_verbExample.text = verb.verbExamples[0]?.example
+            }
         }
     }
 

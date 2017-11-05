@@ -12,13 +12,22 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <!-- Activity Main -->
+        <!-- Main Activity -->
         <activity
             android:name=".view.main.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Verb Full Activity -->
+        <activity
+            android:name=".view.verbfull.VerbFullActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
 

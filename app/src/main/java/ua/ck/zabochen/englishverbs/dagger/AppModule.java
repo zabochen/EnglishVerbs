@@ -7,8 +7,6 @@ import javax.inject.Singleton;
 import dagger.Module;
 import dagger.Provides;
 import ua.ck.zabochen.englishverbs.database.RealmHelper;
-import ua.ck.zabochen.englishverbs.model.VerbList;
-import ua.ck.zabochen.englishverbs.notification.NotificationHelper;
 
 @Module
 public class AppModule {
@@ -37,13 +35,6 @@ public class AppModule {
     @Singleton
     public NotificationHelper provideNotificationHelper(Context context) {
         return new NotificationHelper(context);
-    }
-
-    // VerbList Singleton
-    @Provides
-    @Singleton
-    public VerbList provideVerbList() {
-        return new VerbList();
     }
 
 }

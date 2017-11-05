@@ -8,10 +8,13 @@ import android.view.ViewGroup
 import com.arellomobile.mvp.MvpAppCompatFragment
 import com.arellomobile.mvp.presenter.InjectPresenter
 import kotlinx.android.synthetic.main.fragment_verb_list.*
+import org.jetbrains.anko.AnkoLogger
 import ua.ck.zabochen.englishverbs.R
 import ua.ck.zabochen.englishverbs.model.realm.Verb
+import ua.ck.zabochen.englishverbs.utils.listener.RecyclerViewItemTouchListener
 
 class VerbListFragment : MvpAppCompatFragment(),
+        AnkoLogger,
         VerbListView {
 
     @InjectPresenter lateinit var mVerbListPresenter: VerbListPresenter
@@ -29,6 +32,18 @@ class VerbListFragment : MvpAppCompatFragment(),
         // RecyclerView - VerbList
         fragmentVerbList_recyclerView.layoutManager = LinearLayoutManager(activity)
         fragmentVerbList_recyclerView.adapter = VerbListAdapter(verbList)
+        fragmentVerbList_recyclerView.addOnItemTouchListener(RecyclerViewItemTouchListener(
+                activity,
+                fragmentVerbList_recyclerView,
+                object : RecyclerViewItemTouchListener.ClickListener {
+                    override fun onClick(view: View?, position: Int) {
+                        mVerbListPresenter.onClickVerbItem(activity, position)
+                    }
+
+                    override fun onLongClick(view: View?, position: Int) {
+                    }
+                }
+        ))
     }
 
 }

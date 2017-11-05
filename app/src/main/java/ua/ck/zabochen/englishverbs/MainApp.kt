@@ -12,7 +12,6 @@ class MainApp : Application() {
 
     companion object {
         @JvmStatic lateinit var mAppComponent: AppComponent
-
         fun appComponent() = mAppComponent
     }
 

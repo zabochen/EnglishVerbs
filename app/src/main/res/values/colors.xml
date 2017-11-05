@@ -8,7 +8,7 @@
     <color name="background_dark">#343434</color>
 
     <!-- Toolbar -->
-    <color name="toolbar_title">#ffffff</color>
+    <color name="toolbarTitle">#ffffff</color>
 
     <!-- Adapter Verb -->
     <color name="adapter_verb">#4f4f4f</color>

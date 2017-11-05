@@ -3,41 +3,41 @@ package ua.ck.zabochen.englishverbs.database
 import android.content.Context
 import io.realm.Realm
 import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.info
+import ua.ck.zabochen.englishverbs.callback.CallbackEvent
 import ua.ck.zabochen.englishverbs.model.realm.Verb
 import ua.ck.zabochen.englishverbs.utils.Constants
 
 class RealmHelper(private val applicationContext: Context) : AnkoLogger {
 
-    fun inflateDatabase() {
+    fun inflateDatabase(subscriber: CallbackEvent.DatabaseCallback) {
         Realm.getDefaultInstance().executeTransactionAsync(
                 { realm ->
-                    realm.createAllFromJson(
+                    realm.createOrUpdateAllFromJson(
                             Verb::class.java,
                             applicationContext.assets.open(Constants.VERBS_JSON_FILE_PATH)
                     )
                 },
+                {
+                    subscriber.onComplete()
+                },
                 { error ->
-                    info("${error.printStackTrace()}")
+                    subscriber.onError(error)
                 }
         )
     }
 
-    fun verbList(): ArrayList<Verb> {
+    fun getVerbList(): ArrayList<Verb> {
         val mRealmInstance = Realm.getDefaultInstance()
 
         // Get Verb List
         var verbList: ArrayList<Verb> = ArrayList()
-        verbList.addAll(mRealmInstance
-                .where(Verb::class.java)
-                .findAll())
+        verbList.addAll(mRealmInstance.where(Verb::class.java).findAll())
 
         // Close Realm
         if (!mRealmInstance.isClosed) mRealmInstance.close()
 
         return verbList
     }
-
 
 
 //    public Verb getRandomVerb() {

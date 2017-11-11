@@ -8,7 +8,7 @@ class Constants {
         @JvmStatic val VERBS_JSON_FILE_PATH: String = "englishVerbs.json"
 
         // Realm Database
-        @JvmStatic val REALM_DATABASE_NAME: String = "english_verbs.realm"
+        @JvmStatic val REALM_DATABASE_NAME: String = "englishVerbs.realm"
         @JvmStatic val REALM_DATABASE_VERSION: Long = 0
 
         // Intents

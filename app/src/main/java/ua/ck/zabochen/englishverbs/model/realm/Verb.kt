@@ -6,21 +6,25 @@ import io.realm.annotations.PrimaryKey
 
 open class Verb(
 
-        // Verb
-        @PrimaryKey var verb: String = "",
-        var verbTranscription: String = " ",
+        // Verb Infinitive
+        @PrimaryKey var verbInfinitive: String = "",
+        var verbInfinitiveTranscription: String = "",
 
-        // Verb Past Simple
-        var verbPastSimple: String = "",
-        var verbPastSimpleTranscription: String = "",
+        // Verb Past Tense
+        var verbPastTense: String = "",
+        var verbPastTenseTranscription: String = "",
 
         // Verb Past Participle
         var verbPastParticiple: String = "",
         var verbPastParticipleTranscription: String = "",
 
-        // Other
+        // Translation
         var verbTranslation: String = "",
+
+        // Image
         var verbImage: String = "",
+
+        // Examples
         var verbExamples: RealmList<VerbExample> = RealmList()
 
 ) : RealmObject()

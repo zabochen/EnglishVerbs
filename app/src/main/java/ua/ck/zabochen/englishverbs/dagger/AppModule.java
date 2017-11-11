@@ -7,6 +7,7 @@ import javax.inject.Singleton;
 import dagger.Module;
 import dagger.Provides;
 import ua.ck.zabochen.englishverbs.database.RealmHelper;
+import ua.ck.zabochen.englishverbs.notification.NotificationHelper;
 
 @Module
 public class AppModule {

@@ -1,1487 +1,1936 @@
 [
   {
-    "verb": "arise",
-    "verbTranscription": "ə'raɪz",
-    "verbPastSimple": "arose",
-    "verbPastSimpleTranscription": "ə'rəuz",
+    "verbInfinitive": "arise",
+    "verbInfinitiveTranscription": "[ə’raiz]",
+    "verbPastTense": "arose",
+    "verbPastTenseTranscription": "[ə’rəuz]",
     "verbPastParticiple": "arisen",
-    "verbPastParticipleTranscription": "ə'rɪz(ə)n",
+    "verbPastParticipleTranscription": "[ə’riz(ə)n]",
     "verbTranslation": "возникать, появляться",
     "verbImage": "verbImages/arise.jpg",
     "verbExamples": [
       {
-        "example": "A new difficulty has arisen - Возникло новое затруднение"
-      },
-      {
         "example": "Doubts arose in his mind - У него возникли сомнения"
-      },
-      {
-        "example": "Additional expenses arose from your delay - Ваша задержка привела к дополнительным расходам"
       }
     ]
   },
   {
-    "verb": "awake",
-    "verbTranscription": "ə'weɪk",
-    "verbPastSimple": "awoke",
-    "verbPastSimpleTranscription": "ə'wəuk",
+    "verbInfinitive": "awake",
+    "verbInfinitiveTranscription": "[ə’weik]",
+    "verbPastTense": "awoke",
+    "verbPastTenseTranscription": "[ə’wəuk]",
     "verbPastParticiple": "awoken",
-    "verbPastParticipleTranscription": "ə'wəukən",
-    "verbTranslation": "будить, проснуться",
+    "verbPastParticipleTranscription": "[ə’wəukən]",
+    "verbTranslation": "будить",
     "verbImage": "verbImages/awake.jpg",
     "verbExamples": [
       {
         "example": "The noise from the street awoke me - Меня разбудил шум с улицы"
-      },
-      {
-        "example": "To awake smb - Будить кого-либо"
-      },
-      {
-        "example": "To awake from / out of sleep - Пробудиться ото сна"
       }
     ]
   },
   {
-    "verb": "be",
-    "verbPastSimple": "was, were",
+    "verbInfinitive": "be",
+    "verbInfinitiveTranscription": "[bi:]",
+    "verbPastTense": "was, were",
+    "verbPastTenseTranscription": "[wɔz], [wз:]",
     "verbPastParticiple": "been",
-    "verbTranslation": "быть",
-    "verbImage": "verbImages/be.jpg"
+    "verbPastParticipleTranscription": "[biːn]",
+    "verbTranslation": "быть, существовать",
+    "verbImage": "verbImages/be.jpg",
+    "verbExamples": [
+      {
+        "example": "The flower-show was last week - На прошлой неделе была выставка цветов"
+      }
+    ]
   },
   {
-    "verb": "bear",
-    "verbPastSimple": "bore",
-    "verbPastParticiple": "borne",
-    "verbTranslation": "носить, нести",
-    "verbImage": "verbImages/bear.jpg"
+    "verbInfinitive": "bear",
+    "verbInfinitiveTranscription": "[bɛə]",
+    "verbPastTense": "bore",
+    "verbPastTenseTranscription": "[bɔ:]",
+    "verbPastParticiple": "born",
+    "verbPastParticipleTranscription": "[bɔ:n]",
+    "verbTranslation": "носить, переносить",
+    "verbImage": "verbImages/bear.jpg",
+    "verbExamples": [
+      {
+        "example": "The spores are borne on the wind - Эти споры разносятся ветром"
+      }
+    ]
   },
   {
+    "verbInfinitive": "beat",
+    "verbInfinitiveTranscription": "[bi:t]",
+    "verbPastTense": "beat",
+    "verbPastTenseTranscription": "[bi:t]",
+    "verbPastParticiple": "beaten",
+    "verbPastParticipleTranscription": "[‘bi:tn]",
     "verbTranslation": "бить",
-    "verb": "beat",
-    "verbPastParticiple": "beat",
-    "verbPastSimple": "beaten",
-    "verbImage": "verbImages/beat.jpg"
+    "verbImage": "verbImages/beat.jpg",
+    "verbExamples": [
+      {
+        "example": "The rain beat against the windows - Дождь стучал в окна"
+      }
+    ]
   },
   {
+    "verbInfinitive": "become",
+    "verbInfinitiveTranscription": "[bɪ‘kʌm]",
+    "verbPastTense": "became",
+    "verbPastTenseTranscription": "[bɪ‘keɪm]",
+    "verbPastParticiple": "become",
+    "verbPastParticipleTranscription": "[bɪ‘kʌm]",
     "verbTranslation": "становиться",
-    "verb": "become",
-    "verbPastParticiple": "became",
-    "verbPastSimple": "become",
-    "verbImage": "verbImages/become.jpg"
+    "verbImage": "verbImages/become.jpg",
+    "verbExamples": [
+      {
+        "example": "She became a teacher - Она стала учителем"
+      }
+    ]
   },
   {
-    "verbTranslation": "начинать",
-    "verb": "begin",
+    "verbInfinitive": "begin",
+    "verbInfinitiveTranscription": "[bɪ ‘gɪn]",
+    "verbPastTense": "began",
+    "verbPastTenseTranscription": "[bɪ ‘gæn]",
     "verbPastParticiple": "begun",
-    "verbPastSimple": "began"
+    "verbPastParticipleTranscription": "[bɪ ‘gʌn]",
+    "verbTranslation": "начинать(ся)",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "The lecture began with a quotation - Лекция началась с цитаты"
+      }
+    ]
   },
   {
-    "verbTranslation": "наклоняться",
-    "verb": "bend",
+    "verbInfinitive": "bend",
+    "verbInfinitiveTranscription": "[bend]",
+    "verbPastTense": "bent",
+    "verbPastTenseTranscription": "[bent]",
     "verbPastParticiple": "bent",
-    "verbPastSimple": "bent"
+    "verbPastParticipleTranscription": "[bent]",
+    "verbTranslation": "сгибать, гнуть",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "The road bends to the right - Дорога поворачивает направо"
+      }
+    ]
   },
   {
-    "verbTranslation": "держать пари",
-    "verb": "bet",
-    "verbPastParticiple": "bet",
-    "verbPastSimple": "bet"
-  },
-  {
-    "verbTranslation": "связывать",
-    "verb": "bind",
+    "verbInfinitive": "bind",
+    "verbInfinitiveTranscription": "[baɪnd]",
+    "verbPastTense": "bound",
+    "verbPastTenseTranscription": "[baʊnd]",
     "verbPastParticiple": "bound",
-    "verbPastSimple": "bound"
+    "verbPastParticipleTranscription": "[baʊnd]",
+    "verbTranslation": "связывать",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "They bound his legs tight - Они крепко связали его ноги"
+      }
+    ]
   },
   {
-    "verbTranslation": "кусать",
-    "verb": "bite",
+    "verbInfinitive": "bite",
+    "verbInfinitiveTranscription": "[baɪt]",
+    "verbPastTense": "bit",
+    "verbPastTenseTranscription": "[bɪt]",
     "verbPastParticiple": "bitten",
-    "verbPastSimple": "bit"
+    "verbPastParticipleTranscription": "[‘bɪtn]",
+    "verbTranslation": "кусать(ся)",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "Does your dog bite ? - Твоя собака кусается ?"
+      }
+    ]
   },
   {
-    "verbTranslation": "кровоточить",
-    "verb": "bleed",
+    "verbInfinitive": "bleed",
+    "verbInfinitiveTranscription": "[bli:d]",
+    "verbPastTense": "bled",
+    "verbPastTenseTranscription": "[bled]",
     "verbPastParticiple": "bled",
-    "verbPastSimple": "bled"
+    "verbPastParticipleTranscription": "[bled]",
+    "verbTranslation": "кровоточить",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "My heart bleeds for him - Сердце кровью обливается за него"
+      }
+    ]
   },
   {
-    "verbTranslation": "дуть",
-    "verb": "blow",
+    "verbInfinitive": "blow",
+    "verbInfinitiveTranscription": "[blou]",
+    "verbPastTense": "blew",
+    "verbPastTenseTranscription": "[blu:]",
     "verbPastParticiple": "blown",
-    "verbPastSimple": "blew"
+    "verbPastParticipleTranscription": "[bloun]",
+    "verbTranslation": "дуть",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "A cold breeze was blowing hard - Дул сильный, холодный ветер"
+      }
+    ]
   },
   {
-    "verbTranslation": "ламать",
-    "verb": "break",
+    "verbInfinitive": "break",
+    "verbInfinitiveTranscription": "[breɪk]",
+    "verbPastTense": "broke",
+    "verbPastTenseTranscription": "[brouk]",
     "verbPastParticiple": "broken",
-    "verbPastSimple": "broke"
+    "verbPastParticipleTranscription": "[‘broukən]",
+    "verbTranslation": "ломать, разбивать, разрушать",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "The plane broke into three pieces - Самолёт разломился на три части"
+      }
+    ]
   },
   {
-    "verbTranslation": "приносить",
-    "verb": "bring",
+    "verbInfinitive": "bring",
+    "verbInfinitiveTranscription": "[brɪŋ]",
+    "verbPastTense": "brought",
+    "verbPastTenseTranscription": "[brɔ:t]",
     "verbPastParticiple": "brought",
-    "verbPastSimple": "brought"
+    "verbPastParticipleTranscription": "[brɔ:t]",
+    "verbTranslation": "приносить, привозить, приводить, доставлять",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "They are going to bring one of their friends with them - Они собираются привести с собой одного из своих друзей"
+      }
+    ]
   },
   {
-    "verbTranslation": "трансляция",
-    "verb": "broadcast",
-    "verbPastParticiple": "broadcast",
-    "verbPastSimple": "broadcast"
-  },
-  {
-    "verbTranslation": "строить",
-    "verb": "build",
+    "verbInfinitive": "build",
+    "verbInfinitiveTranscription": "[bɪld]",
+    "verbPastTense": "built",
+    "verbPastTenseTranscription": "[bɪlt]",
     "verbPastParticiple": "built",
-    "verbPastSimple": "built"
+    "verbPastParticipleTranscription": "[bɪlt]",
+    "verbTranslation": "строить",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "The house was built in the early 19th century - Дом был построен в начале 19 века"
+      }
+    ]
   },
   {
-    "verbTranslation": "гореть",
-    "verb": "burn",
+    "verbInfinitive": "burn",
+    "verbInfinitiveTranscription": "[bɜ:rn]",
+    "verbPastTense": "burnt",
+    "verbPastTenseTranscription": "[bз:nt]",
     "verbPastParticiple": "burnt",
-    "verbPastSimple": "burnt"
+    "verbPastParticipleTranscription": "[bз:nt]",
+    "verbTranslation": "гореть",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "There was a fire burning in the large fireplace - В большом камине горел огонь"
+      }
+    ]
   },
   {
-    "verbTranslation": "разрывать",
-    "verb": "burst",
+    "verbInfinitive": "burst",
+    "verbInfinitiveTranscription": "[bз:st]",
+    "verbPastTense": "burst",
+    "verbPastTenseTranscription": "[bз:st]",
     "verbPastParticiple": "burst",
-    "verbPastSimple": "burst"
+    "verbPastParticipleTranscription": "[bз:st]",
+    "verbTranslation": "лопаться, разрываться, взрываться",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "Shells were bursting all around us - Вокруг нас рвались снаряды"
+      }
+    ]
   },
   {
-    "verbTranslation": "покупать",
-    "verb": "buy",
+    "verbInfinitive": "buy",
+    "verbInfinitiveTranscription": "[baɪ]",
+    "verbPastTense": "bought",
+    "verbPastTenseTranscription": "[bɔ:t]",
     "verbPastParticiple": "bought",
-    "verbPastSimple": "bought"
+    "verbPastParticipleTranscription": "[bɔ:t]",
+    "verbTranslation": "покупать",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "He bought the book for $5 - Он купил книгу за $5"
+      }
+    ]
   },
   {
-    "verbTranslation": "бросать",
-    "verb": "cast",
+    "verbInfinitive": "cast",
+    "verbInfinitiveTranscription": "[kɑːst]",
+    "verbPastTense": "cast",
+    "verbPastTenseTranscription": "[kɑːst]",
     "verbPastParticiple": "cast",
-    "verbPastSimple": "cast"
+    "verbPastParticipleTranscription": "[kɑːst]",
+    "verbTranslation": "бросать, кидать, швырять",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "The snake cast off its old skin - Змея сбросила старую кожу"
+      }
+    ]
   },
   {
-    "verbTranslation": "ловить, хватать, успеть",
-    "verb": "catch",
+    "verbInfinitive": "catch",
+    "verbInfinitiveTranscription": "[kætʃ]",
+    "verbPastTense": "caught",
+    "verbPastTenseTranscription": "[kɔ:t]",
     "verbPastParticiple": "caught",
-    "verbPastSimple": "caught"
+    "verbPastParticipleTranscription": "[kɔ:t]",
+    "verbTranslation": "ловить, поймать, схватить",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "You might catch him in about 11 o'clock - Ты можешь застать его дома около 11 часов"
+      }
+    ]
   },
   {
-    "verbTranslation": "выбирать",
-    "verb": "choose",
+    "verbInfinitive": "choose",
+    "verbInfinitiveTranscription": "[tʃu:z]",
+    "verbPastTense": "chose",
+    "verbPastTenseTranscription": "[tʃouz]",
     "verbPastParticiple": "chosen",
-    "verbPastSimple": "chose"
+    "verbPastParticipleTranscription": "[‘tʃouzən]",
+    "verbTranslation": "выбирать",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "It is difficult to choose among so many nice houses - Так трудно выбрать, тут столько таких прелестных домиков"
+      }
+    ]
   },
   {
-    "verbTranslation": "цепляться",
-    "verb": "cling",
-    "verbPastParticiple": "clung",
-    "verbPastSimple": "clung"
-  },
-  {
-    "verbTranslation": "приходить",
-    "verb": "come",
+    "verbInfinitive": "come",
+    "verbInfinitiveTranscription": "[kʌm]",
+    "verbPastTense": "came",
+    "verbPastTenseTranscription": "[keɪm]",
     "verbPastParticiple": "come",
-    "verbPastSimple": "came"
+    "verbPastParticipleTranscription": "[kʌm]",
+    "verbTranslation": "приходить",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "Godfather, come and see your boy - Крёстный отец, подойдите же и посмотрите на своего мальчика"
+      }
+    ]
   },
   {
-    "verbTranslation": "стоить",
-    "verb": "cost",
+    "verbInfinitive": "cost",
+    "verbInfinitiveTranscription": "[kɔst]",
+    "verbPastTense": "cost",
+    "verbPastTenseTranscription": "[kɔst]",
     "verbPastParticiple": "cost",
-    "verbPastSimple": "cost"
+    "verbPastParticipleTranscription": "[kɔst]",
+    "verbTranslation": "стоить",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "Financial worries cost her many sleepless nights - Финансовые проблемы стоили ей множества бессонных ночей"
+      }
+    ]
   },
   {
-    "verbTranslation": "ползать",
-    "verb": "creep",
-    "verbPastParticiple": "crept",
-    "verbPastSimple": "crept"
-  },
-  {
-    "verbTranslation": "резать",
-    "verb": "cut",
+    "verbInfinitive": "cut",
+    "verbInfinitiveTranscription": "[kʌt]",
+    "verbPastTense": "cut",
+    "verbPastTenseTranscription": "[kʌt]",
     "verbPastParticiple": "cut",
-    "verbPastSimple": "cut"
+    "verbPastParticipleTranscription": "[kʌt]",
+    "verbTranslation": "резать",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "The knife does not cut - Нож не режет"
+      }
+    ]
   },
   {
-    "verbTranslation": "торговать",
-    "verb": "deal",
-    "verbPastParticiple": "dealt",
-    "verbPastSimple": "dealt"
-  },
-  {
-    "verbTranslation": "копать",
-    "verb": "dig",
+    "verbInfinitive": "dig",
+    "verbInfinitiveTranscription": "[dɪg]",
+    "verbPastTense": "dug",
+    "verbPastTenseTranscription": "[dʌg]",
     "verbPastParticiple": "dug",
-    "verbPastSimple": "dug"
+    "verbPastParticipleTranscription": "[dʌg]",
+    "verbTranslation": "копать, рыть",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "The hole was freshly dug - Яма была выкопана недавно"
+      }
+    ]
   },
   {
-    "verbTranslation": "нырять",
-    "verb": "dive",
-    "verbPastParticiple": "dived",
-    "verbPastSimple": "dived/dove"
-  },
-  {
-    "verb": "do",
-    "verbPastSimple": "did",
+    "verbInfinitive": "do",
+    "verbInfinitiveTranscription": "[du:]",
+    "verbPastTense": "did",
+    "verbPastTenseTranscription": "[dɪd]",
     "verbPastParticiple": "done",
-    "verbTranslation": "делать"
+    "verbPastParticipleTranscription": "[dʌn]",
+    "verbTranslation": "делать",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "What are you doing ? - Что вы делаете ?"
+      }
+    ]
   },
   {
-    "verb": "draw",
-    "verbPastSimple": "drew",
+    "verbInfinitive": "draw",
+    "verbInfinitiveTranscription": "[drɔ:]",
+    "verbPastTense": "drew",
+    "verbPastTenseTranscription": "[dru:]",
     "verbPastParticiple": "drawn",
-    "verbTranslation": "рисовать, тащить"
+    "verbPastParticipleTranscription": "[drɔ:n]",
+    "verbTranslation": "рисовать",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "He draws beautifully - Он прекрасно рисует"
+      }
+    ]
   },
   {
-    "verbTranslation": "мечтать, дремать",
-    "verb": "dream",
-    "verbPastSimple": "dreamt",
-    "verbPastParticiple": "dreamt"
+    "verbInfinitive": "dream",
+    "verbInfinitiveTranscription": "[dri:m]",
+    "verbPastTense": "dreamt",
+    "verbPastTenseTranscription": "[dremt]",
+    "verbPastParticiple": "dreamt",
+    "verbPastParticipleTranscription": "[dremt]",
+    "verbTranslation": "мечтать",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "The idea came to him in a dream - Эта идея пришла к нему во сне"
+      }
+    ]
   },
   {
+    "verbInfinitive": "drink",
+    "verbInfinitiveTranscription": "[drɪŋk]",
+    "verbPastTense": "drank",
+    "verbPastTenseTranscription": "[dræŋk]",
+    "verbPastParticiple": "drunk",
+    "verbPastParticipleTranscription": "[drʌŋk]",
     "verbTranslation": "пить",
-    "verb": "drink",
-    "verbPastSimple": "drank",
-    "verbPastParticiple": "drunk"
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "I always drink tea from a glass - Я всегда пью чай из стакана"
+      }
+    ]
   },
   {
+    "verbInfinitive": "drive",
+    "verbInfinitiveTranscription": "[draɪv]",
+    "verbPastTense": "drove",
+    "verbPastTenseTranscription": "[drouv]",
+    "verbPastParticiple": "driven",
+    "verbPastParticipleTranscription": "[‘drɪvən]",
     "verbTranslation": "водить",
-    "verb": "drive",
-    "verbPastSimple": "drove",
-    "verbPastParticiple": "driven"
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "We usually drive to the country on Sunday - Мы обычно ездим за город по воскресеньям"
+      }
+    ]
   },
   {
-    "verbTranslation": "жить, обитать",
-    "verb": "dwell",
-    "verbPastSimple": "dwelt",
-    "verbPastParticiple": "dwelt"
-  },
-  {
+    "verbInfinitive": "eat",
+    "verbInfinitiveTranscription": "[i:t]",
+    "verbPastTense": "ate",
+    "verbPastTenseTranscription": "[et, eɪt]",
+    "verbPastParticiple": "eaten",
+    "verbPastParticipleTranscription": "[‘i:tn]",
     "verbTranslation": "есть",
-    "verb": "eat",
-    "verbPastSimple": "ate",
-    "verbPastParticiple": "eaten"
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "Our holiday has eaten into our savings - Этот отпуск съел наши сбережения"
+      }
+    ]
   },
   {
-    "verb": "fall",
-    "verbPastSimple": "fell",
+    "verbInfinitive": "fall",
+    "verbInfinitiveTranscription": "[fɔ:l]",
+    "verbPastTense": "fell",
+    "verbPastTenseTranscription": "[fel]",
     "verbPastParticiple": "fallen",
-    "verbTranslation": "падать"
+    "verbPastParticipleTranscription": "[‘fɔ:lən]",
+    "verbTranslation": "падать",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "The apple fell from the tree - Яблоко упало с дерева"
+      }
+    ]
   },
   {
-    "verb": "feed",
-    "verbPastSimple": "fed",
+    "verbInfinitive": "feed",
+    "verbInfinitiveTranscription": "[fi:d]",
+    "verbPastTense": "fed",
+    "verbPastTenseTranscription": "[fed]",
     "verbPastParticiple": "fed",
-    "verbTranslation": "кормить"
+    "verbPastParticipleTranscription": "[fed]",
+    "verbTranslation": "кормить",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "The farmer is feeding up the chickens for Christmas - Фермер откармливает цыплят к Рождеству"
+      }
+    ]
   },
   {
-    "verb": "feel",
-    "verbPastSimple": "felt",
+    "verbInfinitive": "feel",
+    "verbInfinitiveTranscription": "[fi:l]",
+    "verbPastTense": "felt",
+    "verbPastTenseTranscription": "[felt]",
     "verbPastParticiple": "felt",
-    "verbTranslation": "чувствовать"
+    "verbPastParticipleTranscription": "[felt]",
+    "verbTranslation": "чувствовать",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "The skin doesn't feel alike everywhere - Кожа не везде имеет одинаковую чувствительность"
+      }
+    ]
   },
   {
-    "verb": "fight",
-    "verbPastSimple": "fought",
+    "verbInfinitive": "fight",
+    "verbInfinitiveTranscription": "[faɪt]",
+    "verbPastTense": "fought",
+    "verbPastTenseTranscription": "[fɔ:t]",
     "verbPastParticiple": "fought",
-    "verbTranslation": "драться"
+    "verbPastParticipleTranscription": "[fɔ:t]",
+    "verbTranslation": "бороться, драться",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "The dogs were fighting over a bone - Собаки дрались за косточку"
+      }
+    ]
   },
   {
-    "verb": "find",
-    "verbPastSimple": "found",
+    "verbInfinitive": "find",
+    "verbInfinitiveTranscription": "[faɪnd]",
+    "verbPastTense": "found",
+    "verbPastTenseTranscription": "[faʊnd]",
     "verbPastParticiple": "found",
-    "verbTranslation": "находить"
+    "verbPastParticipleTranscription": "[faʊnd]",
+    "verbTranslation": "находить",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "I found a shilling on the floor - Я нашёл на полу шиллинг"
+      }
+    ]
   },
   {
-    "verb": "fit",
-    "verbPastSimple": "fit",
+    "verbInfinitive": "fit",
+    "verbInfinitiveTranscription": "[fit]",
+    "verbPastTense": "fit",
+    "verbPastTenseTranscription": "[fit]",
     "verbPastParticiple": "fit",
-    "verbTranslation": "подходить, снаряжать"
+    "verbPastParticipleTranscription": "[fit]",
+    "verbTranslation": "подходить, соответствовать",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "The key fits the lock - Ключ точно подходит к замку"
+      }
+    ]
   },
   {
-    "verb": "flee",
-    "verbPastSimple": "fled",
-    "verbPastParticiple": "fled",
-    "verbTranslation": "бежать, исчезать"
-  },
-  {
-    "verb": "fling",
-    "verbPastSimple": "flung",
-    "verbPastParticiple": "flung",
-    "verbTranslation": "броситься"
-  },
-  {
-    "verb": "fly",
-    "verbPastSimple": "flew",
+    "verbInfinitive": "fly",
+    "verbInfinitiveTranscription": "[flaɪ]",
+    "verbPastTense": "flew",
+    "verbPastTenseTranscription": "[flu:]",
     "verbPastParticiple": "flown",
-    "verbTranslation": "летать"
+    "verbPastParticipleTranscription": "[floun]",
+    "verbTranslation": "летать",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "The rumors were flying fast - Эти слухи распространялись быстро"
+      }
+    ]
   },
   {
-    "verb": "forbid",
-    "verbPastSimple": "forbade",
-    "verbPastParticiple": "forbidden",
-    "verbTranslation": "запрещать"
-  },
-  {
-    "verb": "forecast",
-    "verbPastSimple": "forecast",
-    "verbPastParticiple": "forecast",
-    "verbTranslation": "предсказывать"
-  },
-  {
-    "verb": "forget",
-    "verbPastSimple": "forgot",
+    "verbInfinitive": "forget",
+    "verbInfinitiveTranscription": "[fər‘get]",
+    "verbPastTense": "forgot",
+    "verbPastTenseTranscription": "[fə‘gɔt]",
     "verbPastParticiple": "forgotten",
-    "verbTranslation": "забывать"
+    "verbPastParticipleTranscription": "[fər‘gɔtn]",
+    "verbTranslation": "забывать",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "She forgot about the concert - Она забыла о концерте"
+      }
+    ]
   },
   {
-    "verb": "forgive",
-    "verbPastSimple": "forgave",
+    "verbInfinitive": "forgive",
+    "verbInfinitiveTranscription": "[fər ‘gɪv]",
+    "verbPastTense": "forgave",
+    "verbPastTenseTranscription": "[fər ‘geɪv]",
     "verbPastParticiple": "forgiven",
-    "verbTranslation": "прощать"
+    "verbPastParticipleTranscription": "[fər ‘gɪvən]",
+    "verbTranslation": "прощать",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "Forgive me, I didn't mean to insult you - Простите, я не хотел Вас обидеть"
+      }
+    ]
   },
   {
-    "verb": "freeze",
-    "verbPastSimple": "froze",
+    "verbInfinitive": "freeze",
+    "verbInfinitiveTranscription": "[fri:z]",
+    "verbPastTense": "froze",
+    "verbPastTenseTranscription": "[frouz]",
     "verbPastParticiple": "frozen",
-    "verbTranslation": "замерзать"
+    "verbPastParticipleTranscription": "[‘frouzən]",
+    "verbTranslation": "замерзать",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "It made my blood freeze - У меня от этого кровь стыла в жилах"
+      }
+    ]
   },
   {
-    "verb": "get",
-    "verbPastSimple": "got",
+    "verbInfinitive": "get",
+    "verbInfinitiveTranscription": "[get]",
+    "verbPastTense": "got",
+    "verbPastTenseTranscription": "[gɔt]",
     "verbPastParticiple": "got",
-    "verbTranslation": "получать"
+    "verbPastParticipleTranscription": "[gɔt]",
+    "verbTranslation": "получать",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "He got a bicycle for his birthday - На день рождения ему подарили велосипед"
+      }
+    ]
   },
   {
-    "verb": "give",
-    "verbPastSimple": "gave",
+    "verbInfinitive": "give",
+    "verbInfinitiveTranscription": "[gɪv]",
+    "verbPastTense": "gave",
+    "verbPastTenseTranscription": "[geɪv]",
     "verbPastParticiple": "given",
-    "verbTranslation": "давать"
+    "verbPastParticipleTranscription": "[‘gɪvən]",
+    "verbTranslation": "давать",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "Give me that plate, please - Дай мне, пожалуйста, ту тарелку"
+      }
+    ]
   },
   {
-    "verb": "go",
-    "verbPastSimple": "went",
+    "verbInfinitive": "go",
+    "verbInfinitiveTranscription": "[gou]",
+    "verbPastTense": "went",
+    "verbPastTenseTranscription": "[went]",
     "verbPastParticiple": "gone",
-    "verbTranslation": "идти"
+    "verbPastParticipleTranscription": "[gɔn]",
+    "verbTranslation": "идти",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "What time will you go to the store today? - Когда ты пойдёшь сегодня в магазин ?"
+      }
+    ]
   },
   {
-    "verb": "grow",
-    "verbPastSimple": "grew",
+    "verbInfinitive": "grow",
+    "verbInfinitiveTranscription": "[grou]",
+    "verbPastTense": "grew",
+    "verbPastTenseTranscription": "[gru:]",
     "verbPastParticiple": "grown",
-    "verbTranslation": "расти"
+    "verbPastParticipleTranscription": "[groun]",
+    "verbTranslation": "расти",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "Rice grows in water - Рис растёт в воде"
+      }
+    ]
   },
   {
-    "verb": "hang",
-    "verbPastSimple": "hung",
+    "verbInfinitive": "hang",
+    "verbInfinitiveTranscription": "[hæŋ]",
+    "verbPastTense": "hung",
+    "verbPastTenseTranscription": "[hʌŋ]",
     "verbPastParticiple": "hung",
-    "verbTranslation": "вешать"
+    "verbPastParticipleTranscription": "[hʌŋ]",
+    "verbTranslation": "висеть",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "She was hanging wet clothes outside - Она развешивала мокрое бельё на улице"
+      }
+    ]
   },
   {
-    "verb": "have",
-    "verbPastSimple": "had",
+    "verbInfinitive": "have",
+    "verbInfinitiveTranscription": "[hæv]",
+    "verbPastTense": "had",
+    "verbPastTenseTranscription": "[hæd]",
     "verbPastParticiple": "had",
-    "verbTranslation": "иметь"
+    "verbPastParticipleTranscription": "[hæd]",
+    "verbTranslation": "иметь",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "The car has power brakes - У этого автомобиля мощные тормоза"
+      }
+    ]
   },
   {
-    "verb": "hear",
-    "verbPastSimple": "heard",
+    "verbInfinitive": "hear",
+    "verbInfinitiveTranscription": "[hɪər]",
+    "verbPastTense": "heard",
+    "verbPastTenseTranscription": "[hɜ:rd]",
     "verbPastParticiple": "heard",
-    "verbTranslation": "слышать"
+    "verbPastParticipleTranscription": "[hɜ:rd]",
+    "verbTranslation": "слышать",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "He is dull of hearing - Он плохо слышит"
+      }
+    ]
   },
   {
-    "verb": "hide",
-    "verbPastSimple": "hid",
+    "verbInfinitive": "hide",
+    "verbInfinitiveTranscription": "[haɪd]",
+    "verbPastTense": "hid",
+    "verbPastTenseTranscription": "[hɪd]",
     "verbPastParticiple": "hidden",
-    "verbTranslation": "прятать"
+    "verbPastParticipleTranscription": "[‘hɪdn]",
+    "verbTranslation": "прятать",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "Clouds hid the sun - Тучи закрыли солнце"
+      }
+    ]
   },
   {
-    "verb": "hit",
-    "verbPastSimple": "hit",
+    "verbInfinitive": "hit",
+    "verbInfinitiveTranscription": "[hɪt]",
+    "verbPastTense": "hit",
+    "verbPastTenseTranscription": "[hɪt]",
     "verbPastParticiple": "hit",
-    "verbTranslation": "попадать в цель"
+    "verbPastParticipleTranscription": "[hɪt]",
+    "verbTranslation": "попадать, удариться, поражать",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "He hit me a hard blow - Он сильно ударил меня"
+      }
+    ]
   },
   {
-    "verb": "hold",
-    "verbPastSimple": "held",
+    "verbInfinitive": "hold",
+    "verbInfinitiveTranscription": "[hould]",
+    "verbPastTense": "held",
+    "verbPastTenseTranscription": "[held]",
     "verbPastParticiple": "held",
-    "verbTranslation": "держать"
+    "verbPastParticipleTranscription": "[held]",
+    "verbTranslation": "держать",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "The mother was holding the baby in her arms - Мать держала ребёнка на руках"
+      }
+    ]
   },
   {
-    "verb": "hurt",
-    "verbPastSimple": "hurt",
+    "verbInfinitive": "hurt",
+    "verbInfinitiveTranscription": "[hɜ:rt]",
+    "verbPastTense": "hurt",
+    "verbPastTenseTranscription": "[hɜ:rt]",
     "verbPastParticiple": "hurt",
-    "verbTranslation": "ушибить"
+    "verbPastParticipleTranscription": "[hɜ:rt]",
+    "verbTranslation": "болеть, ранить, травмировать",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "My hand still hurts - Рука всё ещё болит"
+      }
+    ]
   },
   {
-    "verb": "keep",
-    "verbPastSimple": "kept",
+    "verbInfinitive": "keep",
+    "verbInfinitiveTranscription": "[ki:p]",
+    "verbPastTense": "kept",
+    "verbPastTenseTranscription": "[kept]",
     "verbPastParticiple": "kept",
-    "verbTranslation": "содержать"
+    "verbPastParticipleTranscription": "[kept]",
+    "verbTranslation": "держать",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "You may keep the book for a month - Можете держать эту книгу месяц"
+      }
+    ]
   },
   {
-    "verb": "kneel",
-    "verbPastSimple": "knelt",
+    "verbInfinitive": "kneel",
+    "verbInfinitiveTranscription": "[ni:l]",
+    "verbPastTense": "knelt",
+    "verbPastTenseTranscription": "[nelt]",
     "verbPastParticiple": "knelt",
-    "verbTranslation": "стоять на коленях"
+    "verbPastParticipleTranscription": "[nelt]",
+    "verbTranslation": "становиться на колени",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "Christians often kneel down to say their prayers - Христиане часто становятся на колени, когда молятся"
+      }
+    ]
   },
   {
-    "verb": "knit",
-    "verbPastSimple": "knit",
+    "verbInfinitive": "knit",
+    "verbInfinitiveTranscription": "[nɪt]",
+    "verbPastTense": "knit",
+    "verbPastTenseTranscription": "[nɪt]",
     "verbPastParticiple": "knit",
-    "verbTranslation": "вязать"
+    "verbPastParticipleTranscription": "[nɪt]",
+    "verbTranslation": "вязать",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "Knit a scarf for me - Свяжи мне шарф"
+      }
+    ]
   },
   {
-    "verb": "know",
-    "verbPastSimple": "knew",
+    "verbInfinitive": "know",
+    "verbInfinitiveTranscription": "[nou]",
+    "verbPastTense": "knew",
+    "verbPastTenseTranscription": "[nu:]",
     "verbPastParticiple": "known",
-    "verbTranslation": "знать"
+    "verbPastParticipleTranscription": "[noun]",
+    "verbTranslation": "знать",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "How do you know ? - Откуда вы знаете ?"
+      }
+    ]
   },
   {
-    "verb": "lay",
-    "verbPastSimple": "laid",
+    "verbInfinitive": "lay",
+    "verbInfinitiveTranscription": "[leɪ]",
+    "verbPastTense": "laid",
+    "verbPastTenseTranscription": "[leɪd]",
     "verbPastParticiple": "laid",
-    "verbTranslation": "класть"
+    "verbPastParticipleTranscription": "[leɪd]",
+    "verbTranslation": "класть",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "Lay the packages on the table - Положи пакеты на стол"
+      }
+    ]
   },
   {
-    "verb": "lead",
-    "verbPastSimple": "led",
+    "verbInfinitive": "lead",
+    "verbInfinitiveTranscription": "[li:d]",
+    "verbPastTense": "led",
+    "verbPastTenseTranscription": "[led]",
     "verbPastParticiple": "led",
-    "verbTranslation": "вести"
+    "verbPastParticipleTranscription": "[led]",
+    "verbTranslation": "вести",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "They led us down to the river - Они вывели нас к реке"
+      }
+    ]
   },
   {
-    "verb": "lean",
-    "verbPastSimple": "leaned, leant",
+    "verbInfinitive": "lean",
+    "verbInfinitiveTranscription": "[li:n]",
+    "verbPastTense": "leant",
+    "verbPastTenseTranscription": "[lent]",
     "verbPastParticiple": "leant",
-    "verbTranslation": "наклоняться на"
+    "verbPastParticipleTranscription": "[lent]",
+    "verbTranslation": "наклоняться",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "He leaned over to me - Он наклонился ко мне"
+      }
+    ]
   },
   {
-    "verb": "leap",
-    "verbPastSimple": "leapt",
-    "verbPastParticiple": "leapt",
-    "verbTranslation": "прыгать, перескакивать"
-  },
-  {
-    "verb": "learn",
-    "verbPastSimple": "learnt",
+    "verbInfinitive": "learn",
+    "verbInfinitiveTranscription": "[lɜ:rn]",
+    "verbPastTense": "learnt",
+    "verbPastTenseTranscription": "[lɜ:rnt]",
     "verbPastParticiple": "learnt",
-    "verbTranslation": "учиться, изучать"
-  },
-  {
-    "verb": "leave",
-    "verbPastSimple": "left",
-    "verbPastParticiple": "left",
-    "verbTranslation": "оставлять"
-  },
-  {
-    "verb": "lend",
-    "verbPastSimple": "lent",
-    "verbPastParticiple": "lent",
-    "verbTranslation": "занимать, одалживать"
-  },
-  {
-    "verb": "let",
-    "verbPastSimple": "let",
-    "verbPastParticiple": "let",
-    "verbTranslation": "позволять, разрешать"
-  },
-  {
-    "verb": "lie",
-    "verbPastSimple": "lay",
-    "verbPastParticiple": "lain",
-    "verbTranslation": "лежать"
-  },
-  {
-    "verb": "light",
-    "verbPastSimple": "lit",
-    "verbPastParticiple": "lit",
-    "verbTranslation": "освещать, зажигать"
-  },
-  {
-    "verb": "lose",
-    "verbPastSimple": "lost",
-    "verbPastParticiple": "lost",
-    "verbTranslation": "терять"
-  },
-  {
-    "verb": "make",
-    "verbPastSimple": "made",
-    "verbPastParticiple": "made",
-    "verbTranslation": "производить"
-  },
-  {
-    "verb": "mean",
-    "verbPastSimple": "meant",
-    "verbPastParticiple": "meant",
-    "verbTranslation": "значить, означать"
-  },
-  {
-    "verb": "meet",
-    "verbPastSimple": "met",
-    "verbPastParticiple": "met",
-    "verbTranslation": "встречать"
-  },
-  {
-    "verb": "mistake",
-    "verbPastSimple": "mistook",
-    "verbPastParticiple": "mistaken",
-    "verbTranslation": "ошибаться"
-  },
-  {
-    "verb": "mow",
-    "verbPastSimple": "mowed",
-    "verbPastParticiple": "mown",
-    "verbTranslation": "косить"
-  },
-  {
-    "verb": "pay",
-    "verbPastSimple": "paid",
-    "verbPastParticiple": "paid",
-    "verbTranslation": "платить"
-  },
-  {
-    "verb": "prove",
-    "verbPastSimple": "proved",
-    "verbPastParticiple": "proven",
-    "verbTranslation": "доказывать"
-  },
-  {
-    "verb": "put",
-    "verbPastSimple": "put",
-    "verbPastParticiple": "put",
-    "verbTranslation": "положить"
-  },
-  {
-    "verb": "quit",
-    "verbPastSimple": "quit",
-    "verbPastParticiple": "quit",
-    "verbTranslation": "выходить, оставлять"
-  },
-  {
-    "verb": "read",
-    "verbPastSimple": "read",
-    "verbPastParticiple": "read",
-    "verbTranslation": "читать"
-  },
-  {
-    "verb": "ride",
-    "verbPastSimple": "rode",
-    "verbPastParticiple": "ridden",
-    "verbTranslation": "ездить верхом"
-  },
-  {
-    "verb": "ring",
-    "verbPastSimple": "rang",
-    "verbPastParticiple": "rung",
-    "verbTranslation": "звенеть"
-  },
-  {
-    "verb": "rise",
-    "verbPastSimple": "rose",
-    "verbPastParticiple": "risen",
-    "verbTranslation": "подниматься"
-  },
-  {
-    "verb": "run",
-    "verbPastSimple": "ran",
-    "verbPastParticiple": "run",
-    "verbTranslation": "бежать"
-  },
-  {
-    "verb": "saw",
-    "verbPastSimple": "sawed",
-    "verbPastParticiple": "sawn",
-    "verbTranslation": "пилить"
-  },
-  {
-    "verb": "say",
-    "verbPastSimple": "said",
-    "verbPastParticiple": "said",
-    "verbTranslation": "говорить"
-  },
-  {
-    "verb": "see",
-    "verbPastSimple": "saw",
-    "verbPastParticiple": "seen",
-    "verbTranslation": "видеть"
-  },
-  {
-    "verb": "seek",
-    "verbPastSimple": "sought",
-    "verbPastParticiple": "sought",
-    "verbTranslation": "искать"
-  },
-  {
-    "verb": "sell",
-    "verbPastSimple": "sold",
-    "verbPastParticiple": "sold",
-    "verbTranslation": "продавать"
-  },
-  {
-    "verb": "send",
-    "verbPastSimple": "sent",
-    "verbPastParticiple": "sent",
-    "verbTranslation": "посылать"
-  },
-  {
-    "verb": "set",
-    "verbPastSimple": "set",
-    "verbPastParticiple": "set",
-    "verbTranslation": "ставить"
-  },
-  {
-    "verb": "sew",
-    "verbPastSimple": "sewed",
-    "verbPastParticiple": "sewn",
-    "verbTranslation": "шить"
-  },
-  {
-    "verb": "shake",
-    "verbPastSimple": "shook",
-    "verbPastParticiple": "shaken",
-    "verbTranslation": "встряхивать"
-  },
-  {
-    "verb": "shear",
-    "verbPastSimple": "sheared",
-    "verbPastParticiple": "short",
-    "verbTranslation": "резать, стричь"
-  },
-  {
-    "verb": "shed",
-    "verbPastSimple": "shed",
-    "verbPastParticiple": "shed",
-    "verbTranslation": "сбросить"
-  },
-  {
-    "verb": "shine",
-    "verbPastSimple": "shone",
-    "verbPastParticiple": "shone",
-    "verbTranslation": "сиять, светиться"
-  },
-  {
-    "verb": "shoot",
-    "verbPastSimple": "shot",
-    "verbPastParticiple": "shot",
-    "verbTranslation": "стрелять"
-  },
-  {
-    "verb": "show",
-    "verbPastSimple": "showed",
-    "verbPastParticiple": "shown",
-    "verbTranslation": "показывать"
-  },
-  {
-    "verb": "shrink",
-    "verbPastSimple": "shrank",
-    "verbPastParticiple": "shrunk",
-    "verbTranslation": "сокращаться, сесть"
-  },
-  {
-    "verb": "shut",
-    "verbPastSimple": "shut",
-    "verbPastParticiple": "shut",
-    "verbTranslation": "закрывать"
-  },
-  {
-    "verb": "sing",
-    "verbPastSimple": "sang",
-    "verbPastParticiple": "sung",
-    "verbTranslation": "петь"
-  },
-  {
-    "verb": "sink",
-    "verbPastSimple": "sank, sunk",
-    "verbPastParticiple": "sunk",
-    "verbTranslation": "тонуть"
-  },
-  {
-    "verb": "sit",
-    "verbPastSimple": "sat",
-    "verbPastParticiple": "sat",
-    "verbTranslation": "сидеть"
-  },
-  {
-    "verb": "sleep",
-    "verbPastSimple": "slept",
-    "verbPastParticiple": "slept",
-    "verbTranslation": "спать"
-  },
-  {
-    "verb": "slide",
-    "verbPastSimple": "slid",
-    "verbPastParticiple": "slid",
-    "verbTranslation": "скользить"
-  },
-  {
-    "verb": "sling",
-    "verbPastSimple": "slung",
-    "verbPastParticiple": "slung",
-    "verbTranslation": "швырять"
-  },
-  {
-    "verb": "smell",
-    "verbPastSimple": "smelt",
-    "verbPastParticiple": "smelt",
-    "verbTranslation": "пахнуть, чуять"
-  },
-  {
-    "verb": "sow",
-    "verbPastSimple": "sowed",
-    "verbPastParticiple": "sown",
-    "verbTranslation": "сеять"
-  },
-  {
-    "verb": "speak",
-    "verbPastSimple": "spoke",
-    "verbPastParticiple": "spoken",
-    "verbTranslation": "говорить"
-  },
-  {
-    "verb": "speed",
-    "verbPastSimple": "sped",
-    "verbPastParticiple": "sped",
-    "verbTranslation": "мчаться, нестись"
-  },
-  {
-    "verb": "spell",
-    "verbPastSimple": "spelt",
-    "verbPastParticiple": "spelt",
-    "verbTranslation": "произносить по буквам"
-  },
-  {
-    "verb": "spend",
-    "verbPastSimple": "spent",
-    "verbPastParticiple": "spent",
-    "verbTranslation": "тратить"
-  },
-  {
-    "verb": "spill",
-    "verbPastSimple": "spilt",
-    "verbPastParticiple": "spilt",
-    "verbTranslation": "проливать"
-  },
-  {
-    "verb": "spin",
-    "verbPastSimple": "span, spun",
-    "verbPastParticiple": "spun",
-    "verbTranslation": "вертеться, кружиться"
-  },
-  {
-    "verb": "spit",
-    "verbPastSimple": "spat, spit",
-    "verbPastParticiple": "spat, spit",
-    "verbTranslation": "плевать"
-  },
-  {
-    "verb": "split",
-    "verbTranscription": "splɪt",
-    "verbPastSimple": "split",
-    "verbPastSimpleTranscription": "splɪt",
-    "verbPastParticiple": "split",
-    "verbPastParticipleTranscription": "splɪt",
-    "verbTranslation": "раскалывать, разбивать, разрушать, отделять, расщеплять",
-    "verbImage": "",
-    "verbExamples": [
-      {
-        "example": "My head is splitting - У меня голова раскалывается (от боли)"
-      },
-      {
-        "example": "We split up into teams - Мы разбились на команды"
-      },
-      {
-        "example": "The band split two years ago - Группа распалась два года назад"
-      }
-    ]
-  },
-  {
-    "verb": "spoil",
-    "verbTranscription": "",
-    "verbPastSimple": "spoilt",
-    "verbPastSimpleTranscription": "",
-    "verbPastParticiple": "spoilt",
-    "verbPastParticipleTranscription": "",
-    "verbTranslation": "портить, наносить ущерб",
-    "verbImage": "",
-    "verbExamples": [
-      {
-        "example": "The milk was beginning to spoil - Молоко начинало портиться"
-      },
-      {
-        "example": "The camping trip was spoiled by bad weather - Поход был испорчен плохой погодой"
-      },
-      {
-        "example": "Don't let one mistake spoil your day - Не позволяйте единственной ошибке портить вам весь день"
-      }
-    ]
-  },
-  {
-    "verb": "spread",
-    "verbTranscription": "",
-    "verbPastSimple": "spread",
-    "verbPastSimpleTranscription": "",
-    "verbPastParticiple": "spread",
-    "verbPastParticipleTranscription": "",
-    "verbTranslation": "расстилать, распространять",
-    "verbImage": "",
-    "verbExamples": [
-      {
-        "example": ""
-      },
-      {
-        "example": ""
-      },
-      {
-        "example": ""
-      }
-    ]
-  },
-  {
-    "verb": "spring",
-    "verbTranscription": "",
-    "verbPastSimple": "sprang",
-    "verbPastSimpleTranscription": "",
-    "verbPastParticiple": "sprung",
-    "verbPastParticipleTranscription": "",
-    "verbTranslation": "прыгать",
-    "verbImage": "",
-    "verbExamples": [
-      {
-        "example": ""
-      },
-      {
-        "example": ""
-      },
-      {
-        "example": ""
-      }
-    ]
-  },
-  {
-    "verb": "stand",
-    "verbTranscription": "",
-    "verbPastSimple": "stood",
-    "verbPastSimpleTranscription": "",
-    "verbPastParticiple": "stood",
-    "verbPastParticipleTranscription": "",
-    "verbTranslation": "стоять",
-    "verbImage": "",
-    "verbExamples": [
-      {
-        "example": ""
-      },
-      {
-        "example": ""
-      },
-      {
-        "example": ""
-      }
-    ]
-  },
-  {
-    "verb": "steal",
-    "verbTranscription": "",
-    "verbPastSimple": "stole",
-    "verbPastSimpleTranscription": "",
-    "verbPastParticiple": "stolen",
-    "verbPastParticipleTranscription": "",
-    "verbTranslation": "красть",
-    "verbImage": "",
-    "verbExamples": [
-      {
-        "example": ""
-      },
-      {
-        "example": ""
-      },
-      {
-        "example": ""
-      }
-    ]
-  },
-  {
-    "verb": "stick",
-    "verbTranscription": "",
-    "verbPastSimple": "stuck",
-    "verbPastSimpleTranscription": "",
-    "verbPastParticiple": "stuck",
-    "verbPastParticipleTranscription": "",
-    "verbTranslation": "колоть",
-    "verbImage": "",
-    "verbExamples": [
-      {
-        "example": ""
-      },
-      {
-        "example": ""
-      },
-      {
-        "example": ""
-      }
-    ]
-  },
-  {
-    "verb": "sting",
-    "verbTranscription": "",
-    "verbPastSimple": "stung",
-    "verbPastSimpleTranscription": "",
-    "verbPastParticiple": "stung",
-    "verbPastParticipleTranscription": "",
-    "verbTranslation": "жалить",
-    "verbImage": "",
-    "verbExamples": [
-      {
-        "example": ""
-      },
-      {
-        "example": ""
-      },
-      {
-        "example": ""
-      }
-    ]
-  },
-  {
-    "verb": "stink",
-    "verbTranscription": "",
-    "verbPastSimple": "stank",
-    "verbPastSimpleTranscription": "",
-    "verbPastParticiple": "stunk",
-    "verbPastParticipleTranscription": "",
-    "verbTranslation": "вонять",
-    "verbImage": "",
-    "verbExamples": [
-      {
-        "example": ""
-      },
-      {
-        "example": ""
-      },
-      {
-        "example": ""
-      }
-    ]
-  },
-  {
-    "verb": "strike",
-    "verbTranscription": "",
-    "verbPastSimple": "struck",
-    "verbPastSimpleTranscription": "",
-    "verbPastParticiple": "struck",
-    "verbPastParticipleTranscription": "",
-    "verbTranslation": "ударить",
-    "verbImage": "",
-    "verbExamples": [
-      {
-        "example": ""
-      },
-      {
-        "example": ""
-      },
-      {
-        "example": ""
-      }
-    ]
-  },
-  {
-    "verb": "strive",
-    "verbTranscription": "",
-    "verbPastSimple": "strove",
-    "verbPastSimpleTranscription": "",
-    "verbPastParticiple": "striven",
-    "verbPastParticipleTranscription": "",
-    "verbTranslation": "стремиться",
-    "verbImage": "",
-    "verbExamples": [
-      {
-        "example": ""
-      },
-      {
-        "example": ""
-      },
-      {
-        "example": ""
-      }
-    ]
-  },
-  {
-    "verb": "swear",
-    "verbTranscription": "",
-    "verbPastSimple": "swore",
-    "verbPastSimpleTranscription": "",
-    "verbPastParticiple": "sworn",
-    "verbPastParticipleTranscription": "",
-    "verbTranslation": "клясться, божиться",
-    "verbImage": "",
-    "verbExamples": [
-      {
-        "example": ""
-      },
-      {
-        "example": ""
-      },
-      {
-        "example": ""
-      }
-    ]
-  },
-  {
-    "verb": "sweep",
-    "verbTranscription": "",
-    "verbPastSimple": "swept",
-    "verbPastSimpleTranscription": "",
-    "verbPastParticiple": "swept",
-    "verbPastParticipleTranscription": "",
-    "verbTranslation": "выметать",
-    "verbImage": "",
-    "verbExamples": [
-      {
-        "example": ""
-      },
-      {
-        "example": ""
-      },
-      {
-        "example": ""
-      }
-    ]
-  },
-  {
-    "verb": "swell",
-    "verbTranscription": "",
-    "verbPastSimple": "swelled",
-    "verbPastSimpleTranscription": "",
-    "verbPastParticiple": "swollen",
-    "verbPastParticipleTranscription": "",
-    "verbTranslation": "разбухать",
-    "verbImage": "",
-    "verbExamples": [
-      {
-        "example": ""
-      },
-      {
-        "example": ""
-      },
-      {
-        "example": ""
-      }
-    ]
-  },
-  {
-    "verb": "swim",
-    "verbTranscription": "",
-    "verbPastSimple": "swam",
-    "verbPastSimpleTranscription": "",
-    "verbPastParticiple": "swum",
-    "verbPastParticipleTranscription": "",
-    "verbTranslation": "плавать",
-    "verbImage": "",
-    "verbExamples": [
-      {
-        "example": ""
-      },
-      {
-        "example": ""
-      },
-      {
-        "example": ""
-      }
-    ]
-  },
-  {
-    "verb": "swing",
-    "verbTranscription": "",
-    "verbPastSimple": "swung",
-    "verbPastSimpleTranscription": "",
-    "verbPastParticiple": "swung",
-    "verbPastParticipleTranscription": "",
-    "verbTranslation": "качать",
-    "verbImage": "",
-    "verbExamples": [
-      {
-        "example": ""
-      },
-      {
-        "example": ""
-      },
-      {
-        "example": ""
-      }
-    ]
-  },
-  {
-    "verb": "take",
-    "verbTranscription": "",
-    "verbPastSimple": "took",
-    "verbPastSimpleTranscription": "",
-    "verbPastParticiple": "taken",
-    "verbPastParticipleTranscription": "",
-    "verbTranslation": "брать, взять",
-    "verbImage": "",
-    "verbExamples": [
-      {
-        "example": ""
-      },
-      {
-        "example": ""
-      },
-      {
-        "example": ""
-      }
-    ]
-  },
-  {
-    "verb": "teach",
-    "verbTranscription": "",
-    "verbPastSimple": "taught",
-    "verbPastSimpleTranscription": "",
-    "verbPastParticiple": "taught",
-    "verbPastParticipleTranscription": "",
+    "verbPastParticipleTranscription": "[lɜ:rnt]",
     "verbTranslation": "учить",
-    "verbImage": "",
+    "verbImage": "verbImages/no_image.jpg",
     "verbExamples": [
       {
-        "example": ""
-      },
-      {
-        "example": ""
-      },
-      {
-        "example": ""
+        "example": "She is learning to drive - Она учится водить машину"
       }
     ]
   },
   {
-    "verb": "tear",
-    "verbTranscription": "",
-    "verbPastSimple": "tore",
-    "verbPastSimpleTranscription": "",
+    "verbInfinitive": "leave",
+    "verbInfinitiveTranscription": "[li:v]",
+    "verbPastTense": "left",
+    "verbPastTenseTranscription": "[left]",
+    "verbPastParticiple": "left",
+    "verbPastParticipleTranscription": "[left]",
+    "verbTranslation": "уезжать, оставлять, покидать",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "She left the room without explanation - Она покинула комнату без объяснений"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "lend",
+    "verbInfinitiveTranscription": "[lend]",
+    "verbPastTense": "lent",
+    "verbPastTenseTranscription": "[lent]",
+    "verbPastParticiple": "lent",
+    "verbPastParticipleTranscription": "[lent]",
+    "verbTranslation": "одалживать, давать взаймы",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "She lent the money to him - Она дала ему денег взаймы"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "let",
+    "verbInfinitiveTranscription": "[let]",
+    "verbPastTense": "let",
+    "verbPastTenseTranscription": "[let]",
+    "verbPastParticiple": "let",
+    "verbPastParticipleTranscription": "[let]",
+    "verbTranslation": "позволять, разрешать",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "I was not let see him - Мне не дали его повидать"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "lie",
+    "verbInfinitiveTranscription": "[laɪ]",
+    "verbPastTense": "lay",
+    "verbPastTenseTranscription": "[leɪ]",
+    "verbPastParticiple": "lain",
+    "verbPastParticipleTranscription": "[leɪn]",
+    "verbTranslation": "лежать",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "I know he is lying - Я знаю, что он врёт"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "light",
+    "verbInfinitiveTranscription": "[lait]",
+    "verbPastTense": "lit",
+    "verbPastTenseTranscription": "[lit]",
+    "verbPastParticiple": "lit",
+    "verbPastParticipleTranscription": "[lit]",
+    "verbTranslation": "зажигать, освещать",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "She lit a candle - Она зажгла свечу"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "lose",
+    "verbInfinitiveTranscription": "[lu:z]",
+    "verbPastTense": "lost",
+    "verbPastTenseTranscription": "[lɔst]",
+    "verbPastParticiple": "lost",
+    "verbPastParticipleTranscription": "[lɔst]",
+    "verbTranslation": "терять",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "I lost my driving licence - Я потерял свои водительские права"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "make",
+    "verbInfinitiveTranscription": "[meɪk]",
+    "verbPastTense": "made",
+    "verbPastTenseTranscription": "[meɪd]",
+    "verbPastParticiple": "made",
+    "verbPastParticipleTranscription": "[meɪd]",
+    "verbTranslation": "делать",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "Made in Japan - Сделано в Японии"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "mean",
+    "verbInfinitiveTranscription": "[mi:n]",
+    "verbPastTense": "meant",
+    "verbPastTenseTranscription": "[ment]",
+    "verbPastParticiple": "meant",
+    "verbPastParticipleTranscription": "[ment]",
+    "verbTranslation": "иметь в виду, значить, означать",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "The dictionary tries to tell you what words mean - Словарь пытается показать вам, что значат слова"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "meet",
+    "verbInfinitiveTranscription": "[mi:t]",
+    "verbPastTense": "met",
+    "verbPastTenseTranscription": "[met]",
+    "verbPastParticiple": "met",
+    "verbPastParticipleTranscription": "[met]",
+    "verbTranslation": "встречать",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "I met with an old friend in the town today - Я сегодня в городе встретил старого друга"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "mistake",
+    "verbInfinitiveTranscription": "[mis’teik]",
+    "verbPastTense": "mistook",
+    "verbPastTenseTranscription": "[mis’tuk]",
+    "verbPastParticiple": "mistaken",
+    "verbPastParticipleTranscription": "[mis’teik(e)n]",
+    "verbTranslation": "ошибаться",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "You are mistaken - Вы ошибаетесь"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "pay",
+    "verbInfinitiveTranscription": "[peɪ]",
+    "verbPastTense": "paid",
+    "verbPastTenseTranscription": "[peɪd]",
+    "verbPastParticiple": "paid",
+    "verbPastParticipleTranscription": "[peɪd]",
+    "verbTranslation": "платить",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "My parents paid for my education - Мои родители платили за моё образование"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "put",
+    "verbInfinitiveTranscription": "[pʊt]",
+    "verbPastTense": "put",
+    "verbPastTenseTranscription": "[pʊt]",
+    "verbPastParticiple": "put",
+    "verbPastParticipleTranscription": "[pʊt]",
+    "verbTranslation": "класть, помещать",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "Put the book on the table - Положите книгу на стол"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "read",
+    "verbInfinitiveTranscription": "[ri:d]",
+    "verbPastTense": "read",
+    "verbPastTenseTranscription": "[red]",
+    "verbPastParticiple": "read",
+    "verbPastParticipleTranscription": "[red]",
+    "verbTranslation": "читать",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "Can you read French ? - Ты умеешь читать по-французски ?"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "ride",
+    "verbInfinitiveTranscription": "[raɪd]",
+    "verbPastTense": "rode",
+    "verbPastTenseTranscription": "[roud]",
+    "verbPastParticiple": "ridden",
+    "verbPastParticipleTranscription": "[‘rɪdn]",
+    "verbTranslation": "ехать",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "Let's ride out to the mountains while the weather is good - Давай поедем в горы, пока хорошая погода"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "ring",
+    "verbInfinitiveTranscription": "[rɪŋ]",
+    "verbPastTense": "rang",
+    "verbPastTenseTranscription": "[ræŋ]",
+    "verbPastParticiple": "rung",
+    "verbPastParticipleTranscription": "[rʌŋ]",
+    "verbTranslation": "звонить",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "I'll ring you later - Я позвоню тебе позже"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "rise",
+    "verbInfinitiveTranscription": "[raɪz]",
+    "verbPastTense": "rose",
+    "verbPastTenseTranscription": "[rouz]",
+    "verbPastParticiple": "risen",
+    "verbPastParticipleTranscription": "[‘rɪzən]",
+    "verbTranslation": "вставать, подниматься",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "The new office block rose over all the other buildings - Новые учреждения возвышаются над другими домами"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "run",
+    "verbInfinitiveTranscription": "[rʌn]",
+    "verbPastTense": "ran",
+    "verbPastTenseTranscription": "[ræn]",
+    "verbPastParticiple": "run",
+    "verbPastParticipleTranscription": "[rʌn]",
+    "verbTranslation": "бежать",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "I opened the door and the cat ran in - Я открыл дверь, и в дом забежала кошка"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "say",
+    "verbInfinitiveTranscription": "[seɪ]",
+    "verbPastTense": "said",
+    "verbPastTenseTranscription": "[sed]",
+    "verbPastParticiple": "said",
+    "verbPastParticipleTranscription": "[sed]",
+    "verbTranslation": "говорить, сказать, допускать",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "Don't forget to say thank you - Не забудьте сказать спасибо"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "see",
+    "verbInfinitiveTranscription": "[si:]",
+    "verbPastTense": "saw",
+    "verbPastTenseTranscription": "[sɔ:]",
+    "verbPastParticiple": "seen",
+    "verbPastParticipleTranscription": "[si:n]",
+    "verbTranslation": "видеть, смотреть",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "Let me see the book - Покажите мне эту книгу"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "seek",
+    "verbInfinitiveTranscription": "[si:k]",
+    "verbPastTense": "sought",
+    "verbPastTenseTranscription": "[sɔ:t]",
+    "verbPastParticiple": "sought",
+    "verbPastParticipleTranscription": "[sɔ:t]",
+    "verbTranslation": "искать",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "They sought brake and thicket, in vain - Они обыскали чащу и заросли, но всё было напрасно"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "sell",
+    "verbInfinitiveTranscription": "[sel]",
+    "verbPastTense": "sold",
+    "verbPastTenseTranscription": "[sould]",
+    "verbPastParticiple": "sold",
+    "verbPastParticipleTranscription": "[sould]",
+    "verbTranslation": "продавать",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "I don't want to sell the house at a loss - Я не хочу продавать дом с убытком"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "send",
+    "verbInfinitiveTranscription": "[send]",
+    "verbPastTense": "sent",
+    "verbPastTenseTranscription": "[sent]",
+    "verbPastParticiple": "sent",
+    "verbPastParticipleTranscription": "[sent]",
+    "verbTranslation": "посылать, отправлять",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "I sent her a letter - Я послала ей письмо"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "set",
+    "verbInfinitiveTranscription": "[set]",
+    "verbPastTense": "set",
+    "verbPastTenseTranscription": "[set]",
+    "verbPastParticiple": "set",
+    "verbPastParticipleTranscription": "[set]",
+    "verbTranslation": "ставить, класть",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "She set a tray down on the table - Она поставила поднос на стол"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "shake",
+    "verbInfinitiveTranscription": "[ʃeɪk]",
+    "verbPastTense": "shook",
+    "verbPastTenseTranscription": "[ʃʊk]",
+    "verbPastParticiple": "shaken",
+    "verbPastParticipleTranscription": "[‘ʃeɪkən]",
+    "verbTranslation": "трясти",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "Shake up the medicine before drinking it - Встряхните лекарство перед употреблением"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "shine",
+    "verbInfinitiveTranscription": "[ʃaɪn]",
+    "verbPastTense": "shone",
+    "verbPastTenseTranscription": "[ʃɔn]",
+    "verbPastParticiple": "shone",
+    "verbPastParticipleTranscription": "[ʃɔn]",
+    "verbTranslation": "светить, сиять, освещать",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "His face shone with happiness - Его лицо сияло от счастья"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "shoot",
+    "verbInfinitiveTranscription": "[ʃu:t]",
+    "verbPastTense": "shot",
+    "verbPastTenseTranscription": "[ʃɔt]",
+    "verbPastParticiple": "shot",
+    "verbPastParticipleTranscription": "[ʃɔt]",
+    "verbTranslation": "стрелять",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "Don't shoot at me please ! - Пожалуйста, не стреляйте в меня !"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "show",
+    "verbInfinitiveTranscription": "[ʃou]",
+    "verbPastTense": "showed",
+    "verbPastTenseTranscription": "[ʃoud]",
+    "verbPastParticiple": "shown",
+    "verbPastParticipleTranscription": "[ʃoun]",
+    "verbTranslation": "показывать",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "He showed me the pictures of his family - Он показал мне фотографии своей семьи"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "shrink",
+    "verbInfinitiveTranscription": "[ʃriŋk]",
+    "verbPastTense": "shrank",
+    "verbPastTenseTranscription": "[ʃræŋk]",
+    "verbPastParticiple": "shrunk",
+    "verbPastParticipleTranscription": "[ʃrʌŋk]",
+    "verbTranslation": "уменьшать, сокращать, садиться, сжиматься",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "The number of students has shrunk - оличество студентов сократилось"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "shut",
+    "verbInfinitiveTranscription": "[ʃʌt]",
+    "verbPastTense": "shut",
+    "verbPastTenseTranscription": "[ʃʌt]",
+    "verbPastParticiple": "shut",
+    "verbPastParticipleTranscription": "[ʃʌt]",
+    "verbTranslation": "закрывать",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "Make sure that you shut the door to as you leave - Не забудь закрыть дверь, когда будешь уходить"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "sing",
+    "verbInfinitiveTranscription": "[sɪŋ]",
+    "verbPastTense": "sang",
+    "verbPastTenseTranscription": "[sæŋ]",
+    "verbPastParticiple": "sung",
+    "verbPastParticipleTranscription": "[sʌŋ]",
+    "verbTranslation": "петь",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "I like to sing to many people - Я люблю петь перед большой аудиторией"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "sink",
+    "verbInfinitiveTranscription": "[sɪŋk]",
+    "verbPastTense": "sank",
+    "verbPastTenseTranscription": "[sæŋk]",
+    "verbPastParticiple": "sunk",
+    "verbPastParticipleTranscription": "[sʌŋk]",
+    "verbTranslation": "тонуть",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "Your feet sank into the softest of carpets - Ваши ноги тонули в мягчайшем ковре"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "sit",
+    "verbInfinitiveTranscription": "[sɪt]",
+    "verbPastTense": "sat",
+    "verbPastTenseTranscription": "[sæt]",
+    "verbPastParticiple": "sat",
+    "verbPastParticipleTranscription": "[sæt]",
+    "verbTranslation": "сидеть",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "He sat back in his chair - Он снова сел в кресло"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "sleep",
+    "verbInfinitiveTranscription": "[sli:p]",
+    "verbPastTense": "slept",
+    "verbPastTenseTranscription": "[slept]",
+    "verbPastParticiple": "slept",
+    "verbPastParticipleTranscription": "[slept]",
+    "verbTranslation": "спать",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "I sleep late at the weekends - По выходным я сплю до обеда"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "smell",
+    "verbInfinitiveTranscription": "[smel]",
+    "verbPastTense": "smelt",
+    "verbPastTenseTranscription": "[smelt]",
+    "verbPastParticiple": "smelt",
+    "verbPastParticipleTranscription": "[smelt]",
+    "verbTranslation": "нюхать",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "The sharks will smell blood - Акулы учуют запах крови"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "slide",
+    "verbInfinitiveTranscription": "[slaid]",
+    "verbPastTense": "slid",
+    "verbPastTenseTranscription": "[slid]",
+    "verbPastParticiple": "slid",
+    "verbPastParticipleTranscription": "[slid]",
+    "verbTranslation": "скользить, двигаться плавно",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "The drawers slide in and out easily - Ящики легко выдвигаются и задвигаются"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "sow",
+    "verbInfinitiveTranscription": "[sou]",
+    "verbPastTense": "sowed",
+    "verbPastTenseTranscription": "[soud]",
+    "verbPastParticiple": "sown",
+    "verbPastParticipleTranscription": "[soun]",
+    "verbTranslation": "сеять",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "To sow a field with wheat - Засеивать поле пшеницей"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "smell",
+    "verbInfinitiveTranscription": "[smel]",
+    "verbPastTense": "smelled",
+    "verbPastTenseTranscription": "[smeld]",
+    "verbPastParticiple": "smelled",
+    "verbPastParticipleTranscription": "[smeld]",
+    "verbTranslation": "нюхать, чувствовать запах, пахнуть",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "Smell these flowers - Понюхайте эти цветы"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "speak",
+    "verbInfinitiveTranscription": "[spi:k]",
+    "verbPastTense": "spoke",
+    "verbPastTenseTranscription": "[spouk]",
+    "verbPastParticiple": "spoken",
+    "verbPastParticipleTranscription": "[‘spoukən]",
+    "verbTranslation": "говорить",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "She spoke her mind - Она высказала своё мнение"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "spell",
+    "verbInfinitiveTranscription": "[spel]",
+    "verbPastTense": "spelt",
+    "verbPastTenseTranscription": "[spelt]",
+    "verbPastParticiple": "spelt",
+    "verbPastParticipleTranscription": "[spelt]",
+    "verbTranslation": "произносить по буквам",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "How do you spell your name ? - Как пишется ваше имя ?"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "spend",
+    "verbInfinitiveTranscription": "[spend]",
+    "verbPastTense": "spent",
+    "verbPastTenseTranscription": "[spent]",
+    "verbPastParticiple": "spent",
+    "verbPastParticipleTranscription": "[spent]",
+    "verbTranslation": "тратить, проводить время",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "He spent a weekend in London - Выходные он провёл в Лондоне"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "spill",
+    "verbInfinitiveTranscription": "[spɪl]",
+    "verbPastTense": "spilt",
+    "verbPastTenseTranscription": "[spɪlt]",
+    "verbPastParticiple": "spilt",
+    "verbPastParticipleTranscription": "[spɪlt]",
+    "verbTranslation": "проливать, разливать, рассыпать",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "Who has spilt the milk on the table ? - Кто пролил молоко на стол ?"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "spit",
+    "verbInfinitiveTranscription": "[spɪt]",
+    "verbPastTense": "spat",
+    "verbPastTenseTranscription": "[spæt]",
+    "verbPastParticiple": "spat",
+    "verbPastParticipleTranscription": "[spæt]",
+    "verbTranslation": "плевать",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "He spat out a stone - Он выплюнул косточку"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "split",
+    "verbInfinitiveTranscription": "[splɪt]",
+    "verbPastTense": "split",
+    "verbPastTenseTranscription": "[splɪt]",
+    "verbPastParticiple": "split",
+    "verbPastParticipleTranscription": "[splɪt]",
+    "verbTranslation": "раскалывать, разбивать на части, расщеплять",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "Can you split up this piece of wood ? - Ты можешь расколоть эту деревяшку ?"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "spoil",
+    "verbInfinitiveTranscription": "[spoɪl]",
+    "verbPastTense": "spoilt",
+    "verbPastTenseTranscription": "[spoɪlt]",
+    "verbPastParticiple": "spoilt",
+    "verbPastParticipleTranscription": "[spoɪlt]",
+    "verbTranslation": "портить, наносить ущерб",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "The fruit has spoilt in the hot sun - Фрукты испортились на сильном солнце"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "spread",
+    "verbInfinitiveTranscription": "[spred]",
+    "verbPastTense": "spread",
+    "verbPastTenseTranscription": "[spred]",
+    "verbPastParticiple": "spread",
+    "verbPastParticipleTranscription": "[spred]",
+    "verbTranslation": "распространять(ся)",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "She spreads rumours - Она распространяет слухи"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "stand",
+    "verbInfinitiveTranscription": "[stænd]",
+    "verbPastTense": "stood",
+    "verbPastTenseTranscription": "[stʊd]",
+    "verbPastParticiple": "stood",
+    "verbPastParticipleTranscription": "[stʊd]",
+    "verbTranslation": "стоять",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "The house stands near the river - Дом стоит около реки"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "steal",
+    "verbInfinitiveTranscription": "[sti:l]",
+    "verbPastTense": "stole",
+    "verbPastTenseTranscription": "[stoul]",
+    "verbPastParticiple": "stolen",
+    "verbPastParticipleTranscription": "[‘stoulən]",
+    "verbTranslation": "воровать",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "They've stolen our liberty - Они похитили нашу свободу"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "stick",
+    "verbInfinitiveTranscription": "[stik]",
+    "verbPastTense": "stuck",
+    "verbPastTenseTranscription": "[stʌk]",
+    "verbPastParticiple": "stuck",
+    "verbPastParticipleTranscription": "[stʌk]",
+    "verbTranslation": "приклеивать(ся)",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "I could not stick the envelope - У меня не получалось заклеить конверт"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "sting",
+    "verbInfinitiveTranscription": "[stiŋ]",
+    "verbPastTense": "stung",
+    "verbPastTenseTranscription": "[stʌŋ]",
+    "verbPastParticiple": "stung",
+    "verbPastParticipleTranscription": "[stʌŋ]",
+    "verbTranslation": "жалить, испытывать острую боль",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "My eyes were stinging from the smoke - У меня щипало глаза от дыма"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "strike",
+    "verbInfinitiveTranscription": "[straɪk]",
+    "verbPastTense": "struck",
+    "verbPastTenseTranscription": "[strʌk]",
+    "verbPastParticiple": "struck",
+    "verbPastParticipleTranscription": "[strʌk]",
+    "verbTranslation": "ударять, бить",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "He struck me on the chin - Он ударил меня в подбородок"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "strive",
+    "verbInfinitiveTranscription": "[straɪv]",
+    "verbPastTense": "strove",
+    "verbPastTenseTranscription": "[strəuv]",
+    "verbPastParticiple": "striven",
+    "verbPastParticipleTranscription": "[‘strɪvn]",
+    "verbTranslation": "стараться, стремиться, пытаться",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "To strive for success - Стремиться к успеху"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "swear",
+    "verbInfinitiveTranscription": "[sweə]",
+    "verbPastTense": "swore",
+    "verbPastTenseTranscription": "[swɔ:]",
+    "verbPastParticiple": "sworn",
+    "verbPastParticipleTranscription": "[swɔ:n]",
+    "verbTranslation": "клясться, присягать",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "They swore allegiance to the government - Они поклялись в верности правительству"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "sweep",
+    "verbInfinitiveTranscription": "[swi:p]",
+    "verbPastTense": "swept",
+    "verbPastTenseTranscription": "[swept]",
+    "verbPastParticiple": "swept",
+    "verbPastParticipleTranscription": "[swept]",
+    "verbTranslation": "мести, подметать",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "Will you sweep the leaves off the patio ? - Ты не подметёшь листья во дворе ?"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "swim",
+    "verbInfinitiveTranscription": "[swɪm]",
+    "verbPastTense": "swam",
+    "verbPastTenseTranscription": "[swæm]",
+    "verbPastParticiple": "swum",
+    "verbPastParticipleTranscription": "[swʌm]",
+    "verbTranslation": "плавать",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "I swim anyone hundred yards - Я обгоню всякого в заплыве на сто ярдов"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "take",
+    "verbInfinitiveTranscription": "[teɪk]",
+    "verbPastTense": "took",
+    "verbPastTenseTranscription": "[tʊk]",
+    "verbPastParticiple": "taken",
+    "verbPastParticipleTranscription": "[‘teɪkən]",
+    "verbTranslation": "брать",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "I took her hand and kissed her - Я взял её руку и поцеловал"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "teach",
+    "verbInfinitiveTranscription": "[ti:tʃ]",
+    "verbPastTense": "taught",
+    "verbPastTenseTranscription": "[tɔ:t]",
+    "verbPastParticiple": "taught",
+    "verbPastParticipleTranscription": "[tɔ:t]",
+    "verbTranslation": "учить",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "I taught history for many years - Я много лет преподавал историю"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "tear",
+    "verbInfinitiveTranscription": "[teər]",
+    "verbPastTense": "tore",
+    "verbPastTenseTranscription": "[tɔr]",
     "verbPastParticiple": "torn",
-    "verbPastParticipleTranscription": "",
+    "verbPastParticipleTranscription": "[tɔrn]",
     "verbTranslation": "рвать",
-    "verbImage": "",
+    "verbImage": "verbImages/no_image.jpg",
     "verbExamples": [
       {
-        "example": ""
-      },
-      {
-        "example": ""
-      },
-      {
-        "example": ""
+        "example": "That dog has torn up my newspaper again - Собака опять порвала мою газету"
       }
     ]
   },
   {
-    "verb": "tell",
-    "verbTranscription": "",
-    "verbPastSimple": "told",
-    "verbPastSimpleTranscription": "",
+    "verbInfinitive": "tell",
+    "verbInfinitiveTranscription": "[tel]",
+    "verbPastTense": "told",
+    "verbPastTenseTranscription": "[tould]",
     "verbPastParticiple": "told",
-    "verbPastParticipleTranscription": "",
-    "verbTranslation": "рассказывать",
-    "verbImage": "",
+    "verbPastParticipleTranscription": "[tould]",
+    "verbTranslation": "говорить, рассказывать",
+    "verbImage": "verbImages/no_image.jpg",
     "verbExamples": [
       {
-        "example": ""
-      },
-      {
-        "example": ""
-      },
-      {
-        "example": ""
+        "example": "He could think one thing, and tell another - Он мог думать одно, а говорить другое"
       }
     ]
   },
   {
-    "verb": "think",
-    "verbTranscription": "",
-    "verbPastSimple": "thought",
-    "verbPastSimpleTranscription": "",
+    "verbInfinitive": "think",
+    "verbInfinitiveTranscription": "[θɪŋk]",
+    "verbPastTense": "thought",
+    "verbPastTenseTranscription": "[θɔ:t]",
     "verbPastParticiple": "thought",
-    "verbPastParticipleTranscription": "",
+    "verbPastParticipleTranscription": "[θɔ:t]",
     "verbTranslation": "думать",
-    "verbImage": "",
+    "verbImage": "verbImages/no_image.jpg",
     "verbExamples": [
       {
-        "example": ""
-      },
-      {
-        "example": ""
-      },
-      {
-        "example": ""
+        "example": "I'll think about it - Я подумаю об этом"
       }
     ]
   },
   {
-    "verb": "throw",
-    "verbTranscription": "",
-    "verbPastSimple": "threw",
-    "verbPastSimpleTranscription": "",
+    "verbInfinitive": "throw",
+    "verbInfinitiveTranscription": "[θrou]",
+    "verbPastTense": "threw",
+    "verbPastTenseTranscription": "[θru:]",
     "verbPastParticiple": "thrown",
-    "verbPastParticipleTranscription": "",
+    "verbPastParticipleTranscription": "[θroun]",
     "verbTranslation": "бросать",
-    "verbImage": "",
+    "verbImage": "verbImages/no_image.jpg",
     "verbExamples": [
       {
-        "example": ""
-      },
-      {
-        "example": ""
-      },
-      {
-        "example": ""
+        "example": "Don't throw the ball to me, throw it to the man over there - Не бросай мяч мне, брось его вон тому человеку"
       }
     ]
   },
   {
-    "verb": "thrust",
-    "verbTranscription": "",
-    "verbPastSimple": "thrust",
-    "verbPastSimpleTranscription": "",
-    "verbPastParticiple": "thrust",
-    "verbPastParticipleTranscription": "",
-    "verbTranslation": "толкать",
-    "verbImage": "",
-    "verbExamples": [
-      {
-        "example": ""
-      },
-      {
-        "example": ""
-      },
-      {
-        "example": ""
-      }
-    ]
-  },
-  {
-    "verb": "tread",
-    "verbTranscription": "",
-    "verbPastSimple": "trod",
-    "verbPastSimpleTranscription": "",
-    "verbPastParticiple": "trodden",
-    "verbPastParticipleTranscription": "",
-    "verbTranslation": "ступать, шагать",
-    "verbImage": "",
-    "verbExamples": [
-      {
-        "example": ""
-      },
-      {
-        "example": ""
-      },
-      {
-        "example": ""
-      }
-    ]
-  },
-  {
-    "verb": "understand",
-    "verbTranscription": "",
-    "verbPastSimple": "understood",
-    "verbPastSimpleTranscription": "",
+    "verbInfinitive": "understand",
+    "verbInfinitiveTranscription": "[ʌndər‘stænd]",
+    "verbPastTense": "understood",
+    "verbPastTenseTranscription": "[ʌndər‘stʊd]",
     "verbPastParticiple": "understood",
-    "verbPastParticipleTranscription": "",
+    "verbPastParticipleTranscription": "[ʌndər‘stʊd]",
     "verbTranslation": "понимать",
-    "verbImage": "",
+    "verbImage": "verbImages/no_image.jpg",
     "verbExamples": [
       {
-        "example": ""
-      },
-      {
-        "example": ""
-      },
-      {
-        "example": ""
+        "example": "I cannot understand his behaving like that - Не понимаю, почему он так себя ведёт"
       }
     ]
   },
   {
-    "verb": "wake",
-    "verbTranscription": "",
-    "verbPastSimple": "woke",
-    "verbPastSimpleTranscription": "",
+    "verbInfinitive": "upset",
+    "verbInfinitiveTranscription": "[ʌp’set]",
+    "verbPastTense": "upset",
+    "verbPastTenseTranscription": "[ʌp’set]",
+    "verbPastParticiple": "upset",
+    "verbPastParticipleTranscription": "[ʌp’set]",
+    "verbTranslation": "опрокидывать, переворачивать, расстраивать",
+    "verbImage": "verbImages/no_image.jpg",
+    "verbExamples": [
+      {
+        "example": "I didn't mean to upset you - Я не хотел вас огорчить"
+      }
+    ]
+  },
+  {
+    "verbInfinitive": "wake",
+    "verbInfinitiveTranscription": "[weɪk]",
+    "verbPastTense": "woke",
+    "verbPastTenseTranscription": "[wouk]",
     "verbPastParticiple": "woken",
-    "verbPastParticipleTranscription": "",
+    "verbPastParticipleTranscription": "[‘woukən]",
     "verbTranslation": "просыпаться",
-    "verbImage": "",
+    "verbImage": "verbImages/no_image.jpg",
     "verbExamples": [
       {
-        "example": ""
-      },
-      {
-        "example": ""
-      },
-      {
-        "example": ""
+        "example": "What time did you wake up this morning ? - В котором часу ты встал сегодня утром ?"
       }
     ]
   },
   {
-    "verb": "wear",
-    "verbTranscription": "",
-    "verbPastSimple": "wore",
-    "verbPastSimpleTranscription": "",
+    "verbInfinitive": "wear",
+    "verbInfinitiveTranscription": "[weər]",
+    "verbPastTense": "wore",
+    "verbPastTenseTranscription": "[wɔr]",
     "verbPastParticiple": "worn",
-    "verbPastParticipleTranscription": "",
-    "verbTranslation": "носить (одежда)",
-    "verbImage": "",
+    "verbPastParticipleTranscription": "[wɔrn]",
+    "verbTranslation": "носить",
+    "verbImage": "verbImages/no_image.jpg",
     "verbExamples": [
       {
-        "example": ""
-      },
-      {
-        "example": ""
-      },
-      {
-        "example": ""
+        "example": "Are you going to wear jeans or a dress ? - Ты собираешься надеть джинсы или платье ?"
       }
     ]
   },
   {
-    "verb": "weave",
-    "verbTranscription": "",
-    "verbPastSimple": "wove",
-    "verbPastSimpleTranscription": "",
-    "verbPastParticiple": "woven",
-    "verbPastParticipleTranscription": "",
-    "verbTranslation": "плести, вплетать",
-    "verbImage": "",
-    "verbExamples": [
-      {
-        "example": ""
-      },
-      {
-        "example": ""
-      },
-      {
-        "example": ""
-      }
-    ]
-  },
-  {
-    "verb": "weep",
-    "verbTranscription": "",
-    "verbPastSimple": "wept",
-    "verbPastSimpleTranscription": "",
+    "verbInfinitive": "weep",
+    "verbInfinitiveTranscription": "[wi:p]",
+    "verbPastTense": "wept",
+    "verbPastTenseTranscription": "[wept]",
     "verbPastParticiple": "wept",
-    "verbPastParticipleTranscription": "",
+    "verbPastParticipleTranscription": "[wept]",
     "verbTranslation": "плакать",
-    "verbImage": "",
+    "verbImage": "verbImages/no_image.jpg",
     "verbExamples": [
       {
-        "example": ""
-      },
-      {
-        "example": ""
-      },
-      {
-        "example": ""
+        "example": "To weep bitter tears - Плакать горькими слезами"
       }
     ]
   },
   {
-    "verb": "wet",
-    "verbTranscription": "",
-    "verbPastSimple": "wet",
-    "verbPastSimpleTranscription": "",
+    "verbInfinitive": "wet",
+    "verbInfinitiveTranscription": "[wet]",
+    "verbPastTense": "wet",
+    "verbPastTenseTranscription": "[wet]",
     "verbPastParticiple": "wet",
-    "verbPastParticipleTranscription": "",
-    "verbTranslation": "мочить",
-    "verbImage": "",
+    "verbPastParticipleTranscription": "[wet]",
+    "verbTranslation": "мочить, смачивать, увлажнять",
+    "verbImage": "verbImages/no_image.jpg",
     "verbExamples": [
       {
-        "example": ""
-      },
-      {
-        "example": ""
-      },
-      {
-        "example": ""
+        "example": "I shall be back in a minute, and we'll wet the deal - Я скоро вернусь, и мы обмоем сделку"
       }
     ]
   },
   {
-    "verb": "win",
-    "verbTranscription": "",
-    "verbPastSimple": "won",
-    "verbPastSimpleTranscription": "",
+    "verbInfinitive": "win",
+    "verbInfinitiveTranscription": "[wɪn]",
+    "verbPastTense": "won",
+    "verbPastTenseTranscription": "[wʌn]",
     "verbPastParticiple": "won",
-    "verbPastParticipleTranscription": "",
-    "verbTranslation": "выигрывать",
-    "verbImage": "",
+    "verbPastParticipleTranscription": "[wʌn]",
+    "verbTranslation": "победить, выиграть",
+    "verbImage": "verbImages/no_image.jpg",
     "verbExamples": [
       {
-        "example": ""
-      },
-      {
-        "example": ""
-      },
-      {
-        "example": ""
+        "example": "The home team has won - Команда хозяев одержала победу"
       }
     ]
   },
   {
-    "verb": "wind",
-    "verbTranscription": "",
-    "verbPastSimple": "wound",
-    "verbPastSimpleTranscription": "",
+    "verbInfinitive": "wind",
+    "verbInfinitiveTranscription": "[waind]",
+    "verbPastTense": "wound",
+    "verbPastTenseTranscription": "[waund]",
     "verbPastParticiple": "wound",
-    "verbPastParticipleTranscription": "",
-    "verbTranslation": "извиваться",
-    "verbImage": "",
+    "verbPastParticipleTranscription": "[waund]",
+    "verbTranslation": "извиваться, проветривать, обматывать",
+    "verbImage": "verbImages/no_image.jpg",
     "verbExamples": [
       {
-        "example": ""
-      },
-      {
-        "example": ""
-      },
-      {
-        "example": ""
+        "example": "To wind a bandage round smb's arm - Обмотать руку бинтом"
       }
     ]
   },
   {
-    "verb": "wring",
-    "verbTranscription": "",
-    "verbPastSimple": "wrung",
-    "verbPastSimpleTranscription": "",
-    "verbPastParticiple": "wrung",
-    "verbPastParticipleTranscription": "",
-    "verbTranslation": "сжимать, выжимать",
-    "verbImage": "",
-    "verbExamples": [
-      {
-        "example": ""
-      },
-      {
-        "example": ""
-      },
-      {
-        "example": ""
-      }
-    ]
-  },
-  {
-    "verb": "write",
-    "verbTranscription": "",
-    "verbPastSimple": "wrote",
-    "verbPastSimpleTranscription": "",
+    "verbInfinitive": "write",
+    "verbInfinitiveTranscription": "[raɪt]",
+    "verbPastTense": "wrote",
+    "verbPastTenseTranscription": "[rout]",
     "verbPastParticiple": "written",
-    "verbPastParticipleTranscription": "",
+    "verbPastParticipleTranscription": "[‘rɪtn]",
     "verbTranslation": "писать",
-    "verbImage": "",
+    "verbImage": "verbImages/no_image.jpg",
     "verbExamples": [
       {
-        "example": ""
-      },
-      {
-        "example": ""
-      },
-      {
-        "example": ""
+        "example": "Fear is written on his face - Страх написан у него на лице"
       }
     ]
   }

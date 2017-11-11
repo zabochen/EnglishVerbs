@@ -24,9 +24,10 @@ class VerbListPresenter : MvpPresenter<VerbListView>() {
     }
 
     fun onClickVerbItem(activityContext: Context, position: Int) {
-        var intentVerbFullActivity: Intent = Intent(activityContext, VerbFullActivity::class.java)
+        var intentVerbFullActivity = Intent(activityContext, VerbFullActivity::class.java)
         intentVerbFullActivity.putExtra(Constants.INTENT_VERB_SELECTED_POSITION, position)
         activityContext.startActivity(intentVerbFullActivity)
     }
+
 
 }

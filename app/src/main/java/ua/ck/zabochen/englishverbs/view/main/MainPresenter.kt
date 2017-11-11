@@ -25,6 +25,7 @@ class MainPresenter : MvpPresenter<MainView>(),
 
         // Inflate data
         mRealmHelper.inflateDatabase(object : CallbackEvent.DatabaseCallback {
+
             override fun onComplete() {
                 // Show verb fragment
                 viewState.setVerbList()

@@ -97,7 +97,7 @@
     "verbPastParticiple": "begun",
     "verbPastParticipleTranscription": "[bɪ ‘gʌn]",
     "verbTranslation": "начинать(ся)",
-    "verbImage": "verbImages/no_image.jpg",
+    "verbImage": "verbImages/begin.jpg",
     "verbExamples": [
       {
         "example": "The lecture began with a quotation - Лекция началась с цитаты"
@@ -112,7 +112,7 @@
     "verbPastParticiple": "bent",
     "verbPastParticipleTranscription": "[bent]",
     "verbTranslation": "сгибать, гнуть",
-    "verbImage": "verbImages/no_image.jpg",
+    "verbImage": "verbImages/bend.jpg",
     "verbExamples": [
       {
         "example": "The road bends to the right - Дорога поворачивает направо"
@@ -127,7 +127,7 @@
     "verbPastParticiple": "bound",
     "verbPastParticipleTranscription": "[baʊnd]",
     "verbTranslation": "связывать",
-    "verbImage": "verbImages/no_image.jpg",
+    "verbImage": "verbImages/bind.jpg",
     "verbExamples": [
       {
         "example": "They bound his legs tight - Они крепко связали его ноги"
@@ -141,8 +141,8 @@
     "verbPastTenseTranscription": "[bɪt]",
     "verbPastParticiple": "bitten",
     "verbPastParticipleTranscription": "[‘bɪtn]",
-    "verbTranslation": "кусать(ся)",
-    "verbImage": "verbImages/no_image.jpg",
+    "verbTranslation": "кусать",
+    "verbImage": "verbImages/bite.jpg",
     "verbExamples": [
       {
         "example": "Does your dog bite ? - Твоя собака кусается ?"
@@ -157,7 +157,7 @@
     "verbPastParticiple": "bled",
     "verbPastParticipleTranscription": "[bled]",
     "verbTranslation": "кровоточить",
-    "verbImage": "verbImages/no_image.jpg",
+    "verbImage": "verbImages/bleed.jpg",
     "verbExamples": [
       {
         "example": "My heart bleeds for him - Сердце кровью обливается за него"
@@ -172,7 +172,7 @@
     "verbPastParticiple": "blown",
     "verbPastParticipleTranscription": "[bloun]",
     "verbTranslation": "дуть",
-    "verbImage": "verbImages/no_image.jpg",
+    "verbImage": "verbImages/blow.jpg",
     "verbExamples": [
       {
         "example": "A cold breeze was blowing hard - Дул сильный, холодный ветер"
@@ -187,7 +187,7 @@
     "verbPastParticiple": "broken",
     "verbPastParticipleTranscription": "[‘broukən]",
     "verbTranslation": "ломать, разбивать, разрушать",
-    "verbImage": "verbImages/no_image.jpg",
+    "verbImage": "verbImages/break.jpg",
     "verbExamples": [
       {
         "example": "The plane broke into three pieces - Самолёт разломился на три части"
@@ -202,7 +202,7 @@
     "verbPastParticiple": "brought",
     "verbPastParticipleTranscription": "[brɔ:t]",
     "verbTranslation": "приносить, привозить, приводить, доставлять",
-    "verbImage": "verbImages/no_image.jpg",
+    "verbImage": "verbImages/bring.jpg",
     "verbExamples": [
       {
         "example": "They are going to bring one of their friends with them - Они собираются привести с собой одного из своих друзей"
@@ -217,7 +217,7 @@
     "verbPastParticiple": "built",
     "verbPastParticipleTranscription": "[bɪlt]",
     "verbTranslation": "строить",
-    "verbImage": "verbImages/no_image.jpg",
+    "verbImage": "verbImages/build.jpg",
     "verbExamples": [
       {
         "example": "The house was built in the early 19th century - Дом был построен в начале 19 века"
@@ -232,7 +232,7 @@
     "verbPastParticiple": "burnt",
     "verbPastParticipleTranscription": "[bз:nt]",
     "verbTranslation": "гореть",
-    "verbImage": "verbImages/no_image.jpg",
+    "verbImage": "verbImages/burn.jpg",
     "verbExamples": [
       {
         "example": "There was a fire burning in the large fireplace - В большом камине горел огонь"
@@ -247,7 +247,7 @@
     "verbPastParticiple": "burst",
     "verbPastParticipleTranscription": "[bз:st]",
     "verbTranslation": "лопаться, разрываться, взрываться",
-    "verbImage": "verbImages/no_image.jpg",
+    "verbImage": "verbImages/burst.jpg",
     "verbExamples": [
       {
         "example": "Shells were bursting all around us - Вокруг нас рвались снаряды"
@@ -262,7 +262,7 @@
     "verbPastParticiple": "bought",
     "verbPastParticipleTranscription": "[bɔ:t]",
     "verbTranslation": "покупать",
-    "verbImage": "verbImages/no_image.jpg",
+    "verbImage": "verbImages/buy.jpg",
     "verbExamples": [
       {
         "example": "He bought the book for $5 - Он купил книгу за $5"
@@ -277,7 +277,7 @@
     "verbPastParticiple": "cast",
     "verbPastParticipleTranscription": "[kɑːst]",
     "verbTranslation": "бросать, кидать, швырять",
-    "verbImage": "verbImages/no_image.jpg",
+    "verbImage": "verbImages/cast.jpg",
     "verbExamples": [
       {
         "example": "The snake cast off its old skin - Змея сбросила старую кожу"
@@ -292,7 +292,7 @@
     "verbPastParticiple": "caught",
     "verbPastParticipleTranscription": "[kɔ:t]",
     "verbTranslation": "ловить, поймать, схватить",
-    "verbImage": "verbImages/no_image.jpg",
+    "verbImage": "verbImages/catch.jpg",
     "verbExamples": [
       {
         "example": "You might catch him in about 11 o'clock - Ты можешь застать его дома около 11 часов"
@@ -307,7 +307,7 @@
     "verbPastParticiple": "chosen",
     "verbPastParticipleTranscription": "[‘tʃouzən]",
     "verbTranslation": "выбирать",
-    "verbImage": "verbImages/no_image.jpg",
+    "verbImage": "verbImages/choose.jpg",
     "verbExamples": [
       {
         "example": "It is difficult to choose among so many nice houses - Так трудно выбрать, тут столько таких прелестных домиков"
@@ -322,7 +322,7 @@
     "verbPastParticiple": "come",
     "verbPastParticipleTranscription": "[kʌm]",
     "verbTranslation": "приходить",
-    "verbImage": "verbImages/no_image.jpg",
+    "verbImage": "verbImages/come.jpg",
     "verbExamples": [
       {
         "example": "Godfather, come and see your boy - Крёстный отец, подойдите же и посмотрите на своего мальчика"
@@ -337,7 +337,7 @@
     "verbPastParticiple": "cost",
     "verbPastParticipleTranscription": "[kɔst]",
     "verbTranslation": "стоить",
-    "verbImage": "verbImages/no_image.jpg",
+    "verbImage": "verbImages/cost.jpg",
     "verbExamples": [
       {
         "example": "Financial worries cost her many sleepless nights - Финансовые проблемы стоили ей множества бессонных ночей"
@@ -352,7 +352,7 @@
     "verbPastParticiple": "cut",
     "verbPastParticipleTranscription": "[kʌt]",
     "verbTranslation": "резать",
-    "verbImage": "verbImages/no_image.jpg",
+    "verbImage": "verbImages/cut.jpg",
     "verbExamples": [
       {
         "example": "The knife does not cut - Нож не режет"
@@ -367,7 +367,7 @@
     "verbPastParticiple": "dug",
     "verbPastParticipleTranscription": "[dʌg]",
     "verbTranslation": "копать, рыть",
-    "verbImage": "verbImages/no_image.jpg",
+    "verbImage": "verbImages/dig.jpg",
     "verbExamples": [
       {
         "example": "The hole was freshly dug - Яма была выкопана недавно"
@@ -382,7 +382,7 @@
     "verbPastParticiple": "done",
     "verbPastParticipleTranscription": "[dʌn]",
     "verbTranslation": "делать",
-    "verbImage": "verbImages/no_image.jpg",
+    "verbImage": "verbImages/do.jpg",
     "verbExamples": [
       {
         "example": "What are you doing ? - Что вы делаете ?"
@@ -397,7 +397,7 @@
     "verbPastParticiple": "drawn",
     "verbPastParticipleTranscription": "[drɔ:n]",
     "verbTranslation": "рисовать",
-    "verbImage": "verbImages/no_image.jpg",
+    "verbImage": "verbImages/draw.jpg",
     "verbExamples": [
       {
         "example": "He draws beautifully - Он прекрасно рисует"

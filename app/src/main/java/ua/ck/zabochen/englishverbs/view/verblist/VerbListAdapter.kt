@@ -5,7 +5,6 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.item_adapter_verb_list.view.*
 import ua.ck.zabochen.englishverbs.R
 import ua.ck.zabochen.englishverbs.model.realm.Verb
@@ -35,7 +34,14 @@ class VerbListAdapter(context: Context, verbList: ArrayList<Verb>) : RecyclerVie
         private val mContext = context
 
         fun bind(verb: Verb) {
+
+            // Verb image
+            itemView.itemAdapterVerbList_verbImage.setImageDrawable(Tools.roundedImageFromAssets(mContext, verb.verbImage))
+
+            // Verb
             itemView.itemAdapterVerbList_verbName.text = verb.verbInfinitive
+
+            // Verb transcription
             itemView.itemAdapterVerbList_verbTranscription.text = verb.verbInfinitiveTranscription
             if (!verb.verbExamples.isEmpty()) {
                 itemView.itemAdapterVerbList_verbExample.text = verb.verbExamples[0]?.example

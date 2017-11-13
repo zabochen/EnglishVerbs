@@ -27,18 +27,31 @@ class RealmHelper(private val applicationContext: Context) : AnkoLogger {
     }
 
     fun getVerbList(): ArrayList<Verb> {
-        val mRealmInstance = Realm.getDefaultInstance()
+
+        val realmInstance = Realm.getDefaultInstance()
 
         // Get Verb List
-        var verbList: ArrayList<Verb> = ArrayList()
-        verbList.addAll(mRealmInstance.where(Verb::class.java).findAll())
+        val verbList: ArrayList<Verb> = ArrayList()
+        verbList.addAll(realmInstance.where(Verb::class.java).findAll())
 
         // Close Realm
-        if (!mRealmInstance.isClosed) mRealmInstance.close()
+        if (!realmInstance.isClosed) realmInstance.close()
 
         return verbList
     }
 
+    fun getVerb(verbPosition: Int): Verb? {
+
+        val realmInstance = Realm.getDefaultInstance()
+
+        // Get Verb
+        val realmResult = realmInstance.where(Verb::class.java).findAll()
+
+        // Close Realm
+        if (!realmInstance.isClosed) realmInstance.close()
+
+        return realmResult[verbPosition]
+    }
 
 //    public Verb getRandomVerb() {
 //

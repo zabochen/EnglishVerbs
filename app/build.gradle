@@ -59,6 +59,9 @@ dependencies {
     implementation 'com.arello-mobile:moxy-app-compat:1.5.3'
     kapt 'com.arello-mobile:moxy-compiler:1.5.3'
 
+    // Firebase JobDispatcher
+    implementation 'com.firebase:firebase-jobdispatcher:0.8.4'
+
     // ButterKnife
     implementation 'com.jakewharton:butterknife:8.8.1'
     kapt 'com.jakewharton:butterknife-compiler:8.8.1'

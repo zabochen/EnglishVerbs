@@ -31,7 +31,7 @@ class VerbListFragment : MvpAppCompatFragment(),
     override fun setUi(verbList: ArrayList<Verb>) {
         // RecyclerView - VerbList
         fragmentVerbList_recyclerView.layoutManager = LinearLayoutManager(activity)
-        fragmentVerbList_recyclerView.adapter = VerbListAdapter(verbList)
+        fragmentVerbList_recyclerView.adapter = VerbListAdapter(activity, verbList)
         fragmentVerbList_recyclerView.addOnItemTouchListener(RecyclerViewItemTouchListener(
                 activity,
                 fragmentVerbList_recyclerView,

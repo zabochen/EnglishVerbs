@@ -22,11 +22,12 @@
 
         <ImageView
             android:id="@+id/activityVerbFull_imageView_verbImage"
-            android:layout_width="180dp"
+            android:layout_width="match_parent"
             android:layout_height="180dp"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
+            android:scaleType="centerCrop"
             android:transitionName="@string/transition_image" />
 
         <!-- CardView - Verb Translation -->
@@ -131,9 +132,9 @@
 
         </android.support.v7.widget.CardView>
 
-        <!-- CardView - VerbPastSimple -->
+        <!-- CardView - VerbPastTense -->
         <android.support.v7.widget.CardView
-            android:id="@+id/activityVerbFull_cardView_verbPastSimple"
+            android:id="@+id/activityVerbFull_cardView_verbPastTense"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/activityVerbFull_cardView_verb"
@@ -149,7 +150,7 @@
                 android:layout_height="wrap_content"
                 android:padding="10dp">
 
-                <!-- VerbPastSimple Group -->
+                <!-- VerbPastTense Group -->
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -160,7 +161,7 @@
 
                     <!-- VerbPastSimple -->
                     <TextView
-                        android:id="@+id/activityVerbFull_texView_verbPastSimple"
+                        android:id="@+id/activityVerbFull_textView_verbPastTense"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="6dp"
@@ -169,7 +170,7 @@
 
                     <!-- VerbPastSimple Transcription -->
                     <TextView
-                        android:id="@+id/activityVerbFull_textView_verbPastSimpleTranscription"
+                        android:id="@+id/activityVerbFull_textView_verbPastTenseTranscription"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Verb Past Simple Transcription"
@@ -179,7 +180,7 @@
 
                 <!-- VerbPastSimple Play -->
                 <ImageView
-                    android:id="@+id/activityVerbFull_imageView_verbPastSimplePlay"
+                    android:id="@+id/activityVerbFull_imageView_verbPastTensePlay"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
@@ -199,7 +200,7 @@
             android:id="@+id/activityVerbFull_cardView_verbPastParticiple"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/activityVerbFull_cardView_verbPastSimple"
+            android:layout_below="@id/activityVerbFull_cardView_verbPastTense"
             android:layout_marginEnd="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
@@ -223,7 +224,7 @@
 
                     <!-- VerbPastParticiple -->
                     <TextView
-                        android:id="@+id/activityVerbFull_texView_verbPastParticiple"
+                        android:id="@+id/activityVerbFull_textView_verbPastParticiple"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="6dp"

@@ -10,6 +10,10 @@ class Tools {
 
     companion object {
 
+        fun bitmapImageFromAssets(context: Context, imagePath: String): Bitmap {
+            return BitmapFactory.decodeStream(context.assets.open(imagePath))
+        }
+
         fun roundedImageFromAssets(context: Context, imagePath: String): RoundedBitmapDrawable {
 
             // Source image

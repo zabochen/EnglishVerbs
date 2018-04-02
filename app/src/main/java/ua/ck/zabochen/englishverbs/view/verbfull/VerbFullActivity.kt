@@ -1,10 +1,11 @@
 package ua.ck.zabochen.englishverbs.view.verbfull
 
+
 import android.os.Bundle
 import android.support.v4.content.ContextCompat
+import android.support.v7.widget.Toolbar
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import com.arellomobile.mvp.presenter.InjectPresenter
 import kotlinx.android.synthetic.main.activity_verb_full.*
 import org.jetbrains.anko.AnkoLogger
@@ -29,7 +30,7 @@ class VerbFullActivity : BaseActivity(),
     }
 
     private fun loadVerb(verbPosition: Int) {
-        mVerbFullPresenter.loadVerb(verbPosition)
+        mVerbFullPresenter.loadVerb(this, verbPosition)
     }
 
     override fun setUi(verb: Verb?) {
@@ -37,16 +38,19 @@ class VerbFullActivity : BaseActivity(),
         // Layout
         setContentView(R.layout.activity_verb_full)
 
-        // Toolbar
-        val toolbar = activityVerbFull_toolbar
-        toolbar.setTitleTextColor(ContextCompat.getColor(this, R.color.toolbarTitle))
-        setSupportActionBar(toolbar)
-
         if (verb != null) {
 
-            // Verb Image
-            val mVerbImage: ImageView = activityVerbFull_imageView_verbImage
-            mVerbImage.setImageBitmap(Tools.bitmapImageFromAssets(this, verb.verbImage))
+            // Toolbar
+            val toolbar: Toolbar = activityVerbFull_toolbar
+            toolbar.title = verb.verbInfinitive.toUpperCase()
+            toolbar.setTitleTextColor(ContextCompat.getColor(this, R.color.toolbarTitle))
+
+            // Toolbar Background
+            val toolbarBackground = activityVerbFull_imageView_toolbarBackground
+            toolbarBackground.setImageBitmap(Tools.bitmapImageFromAssets(this, verb.verbImage))
+
+            // Set Toolbar
+            setSupportActionBar(toolbar)
 
             // Verb Translation
             val mVerbTranslation: TextView = activityVerbFull_textView_verbTranslation
@@ -61,7 +65,7 @@ class VerbFullActivity : BaseActivity(),
 
             val mVerbInfinitiveButtonPlay: ImageView = activityVerbFull_imageView_verbPlay
             mVerbInfinitiveButtonPlay.setOnClickListener {
-                Toast.makeText(this, "Infinitive", Toast.LENGTH_LONG).show()
+                mVerbFullPresenter.speakVerb(verb.verbInfinitive)
             }
 
             // Verb Past Tense
@@ -73,7 +77,7 @@ class VerbFullActivity : BaseActivity(),
 
             val mVerbPastTenseButtonPlay: ImageView = activityVerbFull_imageView_verbPastTensePlay
             mVerbPastTenseButtonPlay.setOnClickListener {
-                Toast.makeText(this, "Verb Past Tense", Toast.LENGTH_LONG).show()
+                mVerbFullPresenter.speakVerb(verb.verbPastTense)
             }
 
             // Verb Past Participle
@@ -85,7 +89,7 @@ class VerbFullActivity : BaseActivity(),
 
             val mVerbPastParticipleButtonPlay: ImageView = activityVerbFull_imageView_verbPastParticiplePlay
             mVerbPastParticipleButtonPlay.setOnClickListener {
-                Toast.makeText(this, "Verb Past Participle", Toast.LENGTH_LONG).show()
+                mVerbFullPresenter.speakVerb(verb.verbPastParticiple)
             }
 
         }

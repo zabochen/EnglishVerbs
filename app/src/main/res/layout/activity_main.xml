@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -10,30 +11,39 @@
         <android.support.v7.widget.Toolbar
             android:id="@+id/activityMain_toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize" />
+            android:layout_height="?attr/actionBarSize">
+
+            <!-- Toolbar Center Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/norwester"
+                android:text="@string/app_name"
+                android:textAllCaps="true"
+                android:textColor="@android:color/background_light"
+                android:textSize="20sp" />
+
+        </android.support.v7.widget.Toolbar>
 
     </android.support.design.widget.AppBarLayout>
 
-    <!-- ProgressBar Center -->
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="?attr/actionBarSize">
-
-        <ProgressBar
-            android:id="@+id/activityMain_progressBarCenter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:visibility="gone" />
-
-    </RelativeLayout>
-
-    <!-- Content -->
+    <!-- Fragment Holder -->
     <FrameLayout
         android:id="@+id/activityMain_frameLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginBottom="?attr/actionBarSize"
         android:layout_marginTop="?attr/actionBarSize" />
+
+    <!-- Bottom Navigation View -->
+    <android.support.design.widget.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:itemBackground="@color/bottomNavigationView_itemBackground"
+        app:itemIconTint="@color/bottomNavigationView_iconTint"
+        app:itemTextColor="@color/bottomNavigationView_textColor"
+        app:menu="@menu/menu_bottom_navigation_view" />
 
 </android.support.design.widget.CoordinatorLayout>

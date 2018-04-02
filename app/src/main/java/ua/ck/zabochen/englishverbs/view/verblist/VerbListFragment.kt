@@ -19,11 +19,12 @@ class VerbListFragment : MvpAppCompatFragment(),
 
     @InjectPresenter lateinit var mVerbListPresenter: VerbListPresenter
 
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater?.inflate(R.layout.fragment_verb_list, container, false)
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        return inflater.inflate(R.layout.fragment_verb_list, container, false)
     }
 
-    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         mVerbListPresenter.viewIsReady()
     }
@@ -31,13 +32,13 @@ class VerbListFragment : MvpAppCompatFragment(),
     override fun setUi(verbList: ArrayList<Verb>) {
         // RecyclerView - VerbList
         fragmentVerbList_recyclerView.layoutManager = LinearLayoutManager(activity)
-        fragmentVerbList_recyclerView.adapter = VerbListAdapter(activity, verbList)
+        fragmentVerbList_recyclerView.adapter = VerbListAdapter(activity!!.applicationContext, verbList)
         fragmentVerbList_recyclerView.addOnItemTouchListener(RecyclerViewItemTouchListener(
                 activity,
                 fragmentVerbList_recyclerView,
                 object : RecyclerViewItemTouchListener.ClickListener {
                     override fun onClick(view: View?, position: Int) {
-                        mVerbListPresenter.onClickVerbItem(activity, position)
+                        mVerbListPresenter.onClickVerbItem(activity!!.applicationContext, position)
                     }
 
                     override fun onLongClick(view: View?, position: Int) {

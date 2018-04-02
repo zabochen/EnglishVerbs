@@ -14,6 +14,10 @@ class Constants {
         // Intents
         @JvmStatic val INTENT_VERB_SELECTED_POSITION: String = "intent_verb_selected_position"
 
+        // Notifications
+        @JvmStatic val NOTIFICATION_ID: Int = 0
+        @JvmStatic val NOTIFICATION_CHANNEL_ID: String = "English verbs"
+
     }
 
 }

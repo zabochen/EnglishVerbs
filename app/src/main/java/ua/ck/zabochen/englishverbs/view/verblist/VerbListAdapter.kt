@@ -15,14 +15,14 @@ class VerbListAdapter(context: Context, verbList: ArrayList<Verb>) : RecyclerVie
     private val mContext = context
     private var mVerbList: ArrayList<Verb> = verbList
 
-    override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): VerbListViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VerbListViewHolder {
         return VerbListViewHolder(mContext, LayoutInflater.from(parent?.context)
                 .inflate(R.layout.item_adapter_verb_list, parent, false)
         )
     }
 
-    override fun onBindViewHolder(holder: VerbListViewHolder?, position: Int) {
-        holder?.bind(mVerbList[position])
+    override fun onBindViewHolder(holder: VerbListViewHolder, position: Int) {
+        holder.bind(mVerbList[position])
     }
 
     override fun getItemCount(): Int {

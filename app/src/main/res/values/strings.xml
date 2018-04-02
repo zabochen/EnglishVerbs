@@ -1,17 +1,17 @@
 <resources>
     <string name="app_name">English Verbs</string>
 
-    <!-- Setting Activity -->
-    <string name="settingActivity_title">Settings</string>
+    <!-- Settings Activity -->
+    <string name="settingsActivity_toolbar_title">Settings</string>
 
-    <!-- Settings XML-->
-    <!-- Settings VerbNotificationGroup -->
+    <!-- Settings Fragment XML-->
+    <!-- Settings Fragment - Verb Notification Group -->
     <string name="settings_category_notification_title">Notification</string>
-    <!-- Settings VerbNotification - State -->
+    <!-- Settings Fragment - Verb Notification State -->
     <string name="settings_switchPreference_verbNotificationState_title">Notification state</string>
     <string name="settings_switchPreference_verbNotificationState_summary">Selecting verb notification state</string>
     <string name="settings_switchPreference_verbNotificationState_key">settings_switchPreference_verbNotificationState</string>
-    <!-- Settings VerbNotification - Time -->
+    <!-- Settings Fragment - Verb Notification Time -->
     <string name="settings_listPreference_verbNotificationTime_title">Notification time</string>
     <string name="settings_listPreference_verbNotificationTime_summary">Selecting verb notification time range</string>
     <string name="settings_listPreference_verbNotificationTime_key">settings_listPreference_verbNotificationTime</string>
@@ -58,6 +58,11 @@
 
     <!-- Menu Main -->
     <string name="menuMain_itemSettings_title">Settings</string>
+
+    <!-- Bottom Navigation View -->
+    <string name="bottomNavigationView_itemHome_title">Home</string>
+    <string name="bottomNavigationView_itemBookmarks_title">Bookmarks</string>
+    <string name="bottomNavigationView_itemNotifications_title">Notifications</string>
 
     <!-- Transition Animation -->
     <string name="transition_image">imageTransition</string>

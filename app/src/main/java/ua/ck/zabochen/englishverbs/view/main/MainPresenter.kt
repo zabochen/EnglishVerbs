@@ -1,12 +1,14 @@
 package ua.ck.zabochen.englishverbs.view.main
 
+import android.content.Context
+import android.content.Intent
 import com.arellomobile.mvp.InjectViewState
 import com.arellomobile.mvp.MvpPresenter
 import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.info
 import ua.ck.zabochen.englishverbs.MainApp
 import ua.ck.zabochen.englishverbs.callback.CallbackEvent
-import ua.ck.zabochen.englishverbs.database.RealmHelper
+import ua.ck.zabochen.englishverbs.helper.database.RealmHelper
+import ua.ck.zabochen.englishverbs.view.setting.SettingsActivity
 import javax.inject.Inject
 
 @InjectViewState
@@ -36,7 +38,6 @@ class MainPresenter : MvpPresenter<MainView>(),
             override fun onError(error: Throwable) {
                 // Hide progressBar
                 viewState.hideProgressBar()
-                info("${error.printStackTrace()}")
             }
         })
     }

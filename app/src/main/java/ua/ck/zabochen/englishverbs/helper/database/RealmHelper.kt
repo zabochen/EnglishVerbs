@@ -1,4 +1,4 @@
-package ua.ck.zabochen.englishverbs.database
+package ua.ck.zabochen.englishverbs.helper.database
 
 import android.content.Context
 import io.realm.Realm

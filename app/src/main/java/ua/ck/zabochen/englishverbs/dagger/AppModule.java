@@ -6,8 +6,9 @@ import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
-import ua.ck.zabochen.englishverbs.database.RealmHelper;
-import ua.ck.zabochen.englishverbs.notification.NotificationHelper;
+import ua.ck.zabochen.englishverbs.helper.database.RealmHelper;
+import ua.ck.zabochen.englishverbs.helper.notification.NotificationHelper;
+import ua.ck.zabochen.englishverbs.helper.speech.SpeechHelper;
 
 @Module
 public class AppModule {
@@ -31,11 +32,18 @@ public class AppModule {
         return new RealmHelper(context);
     }
 
+    // TextToSpeech
+    @Provides
+    @Singleton
+    public SpeechHelper provideSpeechHelper(Context context) {
+        return new SpeechHelper(context);
+    }
+
     // Notification
     @Provides
     @Singleton
-    public NotificationHelper provideNotificationHelper(Context context) {
-        return new NotificationHelper(context);
+    public NotificationHelper provideNotificationHelper() {
+        return new NotificationHelper();
     }
 
 }

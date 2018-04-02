@@ -1,17 +1,29 @@
 <resources>
 
-    <!-- Base Theme -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <!-- NoActionBar Theme -->
+    <style name="AppThemeNoActionBar" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-    </style>
-
-    <!-- NoActionBar Theme -->
-    <style name="AppTheme.NoActionBar">
+        <item name="actionOverflowButtonStyle">@style/ActionButtonOverflow</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
+    </style>
+
+    <!-- AppBar Layout -->
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <!-- Toolbar -->
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!-- Toolbar Menu Icon -->
+    <style name="ActionButtonOverflow" parent="Widget.AppCompat.ActionButton.Overflow">
+        <item name="android:tint">@android:color/white</item>
+    </style>
+
+    <!-- Toolbar Home Arrow -->
+    <style name="ToolbarHomeArrow" parent="AppThemeNoActionBar">
     </style>
 
 </resources>

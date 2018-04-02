@@ -8,14 +8,15 @@
         android:layout_height="wrap_content">
 
         <android.support.v7.widget.Toolbar
-            android:id="@+id/activityPreference_toolbar"
+            android:id="@+id/activitySettings_toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize" />
 
     </android.support.design.widget.AppBarLayout>
 
+    <!-- Settings Fragment -->
     <FrameLayout
-        android:id="@+id/activityPreference_frameLayout"
+        android:id="@+id/activitySettings_frameLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="?attr/actionBarSize" />

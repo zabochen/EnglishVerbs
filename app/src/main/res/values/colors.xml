@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#E91E63</color>
-    <color name="colorPrimaryDark">#C2185B</color>
+    <color name="colorPrimary">#673AB7</color>
+    <color name="colorPrimaryDark">#512DA8</color>
     <color name="colorAccent">#FF4081</color>
 
     <!-- Background -->
@@ -9,6 +9,11 @@
 
     <!-- Toolbar -->
     <color name="toolbarTitle">#ffffff</color>
+
+    <!-- Bottom Navigation View -->
+    <color name="bottomNavigationView_itemBackground">#673AB7</color>
+    <color name="bottomNavigationView_iconTint">#ffffff</color>
+    <color name="bottomNavigationView_textColor">#ffffff</color>
 
     <!-- Adapter Verb -->
     <color name="adapter_verb">#4f4f4f</color>

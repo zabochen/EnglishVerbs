@@ -5,7 +5,7 @@ import android.content.Intent
 import com.arellomobile.mvp.InjectViewState
 import com.arellomobile.mvp.MvpPresenter
 import ua.ck.zabochen.englishverbs.MainApp
-import ua.ck.zabochen.englishverbs.database.RealmHelper
+import ua.ck.zabochen.englishverbs.helper.database.RealmHelper
 import ua.ck.zabochen.englishverbs.utils.Constants
 import ua.ck.zabochen.englishverbs.view.verbfull.VerbFullActivity
 import javax.inject.Inject

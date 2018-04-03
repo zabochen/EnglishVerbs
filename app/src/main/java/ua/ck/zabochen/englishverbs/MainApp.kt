@@ -3,15 +3,15 @@ package ua.ck.zabochen.englishverbs
 import android.app.Application
 import io.realm.Realm
 import io.realm.RealmConfiguration
-import ua.ck.zabochen.englishverbs.dagger.AppComponent
 import ua.ck.zabochen.englishverbs.dagger.AppModule
-import ua.ck.zabochen.englishverbs.dagger.DaggerAppComponent
+import ua.ck.zabochen.englishverbs.dagger.DaggerMainAppComponent
+import ua.ck.zabochen.englishverbs.dagger.MainAppComponent
 import ua.ck.zabochen.englishverbs.utils.Constants
 
 class MainApp : Application() {
 
     companion object {
-        @JvmStatic lateinit var mAppComponent: AppComponent
+        lateinit var mAppComponent: MainAppComponent
         fun appComponent() = mAppComponent
     }
 
@@ -22,7 +22,7 @@ class MainApp : Application() {
     }
 
     private fun setDagger() {
-        mAppComponent = DaggerAppComponent.builder()
+        mAppComponent = DaggerMainAppComponent.builder()
                 .appModule(AppModule(this))
                 .build()
     }

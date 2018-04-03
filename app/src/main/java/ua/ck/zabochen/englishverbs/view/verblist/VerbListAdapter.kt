@@ -16,7 +16,7 @@ class VerbListAdapter(context: Context, verbList: ArrayList<Verb>) : RecyclerVie
     private var mVerbList: ArrayList<Verb> = verbList
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VerbListViewHolder {
-        return VerbListViewHolder(mContext, LayoutInflater.from(parent?.context)
+        return VerbListViewHolder(mContext, LayoutInflater.from(parent.context)
                 .inflate(R.layout.item_adapter_verb_list, parent, false)
         )
     }

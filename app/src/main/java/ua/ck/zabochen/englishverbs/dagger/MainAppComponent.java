@@ -9,7 +9,7 @@ import ua.ck.zabochen.englishverbs.view.verblist.VerbListPresenter;
 
 @Singleton
 @Component(modules = {AppModule.class})
-public interface AppComponent {
+public interface MainAppComponent {
 
     void inject(MainPresenter mainPresenter);
     void inject(VerbListPresenter verbListPresenter);

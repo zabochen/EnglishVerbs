@@ -1,14 +1,10 @@
 package ua.ck.zabochen.englishverbs.view.main
 
-import android.content.Context
-import android.content.Intent
 import com.arellomobile.mvp.InjectViewState
 import com.arellomobile.mvp.MvpPresenter
 import org.jetbrains.anko.AnkoLogger
-import ua.ck.zabochen.englishverbs.MainApp
 import ua.ck.zabochen.englishverbs.callback.CallbackEvent
 import ua.ck.zabochen.englishverbs.helper.database.RealmHelper
-import ua.ck.zabochen.englishverbs.view.setting.SettingsActivity
 import javax.inject.Inject
 
 @InjectViewState
@@ -16,10 +12,10 @@ class MainPresenter : MvpPresenter<MainView>(),
         AnkoLogger {
 
     init {
-        MainApp.appComponent().inject(this)
     }
 
-    @Inject lateinit var mRealmHelper: RealmHelper
+    @Inject
+    lateinit var mRealmHelper: RealmHelper
 
     fun inflateOrUpdateDatabase() {
         // Show progressBar

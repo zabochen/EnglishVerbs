@@ -3,16 +3,14 @@ package ua.ck.zabochen.englishverbs.dagger.component
 import android.content.Context
 import dagger.Component
 import ua.ck.zabochen.englishverbs.dagger.module.ApplicationContextModule
-import ua.ck.zabochen.englishverbs.dagger.module.NotificationModule
-import ua.ck.zabochen.englishverbs.dagger.module.RealmModule
-import ua.ck.zabochen.englishverbs.dagger.module.SpeechModule
+import javax.inject.Singleton
 
 @Component(modules = [ApplicationContextModule::class])
+@Singleton
 interface AppComponent {
 
     // Dependent components
-    fun addActivityComponent(realmModule: RealmModule, speechModule: SpeechModule,
-                             notificationModule: NotificationModule): ActivityComponent
+    fun activityComponentBuilder(): ActivityComponent.Builder
 
     // Available dependencies for child components
     fun applicationContext(): Context

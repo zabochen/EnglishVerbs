@@ -54,11 +54,11 @@ class MainApp : Application() {
     }
 
     fun addActivityComponent(): ActivityComponent? {
-        mActivityComponent = mAppComponent.addActivityComponent(
-                RealmModule(),
-                SpeechModule(),
-                NotificationModule()
-        )
+        mActivityComponent = mAppComponent.activityComponentBuilder()
+                .realmModule(RealmModule())
+                .speechModule(SpeechModule())
+                .notificationModule(NotificationModule())
+                .build()
         return mActivityComponent
     }
 

@@ -6,7 +6,7 @@ import dagger.Provides
 import ua.ck.zabochen.englishverbs.dagger.scope.ActivityScope
 import ua.ck.zabochen.englishverbs.helper.database.RealmHelper
 
-@Module(includes = [ApplicationContextModule::class])
+@Module
 class RealmModule {
 
     @Provides

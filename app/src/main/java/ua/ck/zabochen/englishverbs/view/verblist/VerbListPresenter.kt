@@ -14,17 +14,18 @@ import javax.inject.Inject
 class VerbListPresenter : MvpPresenter<VerbListView>() {
 
     init {
-        MainApp.appComponent().inject(this)
+        MainApp.mainAppComponent().inject(this)
     }
 
-    @Inject lateinit var mRealmHelper: RealmHelper
+    @Inject
+    lateinit var mRealmHelper: RealmHelper
 
     fun viewIsReady() {
         viewState.setUi(mRealmHelper.getVerbList())
     }
 
     fun onClickVerbItem(activityContext: Context, position: Int) {
-        var intentVerbFullActivity = Intent(activityContext, VerbFullActivity::class.java)
+        val intentVerbFullActivity = Intent(activityContext, VerbFullActivity::class.java)
         intentVerbFullActivity.putExtra(Constants.INTENT_VERB_SELECTED_POSITION, position)
         activityContext.startActivity(intentVerbFullActivity)
     }

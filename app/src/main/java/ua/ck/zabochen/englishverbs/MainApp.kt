@@ -6,25 +6,64 @@ import io.realm.RealmConfiguration
 import ua.ck.zabochen.englishverbs.dagger.AppModule
 import ua.ck.zabochen.englishverbs.dagger.DaggerMainAppComponent
 import ua.ck.zabochen.englishverbs.dagger.MainAppComponent
+import ua.ck.zabochen.englishverbs.dagger.component.ActivityComponent
+import ua.ck.zabochen.englishverbs.dagger.component.AppComponent
+import ua.ck.zabochen.englishverbs.dagger.component.DaggerAppComponent
+import ua.ck.zabochen.englishverbs.dagger.module.ApplicationContextModule
+import ua.ck.zabochen.englishverbs.dagger.module.NotificationModule
+import ua.ck.zabochen.englishverbs.dagger.module.RealmModule
+import ua.ck.zabochen.englishverbs.dagger.module.SpeechModule
 import ua.ck.zabochen.englishverbs.utils.Constants
 
 class MainApp : Application() {
 
     companion object {
-        lateinit var mAppComponent: MainAppComponent
-        fun appComponent() = mAppComponent
+
+        lateinit var mAppInstance: MainApp
+        fun mainAppInstance() = mAppInstance
+
+        lateinit var mMainAppComponent: MainAppComponent
+        fun mainAppComponent() = mMainAppComponent
+
+        lateinit var mAppComponent: AppComponent
+        fun getAppComponent() = mAppComponent
     }
+
+    private var mActivityComponent: ActivityComponent? = null
 
     override fun onCreate() {
         super.onCreate()
+
+        // Set App Instance
+        mAppInstance = this
+
         setRealm()
         setDagger()
     }
 
     private fun setDagger() {
-        mAppComponent = DaggerMainAppComponent.builder()
+        // Main AppComponent
+        mMainAppComponent = DaggerMainAppComponent.builder()
                 .appModule(AppModule(this))
                 .build()
+
+        // AppComponent
+        mAppComponent = DaggerAppComponent.builder()
+                .applicationContextModule(ApplicationContextModule(this))
+                .build()
+    }
+
+    fun addActivityComponent(): ActivityComponent? {
+        mActivityComponent = mAppComponent.addActivityComponent(
+                RealmModule(),
+                SpeechModule(),
+                NotificationModule()
+        )
+        return mActivityComponent
+    }
+
+    fun clearActiivtyComponent() {
+        mActivityComponent = null
     }
 
     private fun setRealm() {

@@ -3,6 +3,7 @@ package ua.ck.zabochen.englishverbs.view.main
 import com.arellomobile.mvp.InjectViewState
 import com.arellomobile.mvp.MvpPresenter
 import org.jetbrains.anko.AnkoLogger
+import ua.ck.zabochen.englishverbs.MainApp
 import ua.ck.zabochen.englishverbs.callback.CallbackEvent
 import ua.ck.zabochen.englishverbs.helper.database.RealmHelper
 import javax.inject.Inject
@@ -12,6 +13,7 @@ class MainPresenter : MvpPresenter<MainView>(),
         AnkoLogger {
 
     init {
+        MainApp.mainAppInstance().addActivityComponent()?.inject(this)
     }
 
     @Inject

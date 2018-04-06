@@ -13,7 +13,7 @@ import javax.inject.Inject
 class VerbFullPresenter : MvpPresenter<VerbFullView>() {
 
     init {
-        MainApp.appComponent().inject(this)
+        MainApp.mainAppComponent().inject(this)
     }
 
     @Inject lateinit var mRealmHelper: RealmHelper

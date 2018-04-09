@@ -17,7 +17,8 @@ class VerbListFragment : MvpAppCompatFragment(),
         AnkoLogger,
         VerbListView {
 
-    @InjectPresenter lateinit var mVerbListPresenter: VerbListPresenter
+    @InjectPresenter
+    lateinit var mVerbListPresenter: VerbListPresenter
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -32,7 +33,7 @@ class VerbListFragment : MvpAppCompatFragment(),
     override fun setUi(verbList: ArrayList<Verb>) {
         // RecyclerView - VerbList
         fragmentVerbList_recyclerView.layoutManager = LinearLayoutManager(activity)
-        fragmentVerbList_recyclerView.adapter = VerbListAdapter(activity!!.applicationContext, verbList)
+        fragmentVerbList_recyclerView.adapter = VerbListAdapter(verbList)
         fragmentVerbList_recyclerView.addOnItemTouchListener(RecyclerViewItemTouchListener(
                 activity,
                 fragmentVerbList_recyclerView,

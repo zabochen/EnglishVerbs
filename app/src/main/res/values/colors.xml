@@ -5,7 +5,7 @@
     <color name="colorAccent">#FF4081</color>
 
     <!-- Background -->
-    <color name="background_dark">#343434</color>
+    <color name="background_dark">#eff4f8</color>
 
     <!-- Toolbar -->
     <color name="toolbarTitle">#ffffff</color>

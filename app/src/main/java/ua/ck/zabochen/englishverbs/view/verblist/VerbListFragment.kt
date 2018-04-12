@@ -20,7 +20,6 @@ class VerbListFragment : MvpAppCompatFragment(),
     @InjectPresenter
     lateinit var mVerbListPresenter: VerbListPresenter
 
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_verb_list, container, false)
     }

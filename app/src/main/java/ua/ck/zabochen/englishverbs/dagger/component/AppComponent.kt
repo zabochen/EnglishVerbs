@@ -11,6 +11,7 @@ interface AppComponent {
 
     // Dependent components
     fun activityComponentBuilder(): ActivityComponent.Builder
+    fun fragmentComponentBuilder(): FragmentComponent.Builder
 
     // Available dependencies for child components
     fun applicationContext(): Context

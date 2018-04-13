@@ -1,11 +1,8 @@
 package ua.ck.zabochen.englishverbs.view.main
 
-import com.arellomobile.mvp.MvpView
+import android.support.v4.app.Fragment
+import com.hannesdorfmann.mosby3.mvp.MvpView
 
 interface MainView : MvpView {
-
-    fun setVerbList()
-    fun showProgressBar()
-    fun hideProgressBar()
-
+    fun setFragment(fragment: Fragment)
 }

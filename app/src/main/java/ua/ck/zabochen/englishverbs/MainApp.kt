@@ -9,6 +9,7 @@ import ua.ck.zabochen.englishverbs.dagger.MainAppComponent
 import ua.ck.zabochen.englishverbs.dagger.component.ActivityComponent
 import ua.ck.zabochen.englishverbs.dagger.component.AppComponent
 import ua.ck.zabochen.englishverbs.dagger.component.DaggerAppComponent
+import ua.ck.zabochen.englishverbs.dagger.component.FragmentComponent
 import ua.ck.zabochen.englishverbs.dagger.module.ApplicationContextModule
 import ua.ck.zabochen.englishverbs.dagger.module.NotificationModule
 import ua.ck.zabochen.englishverbs.dagger.module.RealmModule
@@ -27,9 +28,9 @@ class MainApp : Application() {
 
         lateinit var mAppComponent: AppComponent
         fun getAppComponent() = mAppComponent
-    }
 
-    private var mActivityComponent: ActivityComponent? = null
+
+    }
 
     override fun onCreate() {
         super.onCreate()
@@ -53,17 +54,20 @@ class MainApp : Application() {
                 .build()
     }
 
-    fun addActivityComponent(): ActivityComponent? {
-        mActivityComponent = mAppComponent.activityComponentBuilder()
+    fun getActivityComponent(): ActivityComponent {
+        return mAppComponent.activityComponentBuilder()
                 .realmModule(RealmModule())
                 .speechModule(SpeechModule())
                 .notificationModule(NotificationModule())
                 .build()
-        return mActivityComponent
     }
 
-    fun clearActiivtyComponent() {
-        mActivityComponent = null
+    fun getFragmentComponent(): FragmentComponent {
+        return mAppComponent.fragmentComponentBuilder()
+                .realmModule(RealmModule())
+                .notificationModule(NotificationModule())
+                .speechModule(SpeechModule())
+                .build()
     }
 
     private fun setRealm() {

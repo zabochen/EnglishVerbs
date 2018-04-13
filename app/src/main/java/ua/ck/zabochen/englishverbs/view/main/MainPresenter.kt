@@ -1,41 +1,30 @@
 package ua.ck.zabochen.englishverbs.view.main
 
-import com.arellomobile.mvp.InjectViewState
-import com.arellomobile.mvp.MvpPresenter
-import org.jetbrains.anko.AnkoLogger
+import com.hannesdorfmann.mosby3.mvp.MvpBasePresenter
 import ua.ck.zabochen.englishverbs.MainApp
 import ua.ck.zabochen.englishverbs.callback.CallbackEvent
 import ua.ck.zabochen.englishverbs.helper.database.RealmHelper
+import ua.ck.zabochen.englishverbs.view.verblist.VerbListFragment
 import javax.inject.Inject
 
-@InjectViewState
-class MainPresenter : MvpPresenter<MainView>(),
-        AnkoLogger {
+class MainPresenter : MvpBasePresenter<MainView>() {
 
     init {
-        MainApp.mainAppInstance().addActivityComponent()?.inject(this)
+        MainApp.mainAppInstance().getActivityComponent().inject(this)
     }
 
     @Inject
     lateinit var mRealmHelper: RealmHelper
 
     fun inflateOrUpdateDatabase() {
-        // Show progressBar
-        viewState.showProgressBar()
-
-        // Inflate data
         mRealmHelper.inflateDatabase(object : CallbackEvent.DatabaseCallback {
-
             override fun onComplete() {
-                // Show verb fragment
-                viewState.setVerbList()
-                // Hide progressBar
-                viewState.hideProgressBar()
+                ifViewAttached {
+                    it.setFragment(VerbListFragment())
+                }
             }
 
             override fun onError(error: Throwable) {
-                // Hide progressBar
-                viewState.hideProgressBar()
             }
         })
     }

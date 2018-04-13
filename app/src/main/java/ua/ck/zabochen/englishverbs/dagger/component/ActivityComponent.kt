@@ -9,8 +9,8 @@ import ua.ck.zabochen.englishverbs.view.main.MainPresenter
 
 @Subcomponent(modules = [
     RealmModule::class,
-    SpeechModule::class,
-    NotificationModule::class
+    NotificationModule::class,
+    SpeechModule::class
 ])
 @ActivityScope
 interface ActivityComponent {
@@ -18,8 +18,8 @@ interface ActivityComponent {
     @Subcomponent.Builder
     interface Builder {
         fun realmModule(realmModule: RealmModule): ActivityComponent.Builder
-        fun speechModule(speechModule: SpeechModule): ActivityComponent.Builder
         fun notificationModule(notificationModule: NotificationModule): ActivityComponent.Builder
+        fun speechModule(speechModule: SpeechModule): ActivityComponent.Builder
         fun build(): ActivityComponent
     }
 

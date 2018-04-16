@@ -7,7 +7,6 @@ import android.support.v4.app.Fragment
 import android.support.v7.widget.Toolbar
 import android.widget.FrameLayout
 import com.hannesdorfmann.mosby3.mvp.MvpActivity
-import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.AnkoLogger
 import ua.ck.zabochen.englishverbs.R
 import ua.ck.zabochen.englishverbs.utils.behavior.BottomNavigationViewBehavior
@@ -18,6 +17,7 @@ import ua.ck.zabochen.englishverbs.view.verblist.VerbListFragment
 class MainActivity : MvpActivity<MainView, MainPresenter>(),
         MainView, AnkoLogger {
 
+    private val mToolbar: Toolbar by lazy { findViewById<Toolbar>(R.id.snippet_toolbar) }
     private val mFrameLayout: FrameLayout by lazy { findViewById<FrameLayout>(R.id.activityMain_frameLayout) }
     private val mBottomNavigationView: BottomNavigationView by lazy { findViewById<BottomNavigationView>(R.id.activityMain_bottomNavigationView) }
 
@@ -38,8 +38,7 @@ class MainActivity : MvpActivity<MainView, MainPresenter>(),
         setContentView(R.layout.activity_main)
 
         // Toolbar
-        val toolbar: Toolbar = activityMain_toolbar
-        setSupportActionBar(toolbar)
+        setSupportActionBar(mToolbar)
         supportActionBar?.setDisplayShowTitleEnabled(false)
 
         // Bottom Navigation View - Behavior (Hide/Show)

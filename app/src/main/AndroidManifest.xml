@@ -10,12 +10,12 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppThemeNoActionBar">
+        android:theme="@style/AppTheme.NoActionBar">
 
         <!-- Main Activity -->
         <activity
             android:name=".view.main.MainActivity"
-            android:theme="@style/AppThemeNoActionBar">
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -25,7 +25,7 @@
         <!-- Verb Full Activity -->
         <activity
             android:name=".view.verbfull.VerbFullActivity"
-            android:theme="@style/AppThemeNoActionBar">
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>

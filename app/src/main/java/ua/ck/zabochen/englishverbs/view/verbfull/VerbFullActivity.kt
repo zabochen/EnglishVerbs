@@ -2,7 +2,6 @@ package ua.ck.zabochen.englishverbs.view.verbfull
 
 
 import android.os.Bundle
-import android.support.v4.content.ContextCompat
 import android.support.v7.widget.Toolbar
 import android.widget.ImageView
 import android.widget.TextView
@@ -12,13 +11,15 @@ import org.jetbrains.anko.AnkoLogger
 import ua.ck.zabochen.englishverbs.R
 import ua.ck.zabochen.englishverbs.model.realm.Verb
 import ua.ck.zabochen.englishverbs.utils.Constants
-import ua.ck.zabochen.englishverbs.utils.Tools
 import ua.ck.zabochen.englishverbs.view.base.BaseActivity
 
 class VerbFullActivity : BaseActivity(),
         AnkoLogger, VerbFullView {
 
-    @InjectPresenter lateinit var mVerbFullPresenter: VerbFullPresenter
+    @InjectPresenter
+    lateinit var mVerbFullPresenter: VerbFullPresenter
+
+    private val mToolbar: Toolbar by lazy { findViewById<Toolbar>(R.id.snippet_toolbar) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,16 +42,7 @@ class VerbFullActivity : BaseActivity(),
         if (verb != null) {
 
             // Toolbar
-            val toolbar: Toolbar = activityVerbFull_toolbar
-            toolbar.title = verb.verbInfinitive.toUpperCase()
-            toolbar.setTitleTextColor(ContextCompat.getColor(this, R.color.toolbarTitle))
-
-            // Toolbar Background
-            val toolbarBackground = activityVerbFull_imageView_toolbarBackground
-            toolbarBackground.setImageBitmap(Tools.bitmapImageFromAssets(this, verb.verbImage))
-
-            // Set Toolbar
-            setSupportActionBar(toolbar)
+            setSupportActionBar(mToolbar)
 
             // Verb Translation
             val mVerbTranslation: TextView = activityVerbFull_textView_verbTranslation

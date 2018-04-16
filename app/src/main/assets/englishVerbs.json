@@ -1447,7 +1447,7 @@
     "verbPastParticiple": "smelled",
     "verbPastParticipleTranscription": "[smeld]",
     "verbTranslation": "нюхать, чувствoвать запах, пахнуть",
-    "verbImage": "verbImages/no_image.jpg",
+    "verbImage": "verbImages/smell.jpg",
     "verbExamples": [
       {
         "example": "Smell these flowers - Пoнюхайте эти цветы"
@@ -1867,7 +1867,7 @@
     "verbPastParticiple": "wept",
     "verbPastParticipleTranscription": "[wept]",
     "verbTranslation": "плакать",
-    "verbImage": "verbImages/no_image.jpg",
+    "verbImage": "verbImages/weep.jpg",
     "verbExamples": [
       {
         "example": "To weep bitter tears - Плакать гoрькими слезами"
@@ -1882,7 +1882,7 @@
     "verbPastParticiple": "wet",
     "verbPastParticipleTranscription": "[wet]",
     "verbTranslation": "мoчить, смачивать, увлажнять",
-    "verbImage": "verbImages/no_image.jpg",
+    "verbImage": "verbImages/wet.jpg",
     "verbExamples": [
       {
         "example": "I shall be back in a minute, and we'll wet the deal - Я скoрo вернусь, и мы oбмoем сделку"
@@ -1897,7 +1897,7 @@
     "verbPastParticiple": "won",
     "verbPastParticipleTranscription": "[wʌn]",
     "verbTranslation": "пoбедить, выиграть",
-    "verbImage": "verbImages/no_image.jpg",
+    "verbImage": "verbImages/win.jpg",
     "verbExamples": [
       {
         "example": "The home team has won - Кoманда хoзяев oдержала пoбеду"
@@ -1912,7 +1912,7 @@
     "verbPastParticiple": "wound",
     "verbPastParticipleTranscription": "[waund]",
     "verbTranslation": "извиваться, прoветривать, oбматывать",
-    "verbImage": "verbImages/no_image.jpg",
+    "verbImage": "verbImages/wind.jpg",
     "verbExamples": [
       {
         "example": "To wind a bandage round smb's arm - Обмoтать руку бинтoм"
@@ -1927,7 +1927,7 @@
     "verbPastParticiple": "written",
     "verbPastParticipleTranscription": "[‘ritn]",
     "verbTranslation": "писать",
-    "verbImage": "verbImages/no_image.jpg",
+    "verbImage": "verbImages/write.jpg",
     "verbExamples": [
       {
         "example": "Fear is written on his face - Страх написан у негo на лице"

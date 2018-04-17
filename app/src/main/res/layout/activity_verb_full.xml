@@ -2,7 +2,8 @@
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/background_dark">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -22,241 +23,213 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <!-- CardView - Verb Translation -->
-            <android.support.v7.widget.CardView
-                android:id="@+id/activityVerbFull_cardView_verbTranslation"
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/activityVerbFull_textView_verbInfinitiveHeader"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginEnd="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="20dp"
-                android:clickable="true"
-                android:focusable="true"
-                app:cardCornerRadius="0dp">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="20dp">
-
-                    <!-- Verb Group -->
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:layout_centerVertical="true"
-                        android:orientation="vertical">
-
-                        <!-- Verb Translation -->
-                        <TextView
-                            android:id="@+id/activityVerbFull_textView_verbTranslation"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="6dp"
-                            android:text="Verb Translation"
-                            android:textAllCaps="true"
-                            android:textSize="16sp" />
-
-                    </LinearLayout>
-
-                </RelativeLayout>
-
-            </android.support.v7.widget.CardView>
-
-            <!-- CardView - Verb -->
-            <android.support.v7.widget.CardView
-                android:id="@+id/activityVerbFull_cardView_verb"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/activityVerbFull_cardView_verbTranslation"
-                android:layout_marginEnd="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="20dp"
-                app:cardCornerRadius="0dp">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="20dp">
-
-                    <!-- Verb Group -->
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentStart="true"
-                        android:layout_centerVertical="true"
-                        android:orientation="horizontal">
-
-                        <!-- Verb -->
-                        <TextView
-                            android:id="@+id/activityVerbFull_textView_verb"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="6dp"
-                            android:text="Verb"
-                            android:textSize="16sp" />
-
-                        <!-- Verb Transcription -->
-                        <TextView
-                            android:id="@+id/activityVerbFull_textView_verbTranscription"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginStart="10dp"
-                            android:text="Verb Transcription"
-                            android:textSize="16sp" />
-
-                    </LinearLayout>
-
-                    <!-- Verb Play -->
-                    <ImageView
-                        android:id="@+id/activityVerbFull_imageView_verbPlay"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"
-                        android:padding="10dp"
-                        android:src="@drawable/ic_volume_up_black_24dp" />
-
-                </RelativeLayout>
-
-            </android.support.v7.widget.CardView>
-
-            <!-- CardView - VerbPastTense -->
-            <android.support.v7.widget.CardView
-                android:id="@+id/activityVerbFull_cardView_verbPastTense"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/activityVerbFull_cardView_verb"
-                android:layout_marginEnd="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="20dp"
-                app:cardCornerRadius="0dp">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="20dp">
-
-                    <!-- VerbPastTense Group -->
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentStart="true"
-                        android:layout_centerVertical="true"
-                        android:orientation="horizontal">
-
-                        <!-- VerbPastSimple -->
-                        <TextView
-                            android:id="@+id/activityVerbFull_textView_verbPastTense"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="6dp"
-                            android:text="Verb Past Simple"
-                            android:textSize="16sp" />
-
-                        <!-- VerbPastSimple Transcription -->
-                        <TextView
-                            android:id="@+id/activityVerbFull_textView_verbPastTenseTranscription"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginStart="10dp"
-                            android:text="Verb Past Simple Transcription"
-                            android:textSize="16sp" />
-
-                    </LinearLayout>
-
-                    <!-- VerbPastSimple Play -->
-                    <ImageView
-                        android:id="@+id/activityVerbFull_imageView_verbPastTensePlay"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"
-                        android:clickable="true"
-                        android:focusable="true"
-                        android:padding="10dp"
-                        android:src="@drawable/ic_volume_up_black_24dp" />
-
-                </RelativeLayout>
-
-            </android.support.v7.widget.CardView>
-
-            <!-- CardView - VerbPastParticiple -->
-            <android.support.v7.widget.CardView
-                android:id="@+id/activityVerbFull_cardView_verbPastParticiple"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/activityVerbFull_cardView_verbPastTense"
                 android:layout_marginBottom="20dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginStart="8dp"
+                android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
-                app:cardCornerRadius="0dp">
+                android:fontFamily="@font/blogger_sans_bold"
+                android:maxLines="1"
+                android:text="wear - носить"
+                android:textAllCaps="true"
+                android:textSize="16sp" />
 
-                <RelativeLayout
+            <ImageView
+                android:id="@+id/activityVerbFull_imageView_bookmark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/activityVerbFull_textView_verbInfinitiveHeader"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ic_bookmark_white_24dp"
+                android:tint="@color/colorPrimaryDark" />
+
+            <ImageView
+                android:id="@+id/activityVerbFull_imageView_verbImage"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_below="@id/activityVerbFull_textView_verbInfinitiveHeader"
+                android:scaleType="centerCrop"
+                android:src="@drawable/arise" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/activityVerbFull_cardView_verbList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/activityVerbFull_textView_verbInfinitiveHeader"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="200dp"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="20dp">
+                    android:orientation="vertical">
 
-                    <!-- VerbPastParticiple Group -->
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentStart="true"
-                        android:layout_centerVertical="true"
-                        android:orientation="horizontal">
+                    <RelativeLayout
+                        android:id="@+id/activityVerbFull_relativeLayout_verbInfinitiveGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
 
-                        <!-- VerbPastParticiple -->
                         <TextView
-                            android:id="@+id/activityVerbFull_textView_verbPastParticiple"
+                            android:id="@+id/activityVerbFull_verbInfinitiveGroup_verbInfinitive"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="6dp"
-                            android:text="Verb Past Participle"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="20dp"
+                            android:text="wear"
                             android:textSize="16sp" />
 
-                        <!-- VerbPastParticiple Transcription -->
                         <TextView
-                            android:id="@+id/activityVerbFull_textView_verbPastParticipleTranscription"
+                            android:id="@+id/activityVerbFull_verbInfinitiveGroup_verbInfinitiveTranscription"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginStart="10dp"
-                            android:text="Verb Past Participle Transcription"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@id/activityVerbFull_verbInfinitiveGroup_verbInfinitive"
+                            android:text="[weər]"
                             android:textSize="16sp" />
 
-                    </LinearLayout>
+                        <ImageView
+                            android:id="@+id/activityVerbFull_verbInfinitiveGroup_verbInfinitivePlay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginTop="20dp"
+                            android:src="@drawable/ic_play_arrow_black_24dp" />
 
-                    <!-- VerbPastParticiple Play -->
-                    <ImageView
-                        android:id="@+id/activityVerbFull_imageView_verbPastParticiplePlay"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"
-                        android:clickable="true"
-                        android:focusable="true"
-                        android:padding="10dp"
-                        android:src="@drawable/ic_volume_up_black_24dp" />
+                    </RelativeLayout>
 
-                </RelativeLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@android:color/darker_gray" />
+
+                    <RelativeLayout
+                        android:id="@+id/activityVerbFull_relativeLayout_verbPastTenseGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/activityVerbFull_verbPastTenseGroup_verbPastTense"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="20dp"
+                            android:text="wore"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/activityVerbFull_verbPastTenseGroup_verbPastTenseTranscription"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@id/activityVerbFull_verbPastTenseGroup_verbPastTense"
+                            android:text="[wɔr]"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:id="@+id/activityVerbFull_verbPastTenseGroup_verbPastTensePlay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginTop="20dp"
+                            android:src="@drawable/ic_play_arrow_black_24dp" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@android:color/darker_gray" />
+
+                    <RelativeLayout
+                        android:id="@+id/activityVerbFull_relativeLayout_verbPastParticipleGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/activityVerbFull_verbPastParticipleGroup_verbPastParticiple"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="20dp"
+                            android:text="worn"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/activityVerbFull_verbPastParticipleGroup_verbPastParticipleTranscription"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@id/activityVerbFull_verbPastParticipleGroup_verbPastParticiple"
+                            android:text="[wɔrn]"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:id="@+id/activityVerbFull_verbPastParticipleGroup_verbPastParticiplePlay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginTop="20dp"
+                            android:src="@drawable/ic_play_arrow_black_24dp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/activityVerbFull_cardView_verbExamples"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/activityVerbFull_cardView_verbList"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="2dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="20dp"
+                    android:lineSpacingExtra="2sp"
+                    android:text="Are you going to wear jeans or a dress ? - Ты сoбираешься надеть джинсы или платье ?"
+                    android:textSize="16sp" />
 
             </android.support.v7.widget.CardView>
 

@@ -25,6 +25,7 @@ interface FragmentComponent {
         fun build(): FragmentComponent
     }
 
+    // Dependent views
     fun inject(verbListPresenter: VerbListPresenter)
     fun inject(bookmarkPresenter: BookmarkPresenter)
     fun inject(notificationPresenter: NotificationPresenter)

@@ -5,20 +5,17 @@ import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.arellomobile.mvp.MvpAppCompatFragment
-import com.arellomobile.mvp.presenter.InjectPresenter
+import com.hannesdorfmann.mosby3.mvp.MvpFragment
 import kotlinx.android.synthetic.main.fragment_verb_list.*
 import org.jetbrains.anko.AnkoLogger
 import ua.ck.zabochen.englishverbs.R
 import ua.ck.zabochen.englishverbs.model.realm.Verb
 import ua.ck.zabochen.englishverbs.utils.listener.RecyclerViewItemTouchListener
 
-class VerbListFragment : MvpAppCompatFragment(),
-        AnkoLogger,
-        VerbListView {
+class VerbListFragment : MvpFragment<VerbListView, VerbListPresenter>(),
+        VerbListView, AnkoLogger {
 
-    @InjectPresenter
-    lateinit var mVerbListPresenter: VerbListPresenter
+    override fun createPresenter() = VerbListPresenter()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_verb_list, container, false)
@@ -26,7 +23,7 @@ class VerbListFragment : MvpAppCompatFragment(),
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        mVerbListPresenter.viewIsReady()
+        presenter.viewIsReady()
     }
 
     override fun setUi(verbList: ArrayList<Verb>) {
@@ -38,7 +35,7 @@ class VerbListFragment : MvpAppCompatFragment(),
                 fragmentVerbList_recyclerView,
                 object : RecyclerViewItemTouchListener.ClickListener {
                     override fun onClick(view: View?, position: Int) {
-                        mVerbListPresenter.onClickVerbItem(activity!!.applicationContext, position)
+                        presenter.onClickVerbItem(activity!!.applicationContext, position)
                     }
 
                     override fun onLongClick(view: View?, position: Int) {

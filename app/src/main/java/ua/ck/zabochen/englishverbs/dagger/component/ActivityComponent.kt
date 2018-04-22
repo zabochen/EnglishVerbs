@@ -6,6 +6,7 @@ import ua.ck.zabochen.englishverbs.dagger.module.RealmModule
 import ua.ck.zabochen.englishverbs.dagger.module.SpeechModule
 import ua.ck.zabochen.englishverbs.dagger.scope.ActivityScope
 import ua.ck.zabochen.englishverbs.view.main.MainPresenter
+import ua.ck.zabochen.englishverbs.view.verbfull.VerbFullPresenter
 
 @Subcomponent(modules = [
     RealmModule::class,
@@ -23,5 +24,8 @@ interface ActivityComponent {
         fun build(): ActivityComponent
     }
 
+    // Dependent views
     fun inject(mainPresenter: MainPresenter)
+    fun inject(verbFullPresenter: VerbFullPresenter)
+
 }

@@ -3,9 +3,6 @@ package ua.ck.zabochen.englishverbs
 import android.app.Application
 import io.realm.Realm
 import io.realm.RealmConfiguration
-import ua.ck.zabochen.englishverbs.dagger.AppModule
-import ua.ck.zabochen.englishverbs.dagger.DaggerMainAppComponent
-import ua.ck.zabochen.englishverbs.dagger.MainAppComponent
 import ua.ck.zabochen.englishverbs.dagger.component.ActivityComponent
 import ua.ck.zabochen.englishverbs.dagger.component.AppComponent
 import ua.ck.zabochen.englishverbs.dagger.component.DaggerAppComponent
@@ -23,13 +20,7 @@ class MainApp : Application() {
         lateinit var mAppInstance: MainApp
         fun mainAppInstance() = mAppInstance
 
-        lateinit var mMainAppComponent: MainAppComponent
-        fun mainAppComponent() = mMainAppComponent
-
         lateinit var mAppComponent: AppComponent
-        fun getAppComponent() = mAppComponent
-
-
     }
 
     override fun onCreate() {
@@ -43,12 +34,6 @@ class MainApp : Application() {
     }
 
     private fun setDagger() {
-        // Main AppComponent
-        mMainAppComponent = DaggerMainAppComponent.builder()
-                .appModule(AppModule(this))
-                .build()
-
-        // AppComponent
         mAppComponent = DaggerAppComponent.builder()
                 .applicationContextModule(ApplicationContextModule(this))
                 .build()

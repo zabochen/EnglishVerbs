@@ -3,12 +3,179 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <!-- Notification state -->
+    <RelativeLayout
+        android:id="@+id/fragmentNotification_relativeLayout_notificationStateGroup"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:fontFamily="@font/blogger_sans_bold"
-        android:text="Notification"
-        android:textSize="30sp" />
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:id="@+id/fragmentNotification_linearLayout_notificationState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/fragmentNotification_textView_notificationState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Notification state"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/fragmentNotification_textView_notificationStateDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="On/Off notification"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="60dp"
+            android:background="@android:color/darker_gray" />
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/fragmentNotification_switch_notificationStateSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+
+    </RelativeLayout>
+
+    <!-- Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/fragmentNotification_relativeLayout_notificationStateGroup"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@android:color/darker_gray" />
+
+    <!-- Notification Words -->
+    <RelativeLayout
+        android:id="@+id/fragmentNotification_relativeLayout_notificationWordsGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fragmentNotification_relativeLayout_notificationStateGroup"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/fragmentNotification_textView_notificationWordsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="Show words in notification from:"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- All words -->
+        <RelativeLayout
+            android:id="@+id/fragmentNotification_relativeLayout_notificationAllWordsGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fragmentNotification_textView_notificationWordsTitle">
+
+            <LinearLayout
+                android:id="@+id/fragmentNotification_linearLayout_notificationAllWords"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/fragmentNotification_textView_notificationAllWords"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="All words"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/fragmentNotification_textView_notificationAllWordsDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Show any word from dictionary"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/fragmentNotification_switch_notificationStateSwitcdh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="60dp"
+                android:background="@android:color/darker_gray" />
+
+        </RelativeLayout>
+
+        <!-- Bookmark words -->
+        <RelativeLayout
+            android:id="@+id/fragmentNotification_relativeLayout_notificationBookmarkWordsGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fragmentNotification_relativeLayout_notificationAllWordsGroup"
+            android:layout_marginTop="20dp">
+
+            <LinearLayout
+                android:id="@+id/fragmentNotification_linearLayout_notificationBookmarkWords"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/fragmentNotification_textView_notificationBookmarkWords"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bookmark words"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/fragmentNotification_textView_notificationBookmarkWordsDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Show any word from bookmark"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/fragmentNotification_switch_notificationBookmarkWords"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="60dp"
+                android:background="@android:color/darker_gray" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
 
 </RelativeLayout>

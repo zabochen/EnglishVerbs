@@ -2,7 +2,7 @@ package ua.ck.zabochen.englishverbs.view.verbfull
 
 
 import android.os.Bundle
-import android.support.v7.widget.Toolbar
+import androidx.appcompat.widget.Toolbar
 import com.hannesdorfmann.mosby3.mvp.MvpActivity
 import org.jetbrains.anko.AnkoLogger
 import ua.ck.zabochen.englishverbs.R

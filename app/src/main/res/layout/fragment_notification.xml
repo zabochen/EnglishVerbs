@@ -44,7 +44,7 @@
             android:layout_marginRight="60dp"
             android:background="@android:color/darker_gray" />
 
-        <android.support.v7.widget.SwitchCompat
+        <androidx.appcompat.widget.SwitchCompat
             android:id="@+id/fragmentNotification_switch_notificationStateSwitch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -109,7 +109,7 @@
 
             </LinearLayout>
 
-            <android.support.v7.widget.AppCompatCheckBox
+            <androidx.appcompat.widget.AppCompatCheckBox
                 android:id="@+id/fragmentNotification_switch_notificationStateSwitcdh"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -158,7 +158,7 @@
 
             </LinearLayout>
 
-            <android.support.v7.widget.AppCompatCheckBox
+            <androidx.appcompat.widget.AppCompatCheckBox
                 android:id="@+id/fragmentNotification_switch_notificationBookmarkWords"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

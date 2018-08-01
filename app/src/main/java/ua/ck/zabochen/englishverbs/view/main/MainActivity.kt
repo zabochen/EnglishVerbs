@@ -1,10 +1,10 @@
 package ua.ck.zabochen.englishverbs.view.main
 
 import android.os.Bundle
-import android.support.design.widget.BottomNavigationView
-import android.support.design.widget.CoordinatorLayout
-import android.support.v4.app.Fragment
-import android.support.v7.widget.Toolbar
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import androidx.coordinatorlayout.widget.CoordinatorLayout
+import androidx.fragment.app.Fragment
+import androidx.appcompat.widget.Toolbar
 import android.widget.FrameLayout
 import com.hannesdorfmann.mosby3.mvp.MvpActivity
 import org.jetbrains.anko.AnkoLogger

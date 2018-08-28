@@ -1,4 +1,4 @@
-package ua.ck.zabochen.englishverbs.view.verblist
+package ua.ck.zabochen.englishverbs.ui.verblist
 
 import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater

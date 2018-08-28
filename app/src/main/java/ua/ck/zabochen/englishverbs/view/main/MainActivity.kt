@@ -12,7 +12,7 @@ import ua.ck.zabochen.englishverbs.R
 import ua.ck.zabochen.englishverbs.utils.behavior.BottomNavigationViewBehavior
 import ua.ck.zabochen.englishverbs.view.bookmark.BookmarkFragment
 import ua.ck.zabochen.englishverbs.view.notification.NotificationFragment
-import ua.ck.zabochen.englishverbs.view.verblist.VerbListFragment
+import ua.ck.zabochen.englishverbs.ui.verblist.VerbListFragment
 
 class MainActivity : MvpActivity<MainView, MainPresenter>(),
         MainView, AnkoLogger {

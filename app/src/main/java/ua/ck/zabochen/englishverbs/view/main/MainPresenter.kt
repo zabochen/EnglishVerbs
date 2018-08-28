@@ -4,7 +4,7 @@ import com.hannesdorfmann.mosby3.mvp.MvpBasePresenter
 import ua.ck.zabochen.englishverbs.MainApp
 import ua.ck.zabochen.englishverbs.callback.CallbackEvent
 import ua.ck.zabochen.englishverbs.helper.database.RealmHelper
-import ua.ck.zabochen.englishverbs.view.verblist.VerbListFragment
+import ua.ck.zabochen.englishverbs.ui.verblist.VerbListFragment
 import javax.inject.Inject
 
 class MainPresenter : MvpBasePresenter<MainView>() {

@@ -34,15 +34,30 @@ dependencies {
 
     // Kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation "org.jetbrains.anko:anko-commons:$anko_version"
+    implementation "org.jetbrains.anko:anko-commons:0.10.5"
 
     // Android Support
-    def android_support_version = "1.0.0-beta01"
+    def android_support_version = "1.0.0-rc01"
     implementation "androidx.appcompat:appcompat:$android_support_version"
     implementation "androidx.recyclerview:recyclerview:$android_support_version"
     implementation "androidx.cardview:cardview:$android_support_version"
     implementation "com.google.android.material:material:$android_support_version"
     implementation 'androidx.constraintlayout:constraintlayout:1.1.2'
+
+    // ViewModel & LiveData
+    def lifecycle_version = "2.0.0-rc01"
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+    kapt "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
+
+    // Room
+    def room_version = "2.0.0-rc01"
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+
+    // WorkManager
+    def work_manager_version = "1.0.0-alpha07"
+    implementation "android.arch.work:work-runtime:$work_manager_version"
+    implementation "android.arch.work:work-firebase:$work_manager_version"
 
     // Mosby
     implementation 'com.hannesdorfmann.mosby3:viewstate:3.1.0'
@@ -57,19 +72,20 @@ dependencies {
     kapt 'com.arello-mobile:moxy-compiler:1.5.3'
 
     // Firebase JobDispatcher
-    implementation 'com.firebase:firebase-jobdispatcher:0.8.4'
+    implementation 'com.firebase:firebase-jobdispatcher:0.8.5'
 
     // ButterKnife
-    implementation 'com.jakewharton:butterknife:8.8.1'
-    kapt 'com.jakewharton:butterknife-compiler:8.8.1'
+    def butter_knife_version = "9.0.0-SNAPSHOT"
+    implementation "com.jakewharton:butterknife:$butter_knife_version"
+    kapt "com.jakewharton:butterknife-compiler:$butter_knife_version"
 
     // Dagger2
     implementation 'com.google.dagger:dagger:2.15'
     kapt 'com.google.dagger:dagger-compiler:2.15'
 
     // RxJava2
-    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
     implementation 'io.reactivex.rxjava2:rxjava:2.1.12'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
 
     // Glide
     implementation 'com.github.bumptech.glide:glide:4.7.1'

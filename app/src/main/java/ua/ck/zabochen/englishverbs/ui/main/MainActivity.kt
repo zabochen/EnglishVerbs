@@ -2,6 +2,7 @@ package ua.ck.zabochen.englishverbs.ui.main
 
 import android.os.Bundle
 import android.widget.FrameLayout
+import android.widget.ProgressBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -23,12 +24,12 @@ import javax.inject.Inject
 
 class MainActivity : AppCompatActivity(), AnkoLogger {
 
+    @Inject
+    lateinit var mRealmHelper: RealmHelper
+
     init {
         MainApp.mainAppInstance().getActivityComponent().inject(this)
     }
-
-    @Inject
-    lateinit var mRealmHelper: RealmHelper
 
     @BindView(R.id.snippet_toolbar)
     lateinit var toolbar: Toolbar
@@ -36,9 +37,11 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
     @BindView(R.id.activityMain_frameLayout)
     lateinit var frameLayout: FrameLayout
 
+    @BindView(R.id.activityMain_progressBar)
+    lateinit var progressBar: ProgressBar
+
     @BindView(R.id.activityMain_bottomNavigationView)
     lateinit var bottomNavigationView: BottomNavigationView
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -54,6 +57,9 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
         // Toolbar
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayShowTitleEnabled(false)
+
+        // ProgressBar
+        progressBar.bringToFront()
 
         // Bottom Navigation View - Behavior (Show/Hide)
         val layoutParams: CoordinatorLayout.LayoutParams = bottomNavigationView.layoutParams as CoordinatorLayout.LayoutParams

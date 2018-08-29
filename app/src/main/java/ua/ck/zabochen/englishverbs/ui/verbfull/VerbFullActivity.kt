@@ -1,18 +1,15 @@
-package ua.ck.zabochen.englishverbs.view.verbfull
+package ua.ck.zabochen.englishverbs.ui.verbfull
 
 
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
-import com.hannesdorfmann.mosby3.mvp.MvpActivity
 import org.jetbrains.anko.AnkoLogger
 import ua.ck.zabochen.englishverbs.R
 import ua.ck.zabochen.englishverbs.model.realm.Verb
 import ua.ck.zabochen.englishverbs.utils.Constants
 
-class VerbFullActivity : MvpActivity<VerbFullView, VerbFullPresenter>(),
-        VerbFullView, AnkoLogger {
-
-    override fun createPresenter() = VerbFullPresenter()
+class VerbFullActivity : AppCompatActivity(), AnkoLogger {
 
     private val mToolbar: Toolbar by lazy { findViewById<Toolbar>(R.id.snippet_toolbar) }
 
@@ -30,7 +27,7 @@ class VerbFullActivity : MvpActivity<VerbFullView, VerbFullPresenter>(),
 
     }
 
-    override fun setUi(verb: Verb?) {
+    private fun setUi(verb: Verb?) {
         // Layout
         setContentView(R.layout.activity_verb_full)
 

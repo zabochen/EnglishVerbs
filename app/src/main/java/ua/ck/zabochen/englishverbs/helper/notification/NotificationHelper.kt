@@ -8,7 +8,7 @@ import androidx.core.app.NotificationCompat
 import androidx.core.app.TaskStackBuilder
 import ua.ck.zabochen.englishverbs.R
 import ua.ck.zabochen.englishverbs.utils.Constants
-import ua.ck.zabochen.englishverbs.view.verbfull.VerbFullActivity
+import ua.ck.zabochen.englishverbs.ui.verbfull.VerbFullActivity
 
 class NotificationHelper {
 

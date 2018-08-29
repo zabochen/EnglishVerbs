@@ -6,8 +6,6 @@ import ua.ck.zabochen.englishverbs.dagger.module.RealmModule
 import ua.ck.zabochen.englishverbs.dagger.module.SpeechModule
 import ua.ck.zabochen.englishverbs.dagger.scope.ActivityScope
 import ua.ck.zabochen.englishverbs.ui.verblist.VerbListViewModel
-import ua.ck.zabochen.englishverbs.view.bookmark.BookmarkPresenter
-import ua.ck.zabochen.englishverbs.view.notification.NotificationPresenter
 
 @Subcomponent(modules = [
     RealmModule::class,
@@ -27,6 +25,4 @@ interface FragmentComponent {
 
     // Dependent views
     fun inject(verbListViewModel: VerbListViewModel)
-    fun inject(bookmarkPresenter: BookmarkPresenter)
-    fun inject(notificationPresenter: NotificationPresenter)
 }

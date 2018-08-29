@@ -26,7 +26,7 @@
 
         <!-- Verb Full Activity -->
         <activity
-            android:name=".view.verbfull.VerbFullActivity"
+            android:name=".ui.verbfull.VerbFullActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />

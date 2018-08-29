@@ -8,7 +8,7 @@ import ua.ck.zabochen.englishverbs.MainApp
 import ua.ck.zabochen.englishverbs.helper.database.RealmHelper
 import ua.ck.zabochen.englishverbs.model.realm.Verb
 import ua.ck.zabochen.englishverbs.utils.Constants
-import ua.ck.zabochen.englishverbs.view.verbfull.VerbFullActivity
+import ua.ck.zabochen.englishverbs.ui.verbfull.VerbFullActivity
 import javax.inject.Inject
 
 class VerbListViewModel : ViewModel() {

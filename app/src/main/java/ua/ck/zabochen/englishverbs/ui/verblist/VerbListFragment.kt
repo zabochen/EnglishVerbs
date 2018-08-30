@@ -1,10 +1,10 @@
 package ua.ck.zabochen.englishverbs.ui.verblist
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ProgressBar
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -15,15 +15,14 @@ import butterknife.ButterKnife
 import org.jetbrains.anko.AnkoLogger
 import ua.ck.zabochen.englishverbs.R
 import ua.ck.zabochen.englishverbs.model.realm.Verb
+import ua.ck.zabochen.englishverbs.ui.verbfull.VerbFullActivity
+import ua.ck.zabochen.englishverbs.utils.Constants
 import ua.ck.zabochen.englishverbs.utils.listener.RecyclerViewItemTouchListener
 
-class VerbListFragment : Fragment(), AnkoLogger {
+class VerbListFragment : Fragment(), VerbListView, AnkoLogger {
 
     @BindView(R.id.fragmentVerbList_recyclerView)
     lateinit var verbListRecyclerView: RecyclerView
-
-    @BindView(R.id.fragmentVerbList_progressBar)
-    lateinit var verbListProgressBar: ProgressBar
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Layout & ButterKnife
@@ -34,18 +33,24 @@ class VerbListFragment : Fragment(), AnkoLogger {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        // Get VerbListViewModel
-        val verbListViewModel = ViewModelProviders.of(this).get(VerbListViewModel::class.java)
-        subscription(verbListViewModel)
-
-        verbListViewModel.getVerbList()?.observe(this, Observer {
-            setUi(it)
-        })
+        addObservers()
+        getViewModel().viewIsReady()
     }
 
-    private fun subscription(viewModel: VerbListViewModel) {
-        // Progress Listener
-        progressListener(viewModel)
+    override fun getViewModel(): VerbListViewModel {
+        return ViewModelProviders.of(this).get(VerbListViewModel::class.java)
+    }
+
+    override fun addObservers() {
+        verbListState()
+    }
+
+    override fun verbListState() {
+        getViewModel().verbListState.observe(this, Observer {
+            if (!it.isEmpty()) {
+                setUi(it)
+            }
+        })
     }
 
     private fun setUi(verbList: ArrayList<Verb>) {
@@ -53,10 +58,11 @@ class VerbListFragment : Fragment(), AnkoLogger {
         verbListRecyclerView.layoutManager = LinearLayoutManager(activity)
         verbListRecyclerView.adapter = VerbListAdapter(verbList)
         verbListRecyclerView.addOnItemTouchListener(RecyclerViewItemTouchListener(
-                activity!!,
+                activity,
                 verbListRecyclerView,
                 object : RecyclerViewItemTouchListener.ClickListener {
                     override fun onClick(view: View, position: Int) {
+                        onClickVerbItem(position)
                     }
 
                     override fun onLongClick(view: View, position: Int) {
@@ -65,12 +71,9 @@ class VerbListFragment : Fragment(), AnkoLogger {
         ))
     }
 
-    private fun progressListener(viewModel: VerbListViewModel) {
-        viewModel.progress.observe(this, Observer {
-            when (it) {
-                true -> verbListProgressBar.visibility = View.VISIBLE
-                false -> verbListProgressBar.visibility = View.GONE
-            }
-        })
+    fun onClickVerbItem(position: Int) {
+        val intentVerbFullActivity = Intent(activity, VerbFullActivity::class.java)
+        intentVerbFullActivity.putExtra(Constants.INTENT_VERB_SELECTED_POSITION, position)
+        startActivity(intentVerbFullActivity)
     }
 }

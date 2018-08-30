@@ -1,7 +1,7 @@
 package ua.ck.zabochen.englishverbs.ui.verblist
 
-interface VerbListView<in VM> {
+import ua.ck.zabochen.englishverbs.ui.base.BaseView
 
-    fun setUi(viewModel: VM)
-
+interface VerbListView : BaseView<VerbListViewModel> {
+    fun verbListState()
 }

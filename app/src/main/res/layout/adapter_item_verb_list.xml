@@ -7,10 +7,10 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="3dp"
         android:layout_marginLeft="6dp"
-        android:layout_marginRight="6dp"
         android:layout_marginTop="3dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginBottom="3dp"
         app:cardCornerRadius="0dp"
         app:cardPreventCornerOverlap="false"
         app:cardUseCompatPadding="true">
@@ -25,30 +25,16 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="18dp">
 
-                <!-- Verb Infinitive -->
+                <!-- Verb Infinitive & Translation -->
                 <TextView
-                    android:id="@+id/adapterItemVerbList_textView_verbInfinitive"
+                    android:id="@+id/adapterItemVerbList_textView_verbInfinitiveAndTranslation"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
                     android:layout_centerVertical="true"
                     android:fontFamily="@font/blogger_sans_bold"
-                    android:text="arise - "
-                    android:textAllCaps="true"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-                <!-- Verb Translation -->
-                <TextView
-                    android:id="@+id/adapterItemVerbList_textView_verbInfinitiveTranscription"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_toEndOf="@id/adapterItemVerbList_textView_verbInfinitive"
-                    android:layout_toRightOf="@id/adapterItemVerbList_textView_verbInfinitive"
-                    android:fontFamily="@font/blogger_sans_bold"
-                    android:text="возникать, появлятьсяы"
+                    android:text="arise - возникать, появляться"
                     android:textAllCaps="true"
                     android:textSize="16sp"
                     android:textStyle="bold" />

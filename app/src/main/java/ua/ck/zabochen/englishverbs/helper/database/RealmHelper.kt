@@ -1,7 +1,6 @@
 package ua.ck.zabochen.englishverbs.helper.database
 
 import android.content.Context
-import androidx.lifecycle.MutableLiveData
 import io.realm.Realm
 import org.jetbrains.anko.AnkoLogger
 import ua.ck.zabochen.englishverbs.callback.CallbackEvent
@@ -27,7 +26,7 @@ class RealmHelper(private val applicationContext: Context) : AnkoLogger {
         )
     }
 
-    fun getVerbList(): MutableLiveData<ArrayList<Verb>> {
+    fun getVerbList(): ArrayList<Verb> {
 
         val realmInstance = Realm.getDefaultInstance()
 
@@ -35,14 +34,10 @@ class RealmHelper(private val applicationContext: Context) : AnkoLogger {
         val verbList: ArrayList<Verb> = ArrayList()
         verbList.addAll(realmInstance.where(Verb::class.java).findAll())
 
-        // VerbList - LiveData
-        val verbListLiveData: MutableLiveData<ArrayList<Verb>> = MutableLiveData()
-        verbListLiveData.postValue(verbList)
-
         // Close Realm
         if (!realmInstance.isClosed) realmInstance.close()
 
-        return verbListLiveData
+        return verbList
     }
 
     fun getVerb(verbPosition: Int): Verb? {

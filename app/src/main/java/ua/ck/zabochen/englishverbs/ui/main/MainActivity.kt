@@ -21,7 +21,7 @@ import ua.ck.zabochen.englishverbs.utils.BottomNavigationViewItem
 import ua.ck.zabochen.englishverbs.utils.behavior.BottomNavigationViewBehavior
 
 class MainActivity : AppCompatActivity(),
-        MainView<MainViewModel>, AnkoLogger {
+        MainView, AnkoLogger {
 
     @BindView(R.id.snippet_toolbar)
     lateinit var toolbar: Toolbar
@@ -51,12 +51,13 @@ class MainActivity : AppCompatActivity(),
     }
 
     override fun databaseStateObserver() {
-        getViewModel().databaseState.observe(this, object : Observer<Boolean> {
-            override fun onChanged(t: Boolean?) {
-                when (t) {
-                    true -> showProgress(false)
-                    false -> showProgress(true)
+        getViewModel().databaseState.observe(this, Observer<Boolean> {
+            when (it) {
+                true -> {
+                    setFragment(VerbListFragment())
+                    showProgress(false)
                 }
+                false -> showProgress(true)
             }
         })
     }
@@ -91,7 +92,7 @@ class MainActivity : AppCompatActivity(),
                 .commit()
     }
 
-    fun showProgress(state: Boolean) {
+    private fun showProgress(state: Boolean) {
         when (state) {
             true -> {
                 progressBarHolder.bringToFront() // Show over all

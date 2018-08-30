@@ -1,10 +1,7 @@
 package ua.ck.zabochen.englishverbs.ui.main
 
-interface MainView<VM> {
+import ua.ck.zabochen.englishverbs.ui.base.BaseView
 
-    fun getViewModel(): VM
-    fun addObservers()
-
-    // Observers
+interface MainView : BaseView<MainViewModel> {
     fun databaseStateObserver()
 }

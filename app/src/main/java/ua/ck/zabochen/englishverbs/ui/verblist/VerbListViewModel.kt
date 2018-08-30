@@ -7,8 +7,8 @@ import androidx.lifecycle.ViewModel
 import ua.ck.zabochen.englishverbs.MainApp
 import ua.ck.zabochen.englishverbs.helper.database.RealmHelper
 import ua.ck.zabochen.englishverbs.model.realm.Verb
-import ua.ck.zabochen.englishverbs.utils.Constants
 import ua.ck.zabochen.englishverbs.ui.verbfull.VerbFullActivity
+import ua.ck.zabochen.englishverbs.utils.Constants
 import javax.inject.Inject
 
 class VerbListViewModel : ViewModel() {
@@ -20,34 +20,15 @@ class VerbListViewModel : ViewModel() {
     @Inject
     lateinit var realmHelper: RealmHelper
 
-    val progress: MutableLiveData<Boolean> = MutableLiveData()
+    val verbListState: MutableLiveData<ArrayList<Verb>> = MutableLiveData()
 
-    private var verbList: MutableLiveData<ArrayList<Verb>>? = null
-
-    fun getVerbList(): MutableLiveData<ArrayList<Verb>>? {
-        // Show progress
-        progress.postValue(true)
-
-        if (verbList == null) {
-            verbList = MutableLiveData()
-            loadData()
-        }
-
-        Thread.sleep(2000)
-
-        // Hide progress
-        progress.postValue(false)
-
-        return verbList
+    fun viewIsReady() {
+        loadData()
     }
 
     private fun loadData() {
-        verbList = realmHelper.getVerbList()
+        verbListState.postValue(realmHelper.getVerbList())
     }
 
-    fun onClickVerbItem(activityContext: Context, position: Int) {
-        val intentVerbFullActivity = Intent(activityContext, VerbFullActivity::class.java)
-        intentVerbFullActivity.putExtra(Constants.INTENT_VERB_SELECTED_POSITION, position)
-        activityContext.startActivity(intentVerbFullActivity)
-    }
+
 }

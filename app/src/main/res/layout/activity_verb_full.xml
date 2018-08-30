@@ -23,37 +23,42 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <!-- Verb Infinitive and Translate -->
             <TextView
-                android:id="@+id/activityVerbFull_textView_verbInfinitiveHeader"
+                android:id="@+id/activityVerbFull_textView_verbInfinitiveAndTranslate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginBottom="20dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
                 android:fontFamily="@font/blogger_sans_bold"
                 android:maxLines="1"
                 android:text="wear - носить"
                 android:textAllCaps="true"
                 android:textSize="16sp" />
 
+            <!-- Bookmark Button/Image - Add or Remove -->
             <ImageView
-                android:id="@+id/activityVerbFull_imageView_bookmark"
+                android:id="@+id/activityVerbFull_imageView_bookmarkAddOrRemove"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBottom="@id/activityVerbFull_textView_verbInfinitiveHeader"
+                android:layout_alignBottom="@id/activityVerbFull_textView_verbInfinitiveAndTranslate"
                 android:layout_alignParentRight="true"
-                android:layout_marginRight="20dp"
                 android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
                 android:src="@drawable/ic_bookmark_white_24dp"
                 android:tint="@color/colorPrimaryDark" />
 
+            <!-- Verb Image -->
             <ImageView
                 android:id="@+id/activityVerbFull_imageView_verbImage"
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
-                android:layout_below="@id/activityVerbFull_textView_verbInfinitiveHeader"
+                android:layout_below="@id/activityVerbFull_textView_verbInfinitiveAndTranslate"
                 android:scaleType="centerCrop"
                 android:src="@drawable/arise" />
 
@@ -61,10 +66,10 @@
                 android:id="@+id/activityVerbFull_cardView_verbList"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/activityVerbFull_textView_verbInfinitiveHeader"
+                android:layout_below="@id/activityVerbFull_textView_verbInfinitiveAndTranslate"
                 android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
                 android:layout_marginTop="200dp"
+                android:layout_marginRight="10dp"
                 app:cardCornerRadius="0dp"
                 app:cardElevation="2dp">
 
@@ -84,10 +89,10 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentLeft="true"
                             android:layout_centerVertical="true"
-                            android:layout_marginBottom="20dp"
                             android:layout_marginLeft="20dp"
-                            android:layout_marginRight="5dp"
                             android:layout_marginTop="20dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="20dp"
                             android:text="wear"
                             android:textSize="16sp" />
 
@@ -106,8 +111,8 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
                             android:layout_centerVertical="true"
-                            android:layout_marginRight="20dp"
                             android:layout_marginTop="20dp"
+                            android:layout_marginRight="20dp"
                             android:src="@drawable/ic_play_arrow_black_24dp" />
 
                     </RelativeLayout>
@@ -130,10 +135,10 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentLeft="true"
                             android:layout_centerVertical="true"
-                            android:layout_marginBottom="20dp"
                             android:layout_marginLeft="20dp"
-                            android:layout_marginRight="5dp"
                             android:layout_marginTop="20dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="20dp"
                             android:text="wore"
                             android:textSize="16sp" />
 
@@ -152,8 +157,8 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
                             android:layout_centerVertical="true"
-                            android:layout_marginRight="20dp"
                             android:layout_marginTop="20dp"
+                            android:layout_marginRight="20dp"
                             android:src="@drawable/ic_play_arrow_black_24dp" />
 
                     </RelativeLayout>
@@ -176,10 +181,10 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentLeft="true"
                             android:layout_centerVertical="true"
-                            android:layout_marginBottom="20dp"
                             android:layout_marginLeft="20dp"
-                            android:layout_marginRight="5dp"
                             android:layout_marginTop="20dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="20dp"
                             android:text="worn"
                             android:textSize="16sp" />
 
@@ -198,8 +203,8 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
                             android:layout_centerVertical="true"
-                            android:layout_marginRight="20dp"
                             android:layout_marginTop="20dp"
+                            android:layout_marginRight="20dp"
                             android:src="@drawable/ic_play_arrow_black_24dp" />
 
                     </RelativeLayout>
@@ -213,20 +218,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/activityVerbFull_cardView_verbList"
-                android:layout_marginBottom="20dp"
                 android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="20dp"
                 app:cardCornerRadius="0dp"
                 app:cardElevation="2dp">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="20dp"
                     android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
                     android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
                     android:lineSpacingExtra="2sp"
                     android:text="Are you going to wear jeans or a dress ? - Ты сoбираешься надеть джинсы или платье ?"
                     android:textSize="16sp" />

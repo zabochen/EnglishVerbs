@@ -24,11 +24,12 @@ class MainViewModel : ViewModel(), AnkoLogger {
     }
 
     private fun databaseInflateOrUpdate() {
-        if (databaseState.value == null || databaseState.value == false) {
-            // State default value
+        // Set default state
+        if (databaseState.value == null) {
             databaseState.postValue(false)
+        }
 
-            // Inflate database
+        if (databaseState.value == false) {
             realmHelper.inflateDatabase(object : CallbackEvent.DatabaseCallback {
                 override fun onComplete() {
                     databaseState.postValue(true)

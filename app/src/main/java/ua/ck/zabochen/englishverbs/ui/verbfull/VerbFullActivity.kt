@@ -47,6 +47,7 @@ class VerbFullActivity : AppCompatActivity(), VerbFullView, AnkoLogger {
         // Toolbar
         setSupportActionBar(mToolbar)
         supportActionBar?.setDisplayShowTitleEnabled(false)
+
     }
 
 }

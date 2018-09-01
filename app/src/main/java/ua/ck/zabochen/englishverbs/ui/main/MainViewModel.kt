@@ -26,7 +26,7 @@ class MainViewModel : ViewModel(), AnkoLogger {
     private fun databaseInflateOrUpdate() {
         // Set default state
         if (databaseState.value == null) {
-            databaseState.postValue(false)
+            databaseState.value = false
         }
 
         if (databaseState.value == false) {

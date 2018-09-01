@@ -3,6 +3,7 @@ package ua.ck.zabochen.englishverbs.utils
 import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import android.widget.Toast
 import androidx.core.graphics.drawable.RoundedBitmapDrawable
 import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory
 
@@ -39,4 +40,8 @@ class Tools {
 
     }
 
+}
+
+fun Context.showToast(message: String, duration: Int = Toast.LENGTH_LONG) {
+    Toast.makeText(this, message, duration).show()
 }

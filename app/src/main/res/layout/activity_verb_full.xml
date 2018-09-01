@@ -47,8 +47,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@id/activityVerbFull_textView_verbInfinitiveAndTranslate"
+                android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
                 android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
                 android:layout_marginRight="20dp"
                 android:src="@drawable/ic_bookmark_white_24dp"
                 android:tint="@color/colorPrimaryDark" />
@@ -78,40 +80,50 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
+                    <!-- Verb Infinitive Group -->
                     <RelativeLayout
                         android:id="@+id/activityVerbFull_relativeLayout_verbInfinitiveGroup"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
+                        <!-- Verb Infinitive -->
                         <TextView
                             android:id="@+id/activityVerbFull_verbInfinitiveGroup_verbInfinitive"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
                             android:layout_alignParentLeft="true"
                             android:layout_centerVertical="true"
+                            android:layout_marginStart="20dp"
                             android:layout_marginLeft="20dp"
                             android:layout_marginTop="20dp"
+                            android:layout_marginEnd="5dp"
                             android:layout_marginRight="5dp"
                             android:layout_marginBottom="20dp"
                             android:text="wear"
                             android:textSize="16sp" />
 
+                        <!-- Verb Infinitive - Transcription -->
                         <TextView
                             android:id="@+id/activityVerbFull_verbInfinitiveGroup_verbInfinitiveTranscription"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerVertical="true"
+                            android:layout_toEndOf="@id/activityVerbFull_verbInfinitiveGroup_verbInfinitive"
                             android:layout_toRightOf="@id/activityVerbFull_verbInfinitiveGroup_verbInfinitive"
                             android:text="[weər]"
                             android:textSize="16sp" />
 
+                        <!-- Verb Infinitive - Image/Button Play -->
                         <ImageView
                             android:id="@+id/activityVerbFull_verbInfinitiveGroup_verbInfinitivePlay"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
                             android:layout_alignParentRight="true"
                             android:layout_centerVertical="true"
                             android:layout_marginTop="20dp"
+                            android:layout_marginEnd="20dp"
                             android:layout_marginRight="20dp"
                             android:src="@drawable/ic_play_arrow_black_24dp" />
 
@@ -124,40 +136,50 @@
                         android:layout_marginRight="10dp"
                         android:background="@android:color/darker_gray" />
 
+                    <!-- Verb Past Tense Group -->
                     <RelativeLayout
                         android:id="@+id/activityVerbFull_relativeLayout_verbPastTenseGroup"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
+                        <!-- Verb Past Tense -->
                         <TextView
                             android:id="@+id/activityVerbFull_verbPastTenseGroup_verbPastTense"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
                             android:layout_alignParentLeft="true"
                             android:layout_centerVertical="true"
+                            android:layout_marginStart="20dp"
                             android:layout_marginLeft="20dp"
                             android:layout_marginTop="20dp"
+                            android:layout_marginEnd="5dp"
                             android:layout_marginRight="5dp"
                             android:layout_marginBottom="20dp"
                             android:text="wore"
                             android:textSize="16sp" />
 
+                        <!-- Verb Past Tense - Transcription -->
                         <TextView
                             android:id="@+id/activityVerbFull_verbPastTenseGroup_verbPastTenseTranscription"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerVertical="true"
+                            android:layout_toEndOf="@id/activityVerbFull_verbPastTenseGroup_verbPastTense"
                             android:layout_toRightOf="@id/activityVerbFull_verbPastTenseGroup_verbPastTense"
                             android:text="[wɔr]"
                             android:textSize="16sp" />
 
+                        <!-- Verb Past Tense - Image/Button Play -->
                         <ImageView
                             android:id="@+id/activityVerbFull_verbPastTenseGroup_verbPastTensePlay"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
                             android:layout_alignParentRight="true"
                             android:layout_centerVertical="true"
                             android:layout_marginTop="20dp"
+                            android:layout_marginEnd="20dp"
                             android:layout_marginRight="20dp"
                             android:src="@drawable/ic_play_arrow_black_24dp" />
 
@@ -170,40 +192,50 @@
                         android:layout_marginRight="10dp"
                         android:background="@android:color/darker_gray" />
 
+                    <!-- Verb Past Participle Group -->
                     <RelativeLayout
                         android:id="@+id/activityVerbFull_relativeLayout_verbPastParticipleGroup"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
+                        <!-- Verb Past Participle -->
                         <TextView
                             android:id="@+id/activityVerbFull_verbPastParticipleGroup_verbPastParticiple"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
                             android:layout_alignParentLeft="true"
                             android:layout_centerVertical="true"
+                            android:layout_marginStart="20dp"
                             android:layout_marginLeft="20dp"
                             android:layout_marginTop="20dp"
+                            android:layout_marginEnd="5dp"
                             android:layout_marginRight="5dp"
                             android:layout_marginBottom="20dp"
                             android:text="worn"
                             android:textSize="16sp" />
 
+                        <!-- Verb Past Participle - Transcription -->
                         <TextView
                             android:id="@+id/activityVerbFull_verbPastParticipleGroup_verbPastParticipleTranscription"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerVertical="true"
+                            android:layout_toEndOf="@id/activityVerbFull_verbPastParticipleGroup_verbPastParticiple"
                             android:layout_toRightOf="@id/activityVerbFull_verbPastParticipleGroup_verbPastParticiple"
                             android:text="[wɔrn]"
                             android:textSize="16sp" />
 
+                        <!-- Verb Past Participle - Image/Button Play -->
                         <ImageView
                             android:id="@+id/activityVerbFull_verbPastParticipleGroup_verbPastParticiplePlay"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
                             android:layout_alignParentRight="true"
                             android:layout_centerVertical="true"
                             android:layout_marginTop="20dp"
+                            android:layout_marginEnd="20dp"
                             android:layout_marginRight="20dp"
                             android:src="@drawable/ic_play_arrow_black_24dp" />
 
@@ -213,8 +245,9 @@
 
             </androidx.cardview.widget.CardView>
 
+            <!-- Verb Examples Group -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/activityVerbFull_cardView_verbExamples"
+                android:id="@+id/activityVerbFull_cardView_verbExamplesGroup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/activityVerbFull_cardView_verbList"
@@ -226,6 +259,7 @@
                 app:cardElevation="2dp">
 
                 <TextView
+                    android:id="@+id/activityVerbFull_cardView_verbExamplesGroup_verbExample"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"

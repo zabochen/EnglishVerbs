@@ -23,7 +23,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <!-- Verb Infinitive and Translate -->
+            <!-- VerbJson Infinitive and Translate -->
             <TextView
                 android:id="@+id/activityVerbFull_textView_verbInfinitiveAndTranslate"
                 android:layout_width="wrap_content"
@@ -55,7 +55,7 @@
                 android:src="@drawable/ic_bookmark_white_24dp"
                 android:tint="@color/colorPrimaryDark" />
 
-            <!-- Verb Image -->
+            <!-- VerbJson Image -->
             <ImageView
                 android:id="@+id/activityVerbFull_imageView_verbImage"
                 android:layout_width="match_parent"
@@ -80,13 +80,13 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <!-- Verb Infinitive Group -->
+                    <!-- VerbJson Infinitive Group -->
                     <RelativeLayout
                         android:id="@+id/activityVerbFull_relativeLayout_verbInfinitiveGroup"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
-                        <!-- Verb Infinitive -->
+                        <!-- VerbJson Infinitive -->
                         <TextView
                             android:id="@+id/activityVerbFull_verbInfinitiveGroup_verbInfinitive"
                             android:layout_width="wrap_content"
@@ -103,7 +103,7 @@
                             android:text="wear"
                             android:textSize="16sp" />
 
-                        <!-- Verb Infinitive - Transcription -->
+                        <!-- VerbJson Infinitive - Transcription -->
                         <TextView
                             android:id="@+id/activityVerbFull_verbInfinitiveGroup_verbInfinitiveTranscription"
                             android:layout_width="wrap_content"
@@ -114,7 +114,7 @@
                             android:text="[weər]"
                             android:textSize="16sp" />
 
-                        <!-- Verb Infinitive - Image/Button Play -->
+                        <!-- VerbJson Infinitive - Image/Button Play -->
                         <ImageView
                             android:id="@+id/activityVerbFull_verbInfinitiveGroup_verbInfinitivePlay"
                             android:layout_width="wrap_content"
@@ -136,13 +136,13 @@
                         android:layout_marginRight="10dp"
                         android:background="@android:color/darker_gray" />
 
-                    <!-- Verb Past Tense Group -->
+                    <!-- VerbJson Past Tense Group -->
                     <RelativeLayout
                         android:id="@+id/activityVerbFull_relativeLayout_verbPastTenseGroup"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
-                        <!-- Verb Past Tense -->
+                        <!-- VerbJson Past Tense -->
                         <TextView
                             android:id="@+id/activityVerbFull_verbPastTenseGroup_verbPastTense"
                             android:layout_width="wrap_content"
@@ -159,7 +159,7 @@
                             android:text="wore"
                             android:textSize="16sp" />
 
-                        <!-- Verb Past Tense - Transcription -->
+                        <!-- VerbJson Past Tense - Transcription -->
                         <TextView
                             android:id="@+id/activityVerbFull_verbPastTenseGroup_verbPastTenseTranscription"
                             android:layout_width="wrap_content"
@@ -170,7 +170,7 @@
                             android:text="[wɔr]"
                             android:textSize="16sp" />
 
-                        <!-- Verb Past Tense - Image/Button Play -->
+                        <!-- VerbJson Past Tense - Image/Button Play -->
                         <ImageView
                             android:id="@+id/activityVerbFull_verbPastTenseGroup_verbPastTensePlay"
                             android:layout_width="wrap_content"
@@ -192,13 +192,13 @@
                         android:layout_marginRight="10dp"
                         android:background="@android:color/darker_gray" />
 
-                    <!-- Verb Past Participle Group -->
+                    <!-- VerbJson Past Participle Group -->
                     <RelativeLayout
                         android:id="@+id/activityVerbFull_relativeLayout_verbPastParticipleGroup"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
-                        <!-- Verb Past Participle -->
+                        <!-- VerbJson Past Participle -->
                         <TextView
                             android:id="@+id/activityVerbFull_verbPastParticipleGroup_verbPastParticiple"
                             android:layout_width="wrap_content"
@@ -215,7 +215,7 @@
                             android:text="worn"
                             android:textSize="16sp" />
 
-                        <!-- Verb Past Participle - Transcription -->
+                        <!-- VerbJson Past Participle - Transcription -->
                         <TextView
                             android:id="@+id/activityVerbFull_verbPastParticipleGroup_verbPastParticipleTranscription"
                             android:layout_width="wrap_content"
@@ -226,7 +226,7 @@
                             android:text="[wɔrn]"
                             android:textSize="16sp" />
 
-                        <!-- Verb Past Participle - Image/Button Play -->
+                        <!-- VerbJson Past Participle - Image/Button Play -->
                         <ImageView
                             android:id="@+id/activityVerbFull_verbPastParticipleGroup_verbPastParticiplePlay"
                             android:layout_width="wrap_content"
@@ -245,7 +245,7 @@
 
             </androidx.cardview.widget.CardView>
 
-            <!-- Verb Examples Group -->
+            <!-- VerbJson Examples Group -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/activityVerbFull_cardView_verbExamplesGroup"
                 android:layout_width="match_parent"

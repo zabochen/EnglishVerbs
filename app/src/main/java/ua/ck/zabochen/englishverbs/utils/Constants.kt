@@ -8,6 +8,10 @@ class Constants {
         @JvmStatic
         val VERBS_JSON_FILE_PATH: String = "englishVerbs.json"
 
+        // Database
+        @JvmStatic
+        val DATABASE_NAME: String = "englishVerbs.db"
+
         // Realm Database
         @JvmStatic
         val REALM_DATABASE_NAME: String = "englishVerbs.realm"
@@ -17,7 +21,7 @@ class Constants {
 
         // Intents
         @JvmStatic
-        val INTENT_VERB_SELECTED_POSITION: String = "intent_verb_selected_position"
+        val INTENT_SELECTED_VERB_ID: String = "intent_selected_verb_id"
 
         // Notifications
         @JvmStatic

@@ -24,7 +24,7 @@
             </intent-filter>
         </activity>
 
-        <!-- Verb Full Activity -->
+        <!-- VerbJson Full Activity -->
         <activity
             android:name=".ui.verbfull.VerbFullActivity"
             android:theme="@style/AppTheme.NoActionBar">

@@ -3,14 +3,12 @@ package ua.ck.zabochen.englishverbs.dagger.component
 import dagger.Subcomponent
 import ua.ck.zabochen.englishverbs.dagger.module.DatabaseModule
 import ua.ck.zabochen.englishverbs.dagger.module.NotificationModule
-import ua.ck.zabochen.englishverbs.dagger.module.RealmModule
 import ua.ck.zabochen.englishverbs.dagger.module.SpeechModule
 import ua.ck.zabochen.englishverbs.dagger.scope.ActivityScope
 import ua.ck.zabochen.englishverbs.ui.verblist.VerbListViewModel
 
 @Subcomponent(modules = [
     DatabaseModule::class,
-    RealmModule::class,
     NotificationModule::class,
     SpeechModule::class
 ])
@@ -20,7 +18,6 @@ interface FragmentComponent {
     @Subcomponent.Builder
     interface Builder {
         fun databaseModule(databaseModule: DatabaseModule): FragmentComponent.Builder
-        fun realmModule(realmModule: RealmModule): FragmentComponent.Builder
         fun notificationModule(notificationModule: NotificationModule): FragmentComponent.Builder
         fun speechModule(speechModule: SpeechModule): FragmentComponent.Builder
         fun build(): FragmentComponent

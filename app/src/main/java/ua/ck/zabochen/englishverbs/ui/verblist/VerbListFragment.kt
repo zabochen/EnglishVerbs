@@ -14,7 +14,7 @@ import butterknife.BindView
 import butterknife.ButterKnife
 import org.jetbrains.anko.AnkoLogger
 import ua.ck.zabochen.englishverbs.R
-import ua.ck.zabochen.englishverbs.model.realm.Verb
+import ua.ck.zabochen.englishverbs.database.entity.Verb
 import ua.ck.zabochen.englishverbs.ui.verbfull.VerbFullActivity
 import ua.ck.zabochen.englishverbs.utils.Constants
 import ua.ck.zabochen.englishverbs.utils.listener.RecyclerViewItemTouchListener
@@ -62,7 +62,7 @@ class VerbListFragment : Fragment(), VerbListView, AnkoLogger {
                 verbListRecyclerView,
                 object : RecyclerViewItemTouchListener.ClickListener {
                     override fun onClick(view: View, position: Int) {
-                        onClickVerbItem(position)
+                        onClickVerbItem(verbList[position].id)
                     }
 
                     override fun onLongClick(view: View, position: Int) {
@@ -71,9 +71,9 @@ class VerbListFragment : Fragment(), VerbListView, AnkoLogger {
         ))
     }
 
-    fun onClickVerbItem(position: Int) {
+    fun onClickVerbItem(id: Int) {
         val intentVerbFullActivity = Intent(activity, VerbFullActivity::class.java)
-        intentVerbFullActivity.putExtra(Constants.INTENT_VERB_SELECTED_POSITION, position)
+        intentVerbFullActivity.putExtra(Constants.INTENT_SELECTED_VERB_ID, id)
         startActivity(intentVerbFullActivity)
     }
 }

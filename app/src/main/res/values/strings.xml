@@ -5,13 +5,13 @@
     <string name="settingsActivity_toolbar_title">Settings</string>
 
     <!-- Settings Fragment XML-->
-    <!-- Settings Fragment - Verb Notification Group -->
+    <!-- Settings Fragment - VerbJson Notification Group -->
     <string name="settings_category_notification_title">Notification</string>
-    <!-- Settings Fragment - Verb Notification State -->
+    <!-- Settings Fragment - VerbJson Notification State -->
     <string name="settings_switchPreference_verbNotificationState_title">Notification state</string>
     <string name="settings_switchPreference_verbNotificationState_summary">Selecting verb notification state</string>
     <string name="settings_switchPreference_verbNotificationState_key">settings_switchPreference_verbNotificationState</string>
-    <!-- Settings Fragment - Verb Notification Time -->
+    <!-- Settings Fragment - VerbJson Notification Time -->
     <string name="settings_listPreference_verbNotificationTime_title">Notification time</string>
     <string name="settings_listPreference_verbNotificationTime_summary">Selecting verb notification time range</string>
     <string name="settings_listPreference_verbNotificationTime_key">settings_listPreference_verbNotificationTime</string>

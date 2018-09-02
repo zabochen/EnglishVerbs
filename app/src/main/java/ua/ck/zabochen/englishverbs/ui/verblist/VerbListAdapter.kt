@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import butterknife.BindView
 import butterknife.ButterKnife
 import ua.ck.zabochen.englishverbs.R
-import ua.ck.zabochen.englishverbs.model.realm.Verb
+import ua.ck.zabochen.englishverbs.database.entity.Verb
 import ua.ck.zabochen.englishverbs.utils.Tools
 
 class VerbListAdapter(private val verbList: ArrayList<Verb>) : RecyclerView.Adapter<VerbListAdapter.VerbListViewHolder>() {
@@ -55,9 +55,7 @@ class VerbListAdapter(private val verbList: ArrayList<Verb>) : RecyclerView.Adap
             verbImage.setImageBitmap(Tools.bitmapImageFromAssets(itemView.context, verb.verbImage))
 
             // Verb Example
-            if (!verb.verbExamples.isEmpty()) {
-                verbExample.text = verb.verbExamples[0]?.example
-            }
+            verbExample.text = verb.verbExample
         }
     }
 

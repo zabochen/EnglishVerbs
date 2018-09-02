@@ -12,7 +12,7 @@ import butterknife.ButterKnife
 import butterknife.OnClick
 import org.jetbrains.anko.AnkoLogger
 import ua.ck.zabochen.englishverbs.R
-import ua.ck.zabochen.englishverbs.model.realm.Verb
+import ua.ck.zabochen.englishverbs.database.entity.Verb
 import ua.ck.zabochen.englishverbs.utils.Constants
 import ua.ck.zabochen.englishverbs.utils.Tools
 import ua.ck.zabochen.englishverbs.utils.showToast
@@ -60,10 +60,10 @@ class VerbFullActivity : AppCompatActivity(), VerbFullView, AnkoLogger {
     }
 
     override fun addObservers() {
-        verbState()
+        verbStateObserver()
     }
 
-    override fun verbState() {
+    override fun verbStateObserver() {
         getViewModel().verbState.observe(this, Observer { verb ->
             setUi(verb)
         })
@@ -76,7 +76,7 @@ class VerbFullActivity : AppCompatActivity(), VerbFullView, AnkoLogger {
     }
 
     private fun getIntentValues() {
-        getViewModel().selectedVerbItem(intent.getIntExtra(Constants.INTENT_VERB_SELECTED_POSITION, 0))
+        getViewModel().selectedVerbItem(intent.getIntExtra(Constants.INTENT_SELECTED_VERB_ID, 0))
     }
 
     private fun setUi(verb: Verb) {
@@ -90,33 +90,33 @@ class VerbFullActivity : AppCompatActivity(), VerbFullView, AnkoLogger {
         supportActionBar?.setDisplayShowTitleEnabled(false)
 
         // Set data
-        // Verb Infinitive and Translate
+        // VerbJson Infinitive and Translate
         val verbInfinitiveAndTranslateBuilder = StringBuilder()
         verbInfinitiveAndTranslateBuilder.append(verb.verbInfinitive)
         verbInfinitiveAndTranslateBuilder.append(" - ")
         verbInfinitiveAndTranslateBuilder.append(verb.verbTranslation)
         verbInfinitiveAndTranslate.text = verbInfinitiveAndTranslateBuilder.toString()
 
-        // Verb Image
+        // VerbJson Image
         verbImage.setImageBitmap(Tools.bitmapImageFromAssets(
                 context = this,
                 imagePath = verb.verbImage
         ))
 
-        // Verb Infinitive
+        // VerbJson Infinitive
         verbInfinitive.text = verb.verbInfinitive
         verbInfinitiveTranscription.text = verb.verbInfinitiveTranscription
 
-        // Verb Past Tense
+        // VerbJson Past Tense
         verbPastTense.text = verb.verbPastTense
         verbPastTenseTranscription.text = verb.verbPastTenseTranscription
 
-        // Verb Past Participle
+        // VerbJson Past Participle
         verbPastParticiple.text = verb.verbPastParticiple
         verbPastParticipleTranscription.text = verb.verbPastParticipleTranscription
 
-        // Verb Examples
-        verbExample.text = verb.verbExamples[0]?.example
+        // VerbJson Examples
+        verbExample.text = verb.verbExample
 
     }
 

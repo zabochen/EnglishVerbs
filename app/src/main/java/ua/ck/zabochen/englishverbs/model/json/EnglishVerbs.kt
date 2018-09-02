@@ -2,12 +2,7 @@ package ua.ck.zabochen.englishverbs.model.json
 
 import com.google.gson.annotations.SerializedName
 
-data class VerbList(
-        @SerializedName("verbList")
-        var verbList: ArrayList<Verb>
-)
-
-data class Verb(
+data class VerbJson(
         @SerializedName("verbInfinitive")
         var verbInfinitive: String,
         @SerializedName("verbInfinitiveTranscription")

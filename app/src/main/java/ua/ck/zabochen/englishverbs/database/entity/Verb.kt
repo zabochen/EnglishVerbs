@@ -2,21 +2,23 @@ package ua.ck.zabochen.englishverbs.database.entity
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import org.jetbrains.annotations.NotNull
 
 @Entity(tableName = "verb")
-class VerbEntity {
+class Verb {
     @PrimaryKey(autoGenerate = true)
+    @NotNull
     var id: Int = 0
 
-    // Verb Infinitive
+    // VerbJson Infinitive
     var verbInfinitive: String = ""
     var verbInfinitiveTranscription: String = ""
 
-    // Verb Past Tense
+    // VerbJson Past Tense
     var verbPastTense: String = ""
     var verbPastTenseTranscription: String = ""
 
-    // Verb Past Participle
+    // VerbJson Past Participle
     var verbPastParticiple: String = ""
     var verbPastParticipleTranscription: String = ""
 

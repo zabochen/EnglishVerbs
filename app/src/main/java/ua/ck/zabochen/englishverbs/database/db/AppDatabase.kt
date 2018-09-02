@@ -3,9 +3,9 @@ package ua.ck.zabochen.englishverbs.database.db
 import androidx.room.Database
 import androidx.room.RoomDatabase
 import ua.ck.zabochen.englishverbs.database.dao.VerbDao
-import ua.ck.zabochen.englishverbs.database.entity.VerbEntity
+import ua.ck.zabochen.englishverbs.database.entity.Verb
 
-@Database(entities = [VerbEntity::class], version = 1)
+@Database(entities = [Verb::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun verbDao(): VerbDao
 }

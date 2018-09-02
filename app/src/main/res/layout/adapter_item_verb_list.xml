@@ -25,7 +25,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="18dp">
 
-                <!-- Verb Infinitive & Translation -->
+                <!-- VerbJson Infinitive & Translation -->
                 <TextView
                     android:id="@+id/adapterItemVerbList_textView_verbInfinitiveAndTranslation"
                     android:layout_width="wrap_content"
@@ -41,7 +41,7 @@
 
             </RelativeLayout>
 
-            <!-- Verb Image -->
+            <!-- VerbJson Image -->
             <ImageView
                 android:id="@+id/adapterItemVerbList_imageView_verbImage"
                 android:layout_width="match_parent"
@@ -50,7 +50,7 @@
                 android:scaleType="centerCrop"
                 android:src="@drawable/arise" />
 
-            <!-- Verb Example -->
+            <!-- VerbJson Example -->
             <TextView
                 android:id="@+id/adapterItemVerbList_textView_verbExample"
                 android:layout_width="wrap_content"

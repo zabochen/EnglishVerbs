@@ -15,7 +15,7 @@
     <color name="bottomNavigationView_iconTint">#ffffff</color>
     <color name="bottomNavigationView_textColor">#ffffff</color>
 
-    <!-- Adapter Verb -->
+    <!-- Adapter VerbJson -->
     <color name="adapter_verb">#4f4f4f</color>
     <color name="adapter_verb_transcription">#4f4f4f</color>
     <color name="adapter_verb_example">#818181</color>

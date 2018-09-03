@@ -10,6 +10,10 @@
     <!-- Toolbar -->
     <color name="toolbarTitle">#ffffff</color>
 
+    <!-- Bookmark -->
+    <color name="bookmark_state_add">#673AB7</color>
+    <color name="bookmark_state_remove">#818181</color>
+
     <!-- Bottom Navigation View -->
     <color name="bottomNavigationView_itemBackground">#673AB7</color>
     <color name="bottomNavigationView_iconTint">#ffffff</color>

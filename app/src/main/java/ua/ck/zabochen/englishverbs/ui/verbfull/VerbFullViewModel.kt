@@ -24,9 +24,28 @@ class VerbFullViewModel : ViewModel() {
     private val compositeDisposable: CompositeDisposable = CompositeDisposable()
 
     val verbState: MutableLiveData<Verb> = MutableLiveData()
+    val verbBookmarkState: MutableLiveData<Boolean> = MutableLiveData()
 
     fun selectedVerbItem(position: Int) {
         getVerb(position)
+    }
+
+    fun setVerbBookmarkState(id: Int) {
+        databaseHelper.setVerbBookmarkState(id)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(object : SingleObserver<Boolean> {
+                    override fun onSubscribe(d: Disposable) {
+                        compositeDisposable.add(d)
+                    }
+
+                    override fun onSuccess(t: Boolean) {
+                        verbBookmarkState.value = t
+                    }
+
+                    override fun onError(e: Throwable) {
+                    }
+                })
     }
 
     private fun getVerb(id: Int) {

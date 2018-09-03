@@ -87,4 +87,20 @@ class DatabaseHelper(private val context: Context) : AnkoLogger {
             }
         }
     }
+
+    fun setVerbBookmarkState(id: Int): Single<Boolean> {
+        return Single.create {
+            try {
+                val verb = appDatabase.verbDao().getVerb(id)
+                verb.bookmarkState = !verb.bookmarkState
+                appDatabase.verbDao().update(verb)
+                when (verb.bookmarkState) {
+                    true -> it.onSuccess(true)
+                    false -> it.onSuccess(false)
+                }
+            } catch (t: Throwable) {
+                it.onError(t)
+            }
+        }
+    }
 }

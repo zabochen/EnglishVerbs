@@ -30,4 +30,7 @@ class Verb {
 
     // Example
     var verbExample: String = ""
+
+    // Bookmark
+    var bookmarkState: Boolean = false
 }

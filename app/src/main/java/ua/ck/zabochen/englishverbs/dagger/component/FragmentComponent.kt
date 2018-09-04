@@ -5,6 +5,7 @@ import ua.ck.zabochen.englishverbs.dagger.module.DatabaseModule
 import ua.ck.zabochen.englishverbs.dagger.module.NotificationModule
 import ua.ck.zabochen.englishverbs.dagger.module.SpeechModule
 import ua.ck.zabochen.englishverbs.dagger.scope.ActivityScope
+import ua.ck.zabochen.englishverbs.ui.bookmark.BookmarkViewModel
 import ua.ck.zabochen.englishverbs.ui.verblist.VerbListViewModel
 
 @Subcomponent(modules = [
@@ -25,4 +26,5 @@ interface FragmentComponent {
 
     // Dependent views
     fun inject(verbListViewModel: VerbListViewModel)
+    fun inject(bookmarkViewModel: BookmarkViewModel)
 }

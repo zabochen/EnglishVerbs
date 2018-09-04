@@ -69,8 +69,7 @@ class DatabaseHelper(private val context: Context) : AnkoLogger {
     fun getVerbList(): Single<ArrayList<Verb>> {
         return Single.create {
             try {
-                val verbList: ArrayList<Verb> = ArrayList(appDatabase.verbDao().getVerbList())
-                it.onSuccess(verbList)
+                it.onSuccess(ArrayList(appDatabase.verbDao().getVerbList()))
             } catch (t: Throwable) {
                 it.onError(t)
             }
@@ -98,6 +97,16 @@ class DatabaseHelper(private val context: Context) : AnkoLogger {
                     true -> it.onSuccess(true)
                     false -> it.onSuccess(false)
                 }
+            } catch (t: Throwable) {
+                it.onError(t)
+            }
+        }
+    }
+
+    fun getBookmarkVerbList(): Single<ArrayList<Verb>> {
+        return Single.create {
+            try {
+                it.onSuccess(ArrayList(appDatabase.verbDao().getBookmarkVerbList()))
             } catch (t: Throwable) {
                 it.onError(t)
             }

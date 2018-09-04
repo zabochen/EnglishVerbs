@@ -9,6 +9,9 @@ interface VerbDao {
     @Query("SELECT * FROM verb")
     fun getVerbList(): List<Verb>
 
+    @Query("SELECT * FROM verb WHERE verb.bookmarkState = 1")
+    fun getBookmarkVerbList(): List<Verb>
+
     @Query("SELECT * FROM verb WHERE id = :id")
     fun getVerb(id: Int): Verb
 

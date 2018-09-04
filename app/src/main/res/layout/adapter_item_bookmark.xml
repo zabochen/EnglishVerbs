@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginBottom="3dp"
+        app:cardCornerRadius="0dp"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/adapterItemBookmark_relativeLayout_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="18dp">
+
+                <!-- Verb Infinitive & Translation -->
+                <TextView
+                    android:id="@+id/adapterItemBookmark_textView_verbInfinitiveAndTranslation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/blogger_sans_bold"
+                    android:text="arise - возникать, появляться"
+                    android:textAllCaps="true"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <!-- Verb Image -->
+            <ImageView
+                android:id="@+id/adapterItemBookmark_imageView_verbImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@id/adapterItemBookmark_relativeLayout_header"
+                android:scaleType="centerCrop"
+                android:src="@drawable/arise" />
+
+            <!-- Verb Example -->
+            <TextView
+                android:id="@+id/adapterItemBookmark_textView_verbExample"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/adapterItemBookmark_imageView_verbImage"
+                android:layout_margin="18dp"
+                android:lineSpacingExtra="2dp"
+                android:text="Doubts arose in his mind - У него возникли сомнения"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

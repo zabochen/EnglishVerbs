@@ -1,5 +1,6 @@
 package ua.ck.zabochen.englishverbs.ui.verbfull
 
+import android.app.Activity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
@@ -90,6 +91,12 @@ class VerbFullActivity : AppCompatActivity(), VerbFullView, AnkoLogger {
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return true
+    }
+
+    override fun onBackPressed() {
+        // ActivityForResult: send result code
+        setResult(Activity.RESULT_OK)
+        super.onBackPressed()
     }
 
     private fun getIntentValues() {

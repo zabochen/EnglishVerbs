@@ -89,6 +89,7 @@ class MainActivity : AppCompatActivity(),
     private fun setFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
                 .replace(fragmentHolder.id, fragment)
+                .addToBackStack(null)
                 .commit()
     }
 

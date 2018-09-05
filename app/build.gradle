@@ -57,7 +57,7 @@ dependencies {
     kapt "androidx.room:room-compiler:$room_version"
 
     // WorkManager
-    def work_manager_version = "1.0.0-alpha07"
+    def work_manager_version = "1.0.0-alpha08"
     implementation "android.arch.work:work-runtime:$work_manager_version"
     implementation "android.arch.work:work-firebase:$work_manager_version"
 

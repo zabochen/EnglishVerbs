@@ -33,6 +33,7 @@ class RecyclerViewItemTouchListener(
         val childView: View? = rv.findChildViewUnder(e.x, e.y)
         if (childView != null && gestureDetector.onTouchEvent(e)) {
             clickListener.onClick(childView, rv.getChildAdapterPosition(childView))
+            return true
         }
         return false
     }

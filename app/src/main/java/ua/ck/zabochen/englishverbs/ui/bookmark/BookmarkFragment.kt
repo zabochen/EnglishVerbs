@@ -13,14 +13,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import butterknife.BindView
 import butterknife.ButterKnife
-import org.greenrobot.eventbus.EventBus
-import org.greenrobot.eventbus.Subscribe
-import org.greenrobot.eventbus.ThreadMode
 import org.jetbrains.anko.AnkoLogger
 import org.jetbrains.anko.info
 import ua.ck.zabochen.englishverbs.R
 import ua.ck.zabochen.englishverbs.database.entity.Verb
-import ua.ck.zabochen.englishverbs.model.event.EventActivityDestroy
 import ua.ck.zabochen.englishverbs.ui.verbfull.VerbFullActivity
 import ua.ck.zabochen.englishverbs.utils.Constants
 import ua.ck.zabochen.englishverbs.utils.listener.RecyclerViewItemTouchListener
@@ -47,19 +43,14 @@ class BookmarkFragment : Fragment(), BookmarkView, AnkoLogger {
         getViewModel().viewIsReady()
     }
 
-    override fun onStart() {
-        super.onStart()
-        EventBus.getDefault().register(this)
-    }
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
 
-    override fun onStop() {
-        EventBus.getDefault().unregister(this)
-        super.onStop()
-    }
+        info { "requestCode = $requestCode, resultCode = $resultCode" }
 
-    @Subscribe(threadMode = ThreadMode.MAIN)
-    fun eventActivityDestroy(event: EventActivityDestroy) {
-        getViewModel().viewIsReady()
+        if (resultCode == Constants.ACTIVITY_FOR_RESULT_ACTIVITY_DESTROY) {
+            // TODO: Refresh view
+        }
     }
 
     override fun getViewModel(): BookmarkViewModel {
@@ -71,7 +62,7 @@ class BookmarkFragment : Fragment(), BookmarkView, AnkoLogger {
     }
 
     override fun bookmarkVerbListObserver() {
-        getViewModel().bookmarkVerbList.observe(this, Observer {
+        getViewModel().bookmarkVerbList.observe(this, Observer<ArrayList<Verb>> {
             if (!it.isEmpty()) {
                 setUi(it)
             }
@@ -102,7 +93,6 @@ class BookmarkFragment : Fragment(), BookmarkView, AnkoLogger {
     private fun onClickVerbItem(verbId: Int) {
         val intentVerbFullActivity = Intent(activity, VerbFullActivity::class.java)
         intentVerbFullActivity.putExtra(Constants.INTENT_SELECTED_VERB_ID, verbId)
-        intentVerbFullActivity.flags
-        startActivity(intentVerbFullActivity)
+        startActivityForResult(intentVerbFullActivity, 88)
     }
 }

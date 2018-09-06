@@ -93,10 +93,17 @@ class DatabaseHelper(private val context: Context) : AnkoLogger {
                 val verb = appDatabase.verbDao().getVerb(id)
                 verb.bookmarkState = !verb.bookmarkState
                 appDatabase.verbDao().update(verb)
-                when (verb.bookmarkState) {
-                    true -> it.onSuccess(true)
-                    false -> it.onSuccess(false)
-                }
+                it.onSuccess(verb.bookmarkState)
+            } catch (t: Throwable) {
+                it.onError(t)
+            }
+        }
+    }
+
+    fun getVerbBookmarkState(id: Int): Single<Boolean> {
+        return Single.create {
+            try {
+                it.onSuccess(appDatabase.verbDao().getVerb(id).bookmarkState)
             } catch (t: Throwable) {
                 it.onError(t)
             }

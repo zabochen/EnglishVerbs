@@ -25,10 +25,33 @@ class BookmarkViewModel : ViewModel(), AnkoLogger {
 
     private val compositeDisposable: CompositeDisposable = CompositeDisposable()
 
+    val bookmarkVerbRemove: MutableLiveData<Verb> = MutableLiveData()
     val bookmarkVerbList: MutableLiveData<ArrayList<Verb>> = MutableLiveData()
 
     fun viewIsReady() {
         getBookmarkVerbList()
+    }
+
+    fun refreshView(verbId: Int) {
+
+    }
+
+    private fun checkVerbBookmarkState(verbId: Int) {
+        databaseHelper.getVerbBookmarkState(verbId)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(object : SingleObserver<Boolean> {
+                    override fun onSubscribe(d: Disposable) {
+                        compositeDisposable.add(d)
+                    }
+
+                    override fun onSuccess(t: Boolean) {
+                        // TODO: Check verb bookmark state
+                    }
+
+                    override fun onError(e: Throwable) {
+                    }
+                })
     }
 
     private fun getBookmarkVerbList() {

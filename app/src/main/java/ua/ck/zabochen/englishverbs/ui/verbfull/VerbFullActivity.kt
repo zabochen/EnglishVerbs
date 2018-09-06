@@ -11,12 +11,9 @@ import androidx.lifecycle.ViewModelProviders
 import butterknife.BindView
 import butterknife.ButterKnife
 import butterknife.OnClick
-import org.greenrobot.eventbus.EventBus
 import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.info
 import ua.ck.zabochen.englishverbs.R
 import ua.ck.zabochen.englishverbs.database.entity.Verb
-import ua.ck.zabochen.englishverbs.model.event.EventActivityDestroy
 import ua.ck.zabochen.englishverbs.utils.Constants
 import ua.ck.zabochen.englishverbs.utils.Tools
 import ua.ck.zabochen.englishverbs.utils.showToast
@@ -64,17 +61,6 @@ class VerbFullActivity : AppCompatActivity(), VerbFullView, AnkoLogger {
         addObservers()
     }
 
-    override fun onStop() {
-        info { "onStop()" }
-        super.onStop()
-    }
-
-    override fun onDestroy() {
-        info { "onDestroy()" }
-        EventBus.getDefault().post(EventActivityDestroy())
-        super.onDestroy()
-    }
-
     override fun getViewModel(): VerbFullViewModel {
         return ViewModelProviders.of(this).get(VerbFullViewModel::class.java)
     }
@@ -104,6 +90,11 @@ class VerbFullActivity : AppCompatActivity(), VerbFullView, AnkoLogger {
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return true
+    }
+
+    override fun onBackPressed() {
+        setResult(Constants.ACTIVITY_FOR_RESULT_ACTIVITY_DESTROY)
+        finish()
     }
 
     private fun getIntentValues() {

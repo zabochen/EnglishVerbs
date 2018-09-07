@@ -1,9 +1,7 @@
 package ua.ck.zabochen.englishverbs.helper.speech
 
 import android.content.Context
-import android.os.Build
 import android.speech.tts.TextToSpeech
-
 import java.util.*
 
 class SpeechHelper(context: Context) {
@@ -26,11 +24,11 @@ class SpeechHelper(context: Context) {
     }
 
     private fun speak(text: String) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            mTextToSpeech.speak(text, TextToSpeech.QUEUE_FLUSH, null, null)
-        } else {
-            mTextToSpeech.speak(text, TextToSpeech.QUEUE_FLUSH, null)
-        }
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+//            mTextToSpeech.speak(text, TextToSpeech.QUEUE_FLUSH, null, null)
+//        } else {
+//            mTextToSpeech.speak(text, TextToSpeech.QUEUE_FLUSH, null)
+//        }
     }
 
 }

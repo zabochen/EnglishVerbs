@@ -93,7 +93,7 @@ class VerbFullActivity : AppCompatActivity(), VerbFullView, AnkoLogger {
     }
 
     override fun onBackPressed() {
-        setResult(Constants.ACTIVITY_FOR_RESULT_ACTIVITY_DESTROY)
+        setActivityForResultValues()
         finish()
     }
 
@@ -140,7 +140,10 @@ class VerbFullActivity : AppCompatActivity(), VerbFullView, AnkoLogger {
 
         // Bookmark
         setBookmarkView(verb.bookmarkState)
+    }
 
+    private fun setActivityForResultValues() {
+        setResult(Constants.AFR_VERB_FULL_ACTIVITY_DESTROY)
     }
 
     @OnClick(R.id.activityVerbFull_imageView_bookmarkAddOrRemove)

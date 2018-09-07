@@ -4,9 +4,6 @@ import ua.ck.zabochen.englishverbs.R
 
 class Constants {
     companion object {
-        // Activity for result
-        @JvmStatic
-        val ACTIVITY_FOR_RESULT_ACTIVITY_DESTROY: Int = 1000
 
         // Verbs File
         @JvmStatic
@@ -16,12 +13,9 @@ class Constants {
         @JvmStatic
         val DATABASE_NAME: String = "englishVerbs.db"
 
-        // Realm Database
+        // Activity for result
         @JvmStatic
-        val REALM_DATABASE_NAME: String = "englishVerbs.realm"
-
-        @JvmStatic
-        val REALM_DATABASE_VERSION: Long = 0
+        val AFR_VERB_FULL_ACTIVITY_DESTROY: Int = 100
 
         // Intents
         @JvmStatic

@@ -25,7 +25,7 @@ class BookmarkViewModel : ViewModel(), AnkoLogger {
 
     private val compositeDisposable: CompositeDisposable = CompositeDisposable()
 
-    val bookmarkVerbRemove: MutableLiveData<Verb> = MutableLiveData()
+    val bookmarkVerbRemove: MutableLiveData<Boolean> = MutableLiveData()
     val bookmarkVerbList: MutableLiveData<ArrayList<Verb>> = MutableLiveData()
 
     fun viewIsReady() {
@@ -33,20 +33,23 @@ class BookmarkViewModel : ViewModel(), AnkoLogger {
     }
 
     fun refreshView(verbId: Int) {
-
+        checkVerbBookmarkState(verbId)
     }
 
     private fun checkVerbBookmarkState(verbId: Int) {
-        databaseHelper.getVerbBookmarkState(verbId)
+        databaseHelper.getVerb(verbId)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(object : SingleObserver<Boolean> {
+                .subscribe(object : SingleObserver<Verb> {
                     override fun onSubscribe(d: Disposable) {
                         compositeDisposable.add(d)
                     }
 
-                    override fun onSuccess(t: Boolean) {
-                        // TODO: Check verb bookmark state
+                    override fun onSuccess(t: Verb) {
+                        when (t.bookmarkState) {
+                            true -> bookmarkVerbRemove.value = true
+                            false -> bookmarkVerbRemove.value = false
+                        }
                     }
 
                     override fun onError(e: Throwable) {

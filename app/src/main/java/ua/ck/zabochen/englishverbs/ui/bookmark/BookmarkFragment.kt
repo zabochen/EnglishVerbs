@@ -1,6 +1,5 @@
 package ua.ck.zabochen.englishverbs.ui.bookmark
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,45 +10,43 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import butterknife.BindView
-import butterknife.ButterKnife
 import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.info
 import ua.ck.zabochen.englishverbs.R
 import ua.ck.zabochen.englishverbs.database.entity.Verb
 import ua.ck.zabochen.englishverbs.ui.verbfull.VerbFullActivity
 import ua.ck.zabochen.englishverbs.utils.Constants
+import ua.ck.zabochen.englishverbs.utils.binding.bindView
 import ua.ck.zabochen.englishverbs.utils.listener.RecyclerViewItemTouchListener
 
 class BookmarkFragment : Fragment(), BookmarkView, AnkoLogger {
 
-    @BindView(R.id.fragmentBookmark_recyclerView)
-    lateinit var bookmarkRecyclerView: RecyclerView
+    private lateinit var rootView: View
 
-    override fun onAttach(context: Context?) {
-        super.onAttach(context)
-        addObservers()
-    }
+    private val bookmarkRecyclerView: RecyclerView by bindView(rootView, R.id.fragmentBookmark_recyclerView)
+
+    private lateinit var bookmarkAdapter: BookmarkAdapter
+
+    // Current state
+    private var bookmarkVerbListSize: Int = 0
+    private var selectedVerbPosition: Int = 0
+    private var selectedVerbId: Int = 0
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        // Layout & ButterKnife
-        val view: View = inflater.inflate(R.layout.fragment_bookmark, container, false)
-        ButterKnife.bind(this, view)
-        return view
+        // Layout & BindView
+        rootView = inflater.inflate(R.layout.fragment_bookmark, container, false)
+        return rootView
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        addObservers()
         getViewModel().viewIsReady()
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-
-        info { "requestCode = $requestCode, resultCode = $resultCode" }
-
-        if (resultCode == Constants.ACTIVITY_FOR_RESULT_ACTIVITY_DESTROY) {
-            // TODO: Refresh view
+        if (resultCode == Constants.AFR_VERB_FULL_ACTIVITY_DESTROY) {
+            getViewModel().refreshView(selectedVerbId)
         }
     }
 
@@ -59,6 +56,7 @@ class BookmarkFragment : Fragment(), BookmarkView, AnkoLogger {
 
     override fun addObservers() {
         bookmarkVerbListObserver()
+        removeVerbObserver()
     }
 
     override fun bookmarkVerbListObserver() {
@@ -69,19 +67,32 @@ class BookmarkFragment : Fragment(), BookmarkView, AnkoLogger {
         })
     }
 
-    private fun setUi(verbList: ArrayList<Verb>) {
+    override fun removeVerbObserver() {
+        getViewModel().bookmarkVerbRemove.observe(this, Observer<Boolean> {
+            if (it) {
+                bookmarkAdapter.notifyItemRemoved(selectedVerbPosition)
+                bookmarkAdapter.notifyItemRangeChanged(selectedVerbPosition, bookmarkVerbListSize - 1)
+            }
+        })
+    }
+
+    private fun setUi(bookmarkVerbList: ArrayList<Verb>) {
         // RecyclerView - BookmarkVerbList
         bookmarkRecyclerView.layoutManager = LinearLayoutManager(activity)
-        bookmarkRecyclerView.adapter = BookmarkAdapter(verbList)
+        bookmarkAdapter = BookmarkAdapter(bookmarkVerbList)
+        bookmarkRecyclerView.adapter = bookmarkAdapter
         bookmarkRecyclerView.addOnItemTouchListener(RecyclerViewItemTouchListener(
                 activity,
                 bookmarkRecyclerView,
                 object : RecyclerViewItemTouchListener.ClickListener {
                     override fun onClick(view: View, position: Int) {
-                        onClickVerbItem(verbList[position].id)
+                        // Save current state
+                        bookmarkVerbListSize = bookmarkVerbList.size
+                        selectedVerbPosition = position
+                        selectedVerbId = bookmarkVerbList[position].id
 
-                        // TODO: LOG
-                        info { "onClick ${verbList[position].verbInfinitive}" }
+                        // Show VerbFull Activity
+                        onClickVerbItem(selectedVerbId)
                     }
 
                     override fun onLongClick(view: View, position: Int) {

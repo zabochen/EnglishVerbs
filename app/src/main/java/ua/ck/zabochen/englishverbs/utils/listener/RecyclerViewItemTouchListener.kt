@@ -12,6 +12,11 @@ class RecyclerViewItemTouchListener(
         private val clickListener: ClickListener
 ) : RecyclerView.OnItemTouchListener {
 
+    interface ClickListener {
+        fun onClick(view: View, position: Int)
+        fun onLongClick(view: View, position: Int)
+    }
+
     private val gestureDetector: GestureDetector
 
     init {
@@ -44,8 +49,5 @@ class RecyclerViewItemTouchListener(
     override fun onRequestDisallowInterceptTouchEvent(disallowIntercept: Boolean) {
     }
 
-    interface ClickListener {
-        fun onClick(view: View, position: Int)
-        fun onLongClick(view: View, position: Int)
-    }
+
 }

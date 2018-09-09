@@ -1,12 +1,9 @@
 package ua.ck.zabochen.englishverbs.utils
 
-import android.app.Activity
 import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
-import android.view.View
 import android.widget.Toast
-import androidx.annotation.IdRes
 import androidx.core.graphics.drawable.RoundedBitmapDrawable
 import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory
 

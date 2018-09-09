@@ -1,5 +1,6 @@
 package ua.ck.zabochen.englishverbs.ui.verbfull
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
@@ -53,7 +54,9 @@ class VerbFullActivity : AppCompatActivity(), VerbFullView, AnkoLogger {
     @BindView(R.id.activityVerbFull_cardView_verbExamplesGroup_verbExample)
     lateinit var verbExample: TextView
 
+    // Verb id & bookmark state
     private var verbId: Int = 0
+    private var verbBookmarkState: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -113,29 +116,29 @@ class VerbFullActivity : AppCompatActivity(), VerbFullView, AnkoLogger {
         supportActionBar?.setDisplayShowTitleEnabled(false)
 
         // Set data
-        // VerbJson Infinitive and Translate
+        // Verb Infinitive and Translate
         val verbInfinitiveAndTranslateBuilder = StringBuilder()
         verbInfinitiveAndTranslateBuilder.append(verb.verbInfinitive)
         verbInfinitiveAndTranslateBuilder.append(" - ")
         verbInfinitiveAndTranslateBuilder.append(verb.verbTranslation)
         verbInfinitiveAndTranslate.text = verbInfinitiveAndTranslateBuilder.toString()
 
-        // VerbJson Image
+        // Verb Image
         verbImage.setImageBitmap(Tools.bitmapImageFromAssets(context = this, imagePath = verb.verbImage))
 
-        // VerbJson Infinitive
+        // Verb Infinitive
         verbInfinitive.text = verb.verbInfinitive
         verbInfinitiveTranscription.text = verb.verbInfinitiveTranscription
 
-        // VerbJson Past Tense
+        // Verb Past Tense
         verbPastTense.text = verb.verbPastTense
         verbPastTenseTranscription.text = verb.verbPastTenseTranscription
 
-        // VerbJson Past Participle
+        // Verb Past Participle
         verbPastParticiple.text = verb.verbPastParticiple
         verbPastParticipleTranscription.text = verb.verbPastParticipleTranscription
 
-        // VerbJson Examples
+        // Verb Examples
         verbExample.text = verb.verbExample
 
         // Bookmark
@@ -143,7 +146,8 @@ class VerbFullActivity : AppCompatActivity(), VerbFullView, AnkoLogger {
     }
 
     private fun setActivityForResultValues() {
-        setResult(Constants.AFR_VERB_FULL_ACTIVITY_DESTROY)
+        val intent: Intent = Intent().putExtra(Constants.AFR_INTENT_KEY_VERB_FULL_ACTIVITY_BOOKMARK_STATE, verbBookmarkState)
+        setResult(Constants.AFR_VERB_FULL_ACTIVITY_DESTROY, intent)
     }
 
     @OnClick(R.id.activityVerbFull_imageView_bookmarkAddOrRemove)
@@ -160,14 +164,15 @@ class VerbFullActivity : AppCompatActivity(), VerbFullView, AnkoLogger {
     }
 
     private fun setBookmarkView(state: Boolean) {
-        when (state) {
+        verbBookmarkState = when (state) {
             true -> {
                 verbBookmark.setColorFilter(ContextCompat.getColor(this, R.color.bookmark_state_add))
+                state
             }
             false -> {
                 verbBookmark.setColorFilter(ContextCompat.getColor(this, R.color.bookmark_state_remove))
+                state
             }
         }
     }
-
 }

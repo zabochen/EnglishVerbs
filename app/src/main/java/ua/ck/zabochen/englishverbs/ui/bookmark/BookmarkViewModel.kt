@@ -1,5 +1,6 @@
 package ua.ck.zabochen.englishverbs.ui.bookmark
 
+import android.os.Parcelable
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import io.reactivex.SingleObserver
@@ -25,36 +26,16 @@ class BookmarkViewModel : ViewModel(), AnkoLogger {
 
     private val compositeDisposable: CompositeDisposable = CompositeDisposable()
 
-    val bookmarkVerbRemove: MutableLiveData<Boolean> = MutableLiveData()
     val bookmarkVerbList: MutableLiveData<ArrayList<Verb>> = MutableLiveData()
+
+    var recyclerViewState: Parcelable? = null
 
     fun viewIsReady() {
         getBookmarkVerbList()
     }
 
-    fun refreshView(verbId: Int) {
-        checkVerbBookmarkState(verbId)
-    }
-
-    private fun checkVerbBookmarkState(verbId: Int) {
-        databaseHelper.getVerb(verbId)
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(object : SingleObserver<Verb> {
-                    override fun onSubscribe(d: Disposable) {
-                        compositeDisposable.add(d)
-                    }
-
-                    override fun onSuccess(t: Verb) {
-                        when (t.bookmarkState) {
-                            true -> bookmarkVerbRemove.value = true
-                            false -> bookmarkVerbRemove.value = false
-                        }
-                    }
-
-                    override fun onError(e: Throwable) {
-                    }
-                })
+    fun refreshView() {
+        getBookmarkVerbList()
     }
 
     private fun getBookmarkVerbList() {
@@ -67,7 +48,9 @@ class BookmarkViewModel : ViewModel(), AnkoLogger {
                     }
 
                     override fun onSuccess(t: ArrayList<Verb>) {
-                        info { "onSuccess()" }
+
+                        info { "onSuccess ${t.size}" }
+
                         bookmarkVerbList.postValue(t)
                     }
 
@@ -77,7 +60,8 @@ class BookmarkViewModel : ViewModel(), AnkoLogger {
     }
 
     override fun onCleared() {
-        super.onCleared()
         compositeDisposable.clear()
+        info { "BOOKMARK => fun onCleared()" }
+        super.onCleared()
     }
 }

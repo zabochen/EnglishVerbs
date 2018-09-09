@@ -38,7 +38,7 @@ class VerbListFragment : Fragment(), VerbListView, AnkoLogger {
     }
 
     override fun getViewModel(): VerbListViewModel {
-        return ViewModelProviders.of(this).get(VerbListViewModel::class.java)
+        return ViewModelProviders.of(activity!!).get(VerbListViewModel::class.java)
     }
 
     override fun addObservers() {

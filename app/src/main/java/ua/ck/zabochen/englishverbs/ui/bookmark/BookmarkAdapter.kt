@@ -11,26 +11,44 @@ import butterknife.ButterKnife
 import ua.ck.zabochen.englishverbs.R
 import ua.ck.zabochen.englishverbs.database.entity.Verb
 import ua.ck.zabochen.englishverbs.utils.Tools
+import ua.ck.zabochen.englishverbs.utils.listener.RecyclerViewClickListener
 
-class BookmarkAdapter(private val verbList: ArrayList<Verb>) : RecyclerView.Adapter<BookmarkAdapter.BookmarkViewHolder>() {
+class BookmarkAdapter(
+        private val recyclerViewClickListener: RecyclerViewClickListener
+) : RecyclerView.Adapter<BookmarkAdapter.BookmarkViewHolder>() {
+
+    private val bookmarkVerbList: ArrayList<Verb> = ArrayList()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BookmarkViewHolder {
-        return BookmarkViewHolder(LayoutInflater.from(parent.context)
-                .inflate(R.layout.adapter_item_bookmark, parent, false)
+        return BookmarkViewHolder(
+                itemView = LayoutInflater.from(parent.context)
+                        .inflate(R.layout.adapter_item_bookmark, parent, false),
+                recyclerViewClickListener = recyclerViewClickListener
         )
     }
 
     override fun onBindViewHolder(holder: BookmarkViewHolder, position: Int) {
-        holder.bind(verbList[position])
+        holder.bind(bookmarkVerbList[position])
     }
 
     override fun getItemCount(): Int {
-        return if (!verbList.isEmpty()) verbList.size else 0
+        return if (!bookmarkVerbList.isEmpty()) bookmarkVerbList.size else 0
     }
 
-    class BookmarkViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    fun setData(bookmarkVerbList: ArrayList<Verb>) {
+        this.bookmarkVerbList.clear()
+        this.bookmarkVerbList.addAll(bookmarkVerbList)
+    }
+
+    inner class BookmarkViewHolder(
+            itemView: View,
+            private val recyclerViewClickListener: RecyclerViewClickListener
+    ) : RecyclerView.ViewHolder(itemView), View.OnClickListener {
 
         init {
+            // ClickListener
+            itemView.setOnClickListener(this)
+            // ButterKnife
             ButterKnife.bind(this, itemView)
         }
 
@@ -57,6 +75,11 @@ class BookmarkAdapter(private val verbList: ArrayList<Verb>) : RecyclerView.Adap
             // Verb Example
             verbExample.text = verb.verbExample
         }
-    }
 
+        override fun onClick(view: View?) {
+            if (view != null) {
+                recyclerViewClickListener.onClick(view, adapterPosition)
+            }
+        }
+    }
 }

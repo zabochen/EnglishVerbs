@@ -79,7 +79,7 @@ class MainActivity : AppCompatActivity(),
         bottomNavigationView.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 BottomNavigationViewItem.HOME.id -> setFragment(VerbListFragment())
-                BottomNavigationViewItem.BOOKMARKS.id -> setFragment(BookmarkFragment())
+                BottomNavigationViewItem.BOOKMARKS.id -> setFragment(BookmarkFragment.newInstance())
                 BottomNavigationViewItem.NOTIFICATION.id -> setFragment(NotificationFragment())
             }
             return@setOnNavigationItemSelectedListener true
@@ -89,7 +89,6 @@ class MainActivity : AppCompatActivity(),
     private fun setFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
                 .replace(fragmentHolder.id, fragment)
-                .addToBackStack(null)
                 .commit()
     }
 

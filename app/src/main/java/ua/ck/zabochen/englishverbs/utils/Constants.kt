@@ -17,6 +17,9 @@ class Constants {
         @JvmStatic
         val AFR_VERB_FULL_ACTIVITY_DESTROY: Int = 100
 
+        @JvmStatic
+        val AFR_INTENT_KEY_VERB_FULL_ACTIVITY_BOOKMARK_STATE: String = "afr_intentKey_verbFullActivity_bookmark_state"
+
         // Intents
         @JvmStatic
         val INTENT_SELECTED_VERB_ID: String = "intent_selected_verb_id"

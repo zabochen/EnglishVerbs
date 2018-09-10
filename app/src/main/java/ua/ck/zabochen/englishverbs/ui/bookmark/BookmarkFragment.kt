@@ -14,12 +14,11 @@ import androidx.recyclerview.widget.RecyclerView
 import butterknife.BindView
 import butterknife.ButterKnife
 import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.info
 import ua.ck.zabochen.englishverbs.R
 import ua.ck.zabochen.englishverbs.database.entity.Verb
 import ua.ck.zabochen.englishverbs.ui.verbfull.VerbFullActivity
 import ua.ck.zabochen.englishverbs.utils.Constants
-import ua.ck.zabochen.englishverbs.utils.listener.RecyclerViewClickListener
+import ua.ck.zabochen.englishverbs.utils.listener.RecyclerViewItemTouchListener
 
 class BookmarkFragment : Fragment(), BookmarkView, AnkoLogger {
 
@@ -31,6 +30,8 @@ class BookmarkFragment : Fragment(), BookmarkView, AnkoLogger {
 
     @BindView(R.id.fragmentBookmark_recyclerView)
     lateinit var bookmarkRecyclerView: RecyclerView
+
+    lateinit var bookmarkAdapter: BookmarkAdapter
 
     // Current state
     private var refreshState: Boolean = false
@@ -70,7 +71,7 @@ class BookmarkFragment : Fragment(), BookmarkView, AnkoLogger {
     }
 
     override fun getViewModel(): BookmarkViewModel {
-        return ViewModelProviders.of(this).get(BookmarkViewModel::class.java)
+        return ViewModelProviders.of(activity!!).get(BookmarkViewModel::class.java)
     }
 
     override fun addObservers() {
@@ -78,104 +79,53 @@ class BookmarkFragment : Fragment(), BookmarkView, AnkoLogger {
     }
 
     override fun bookmarkVerbListObserver() {
-        getViewModel().bookmarkVerbList.observe(this, Observer<ArrayList<Verb>> {
+        getViewModel().bookmarkVerbListState.observe(this, Observer<ArrayList<Verb>> {
             if (!it.isEmpty() && !refreshState) {
                 setUi(it)
-            } else if (!it.isEmpty() && refreshState) {
+            } else if (refreshState) {
                 setUi(it, refreshState)
             }
         })
     }
 
     private fun setUi(bookmarkVerbList: ArrayList<Verb>, refreshState: Boolean = false) {
-
         if (bookmarkRecyclerView.adapter == null) {
+            // Layout Manager
             bookmarkRecyclerView.layoutManager = LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
-            info { "Init recyclerView" }
-            bookmarkRecyclerView.setHasFixedSize(true)
+            // Adapter
+            bookmarkAdapter = BookmarkAdapter()
+            bookmarkRecyclerView.adapter = bookmarkAdapter
+            // Click Listener
+            bookmarkRecyclerView.addOnItemTouchListener(RecyclerViewItemTouchListener(
+                    context = activity,
+                    recyclerView = bookmarkRecyclerView,
+                    clickListener = object : RecyclerViewItemTouchListener.ClickListener {
+                        override fun onClick(view: View, position: Int) {
+                            selectedVerbPosition = position
+                            onClickVerbItem(bookmarkAdapter.getData()[position].id)
+                        }
+
+                        override fun onLongClick(view: View, position: Int) {
+                        }
+                    }
+            ))
         }
 
-        bookmarkRecyclerView.adapter = BookmarkAdapter(object : RecyclerViewClickListener {
-            override fun onClick(view: View, position: Int) {
-                selectedVerbPosition = position
-                onClickVerbItem(bookmarkVerbList[position].id)
-            }
-
-            override fun onLongClick(view: View, position: Int) {
-            }
-        })
-
+        // Restore RecyclerView state
+        if (restoreRecyclerViewState() != null) {
+            bookmarkRecyclerView.layoutManager?.onRestoreInstanceState(restoreRecyclerViewState())
+        }
 
         when (refreshState) {
             true -> {
-                info { "refreshState => true" }
-                val bookmarkAdapter = bookmarkRecyclerView.adapter as BookmarkAdapter
                 bookmarkAdapter.setData(bookmarkVerbList)
-                bookmarkRecyclerView.adapter?.notifyItemRemoved(selectedVerbPosition)
-                //bookmarkRecyclerView.adapter?.notifyItemRangeChanged(0, bookmarkVerbList.size-1)
-//                bookmarkAdapter.notifyDataSetChanged()
+                bookmarkAdapter.notifyItemRemoved(selectedVerbPosition)
             }
             false -> {
-                info { "refreshState => false" }
-                val bookmarkAdapter = bookmarkRecyclerView.adapter as BookmarkAdapter
                 bookmarkAdapter.setData(bookmarkVerbList)
                 bookmarkAdapter.notifyDataSetChanged()
             }
         }
-
-//        val newVerbList: ArrayList<Verb> = bookmarkVerbList
-//
-//        info { "SIZE: ${newVerbList.size}" }
-//
-//        val list: StringBuilder = StringBuilder()
-//        newVerbList.forEach {
-//            list.append(it.verbInfinitive)
-//            list.append(", ")
-//        }
-//        info { "LIST: $list \n" }
-//
-//        // RecyclerView - BookmarkVerbList
-//        bookmarkRecyclerView.layoutManager = LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
-//        //bookmarkRecyclerView.layoutManager?.onRestoreInstanceState(restoreRecyclerViewState())
-//
-//        val bookmarkAdapter = BookmarkAdapter()
-//        bookmarkAdapter.setData(newVerbList)
-//        //bookmarkAdapter.notifyDataSetChanged()
-//
-//        bookmarkRecyclerView.adapter = bookmarkAdapter
-//        bookmarkRecyclerView.adapter?.notifyDataSetChanged()
-//
-//
-//        bookmarkRecyclerView.addOnItemTouchListener(RecyclerViewItemTouchListener(
-//                activity,
-//                bookmarkRecyclerView,
-//                object : RecyclerViewItemTouchListener.ClickListener {
-//                    override fun onClick(view: View, position: Int) {
-//                        selectedVerbPosition = position
-//
-//                        val size = newVerbList.size
-//
-//                        info { "FACK!!!! => S: $size, P: $position, L: ${newVerbList[position].verbInfinitive}" }
-//
-//
-//                        onClickVerbItem(newVerbList[position].id)
-//                    }
-//
-//                    override fun onLongClick(view: View, position: Int) {
-//                        activity?.showToast(bookmarkVerbList[position].verbInfinitive)
-//                    }
-//                }
-//        ))
-
-//        if (!refreshState) {
-//            bookmarkAdapter.setData(bookmarkVerbList)
-//            bookmarkAdapter.notifyDataSetChanged()
-//            //bookmarkRecyclerView.adapter = bookmarkAdapter
-//
-//        } else if (refreshState) {
-//            bookmarkAdapter.setData(bookmarkVerbList)
-//            bookmarkAdapter.notifyItemRemoved(selectedVerbPosition)
-//        }
     }
 
     private fun onClickVerbItem(verbId: Int) {

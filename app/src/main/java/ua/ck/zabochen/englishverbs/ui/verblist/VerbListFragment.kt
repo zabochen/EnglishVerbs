@@ -2,6 +2,7 @@ package ua.ck.zabochen.englishverbs.ui.verblist
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.Parcelable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -37,6 +38,11 @@ class VerbListFragment : Fragment(), VerbListView, AnkoLogger {
         getViewModel().viewIsReady()
     }
 
+    override fun onDestroyView() {
+        saveRecyclerViewState()
+        super.onDestroyView()
+    }
+
     override fun getViewModel(): VerbListViewModel {
         return ViewModelProviders.of(activity!!).get(VerbListViewModel::class.java)
     }
@@ -54,13 +60,12 @@ class VerbListFragment : Fragment(), VerbListView, AnkoLogger {
     }
 
     private fun setUi(verbList: ArrayList<Verb>) {
-        // RecyclerView - VerbList
         verbListRecyclerView.layoutManager = LinearLayoutManager(activity)
         verbListRecyclerView.adapter = VerbListAdapter(verbList)
         verbListRecyclerView.addOnItemTouchListener(RecyclerViewItemTouchListener(
-                activity,
-                verbListRecyclerView,
-                object : RecyclerViewItemTouchListener.ClickListener {
+                context = activity,
+                recyclerView = verbListRecyclerView,
+                clickListener = object : RecyclerViewItemTouchListener.ClickListener {
                     override fun onClick(view: View, position: Int) {
                         onClickVerbItem(verbList[position].id)
                     }
@@ -69,11 +74,24 @@ class VerbListFragment : Fragment(), VerbListView, AnkoLogger {
                     }
                 }
         ))
+
+        // Restore RecyclerView state
+        if (restoreRecyclerViewState() != null) {
+            verbListRecyclerView.layoutManager?.onRestoreInstanceState(restoreRecyclerViewState())
+        }
     }
 
     fun onClickVerbItem(id: Int) {
         val intentVerbFullActivity = Intent(activity, VerbFullActivity::class.java)
         intentVerbFullActivity.putExtra(Constants.INTENT_SELECTED_VERB_ID, id)
         startActivity(intentVerbFullActivity)
+    }
+
+    private fun saveRecyclerViewState() {
+        getViewModel().recyclerViewState = verbListRecyclerView.layoutManager?.onSaveInstanceState()
+    }
+
+    private fun restoreRecyclerViewState(): Parcelable? {
+        return getViewModel().recyclerViewState
     }
 }

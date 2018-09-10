@@ -1,5 +1,6 @@
 package ua.ck.zabochen.englishverbs.ui.verblist
 
+import android.os.Parcelable
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import io.reactivex.SingleObserver
@@ -24,6 +25,7 @@ class VerbListViewModel : ViewModel() {
     private val compositeDisposable: CompositeDisposable = CompositeDisposable()
 
     val verbListState: MutableLiveData<ArrayList<Verb>> = MutableLiveData()
+    var recyclerViewState: Parcelable? = null
 
     fun viewIsReady() {
         loadData()

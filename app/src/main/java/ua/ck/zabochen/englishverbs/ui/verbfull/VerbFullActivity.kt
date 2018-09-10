@@ -2,6 +2,7 @@ package ua.ck.zabochen.englishverbs.ui.verbfull
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -54,6 +55,9 @@ class VerbFullActivity : AppCompatActivity(), VerbFullView, AnkoLogger {
     @BindView(R.id.activityVerbFull_cardView_verbExamplesGroup_verbExample)
     lateinit var verbExample: TextView
 
+    // Current verb
+    private var verbInstance: Verb? = null
+
     // Verb id & bookmark state
     private var verbId: Int = 0
     private var verbBookmarkState: Boolean = false
@@ -75,6 +79,9 @@ class VerbFullActivity : AppCompatActivity(), VerbFullView, AnkoLogger {
 
     override fun verbStateObserver() {
         getViewModel().verbState.observe(this, Observer { verb ->
+            // Save current verb
+            this.verbInstance = verb
+            // Set data
             setUi(verb)
         })
     }
@@ -158,9 +165,12 @@ class VerbFullActivity : AppCompatActivity(), VerbFullView, AnkoLogger {
     @OnClick(R.id.activityVerbFull_verbInfinitiveGroup_verbInfinitivePlay,
             R.id.activityVerbFull_verbPastParticipleGroup_verbPastParticiplePlay,
             R.id.activityVerbFull_verbPastTenseGroup_verbPastTensePlay)
-    fun onClickPlay() {
-        // TODO => onClickPlay()
-        showToast("onClick -> Play")
+    fun onClickPlay(view: View) {
+        when (view.id) {
+            R.id.activityVerbFull_verbInfinitiveGroup_verbInfinitivePlay -> getViewModel().speak(verbInstance!!.verbInfinitive)
+            R.id.activityVerbFull_verbPastParticipleGroup_verbPastParticiplePlay -> getViewModel().speak(verbInstance!!.verbPastParticiple)
+            R.id.activityVerbFull_verbPastTenseGroup_verbPastTensePlay -> getViewModel().speak(verbInstance!!.verbPastTense)
+        }
     }
 
     private fun setBookmarkView(state: Boolean) {

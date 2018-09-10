@@ -130,6 +130,7 @@
                             android:background="?attr/selectableItemBackgroundBorderless"
                             android:clickable="true"
                             android:focusable="true"
+                            android:padding="8dp"
                             android:src="@drawable/ic_play_arrow_black_24dp"
                             android:tint="@color/selector_button_play" />
 
@@ -190,6 +191,7 @@
                             android:background="?attr/selectableItemBackgroundBorderless"
                             android:clickable="true"
                             android:focusable="true"
+                            android:padding="8dp"
                             android:src="@drawable/ic_play_arrow_black_24dp"
                             android:tint="@color/selector_button_play" />
 
@@ -250,6 +252,7 @@
                             android:background="?attr/selectableItemBackgroundBorderless"
                             android:clickable="true"
                             android:focusable="true"
+                            android:padding="8dp"
                             android:src="@drawable/ic_play_arrow_black_24dp"
                             android:tint="@color/selector_button_play" />
 

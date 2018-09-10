@@ -11,19 +11,15 @@ import butterknife.ButterKnife
 import ua.ck.zabochen.englishverbs.R
 import ua.ck.zabochen.englishverbs.database.entity.Verb
 import ua.ck.zabochen.englishverbs.utils.Tools
-import ua.ck.zabochen.englishverbs.utils.listener.RecyclerViewClickListener
 
-class BookmarkAdapter(
-        private val recyclerViewClickListener: RecyclerViewClickListener
-) : RecyclerView.Adapter<BookmarkAdapter.BookmarkViewHolder>() {
+class BookmarkAdapter : RecyclerView.Adapter<BookmarkAdapter.BookmarkViewHolder>() {
 
     private val bookmarkVerbList: ArrayList<Verb> = ArrayList()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BookmarkViewHolder {
         return BookmarkViewHolder(
                 itemView = LayoutInflater.from(parent.context)
-                        .inflate(R.layout.adapter_item_bookmark, parent, false),
-                recyclerViewClickListener = recyclerViewClickListener
+                        .inflate(R.layout.adapter_item_bookmark, parent, false)
         )
     }
 
@@ -40,15 +36,11 @@ class BookmarkAdapter(
         this.bookmarkVerbList.addAll(bookmarkVerbList)
     }
 
-    inner class BookmarkViewHolder(
-            itemView: View,
-            private val recyclerViewClickListener: RecyclerViewClickListener
-    ) : RecyclerView.ViewHolder(itemView), View.OnClickListener {
+    fun getData() = bookmarkVerbList
+
+    inner class BookmarkViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         init {
-            // ClickListener
-            itemView.setOnClickListener(this)
-            // ButterKnife
             ButterKnife.bind(this, itemView)
         }
 
@@ -74,12 +66,6 @@ class BookmarkAdapter(
 
             // Verb Example
             verbExample.text = verb.verbExample
-        }
-
-        override fun onClick(view: View?) {
-            if (view != null) {
-                recyclerViewClickListener.onClick(view, adapterPosition)
-            }
         }
     }
 }

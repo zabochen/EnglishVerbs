@@ -10,12 +10,16 @@ import io.reactivex.schedulers.Schedulers
 import ua.ck.zabochen.englishverbs.MainApp
 import ua.ck.zabochen.englishverbs.database.entity.Verb
 import ua.ck.zabochen.englishverbs.helper.database.DatabaseHelper
+import ua.ck.zabochen.englishverbs.helper.speech.SpeechHelper
 import javax.inject.Inject
 
 class VerbFullViewModel : ViewModel() {
 
     @Inject
     lateinit var databaseHelper: DatabaseHelper
+
+    @Inject
+    lateinit var speechHelper: SpeechHelper
 
     init {
         MainApp.mainAppInstance().getActivityComponent().inject(this)
@@ -66,8 +70,12 @@ class VerbFullViewModel : ViewModel() {
                 })
     }
 
+    fun speak(text: String) {
+        speechHelper.speak(text)
+    }
+
     override fun onCleared() {
-        super.onCleared()
         compositeDisposable.clear()
+        super.onCleared()
     }
 }

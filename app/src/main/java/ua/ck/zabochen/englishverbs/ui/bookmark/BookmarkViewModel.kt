@@ -9,7 +9,6 @@ import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
 import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.info
 import ua.ck.zabochen.englishverbs.MainApp
 import ua.ck.zabochen.englishverbs.database.entity.Verb
 import ua.ck.zabochen.englishverbs.helper.database.DatabaseHelper
@@ -24,11 +23,10 @@ class BookmarkViewModel : ViewModel(), AnkoLogger {
     @Inject
     lateinit var databaseHelper: DatabaseHelper
 
-    private val compositeDisposable: CompositeDisposable = CompositeDisposable()
-
-    val bookmarkVerbList: MutableLiveData<ArrayList<Verb>> = MutableLiveData()
-
+    val bookmarkVerbListState: MutableLiveData<ArrayList<Verb>> = MutableLiveData()
     var recyclerViewState: Parcelable? = null
+
+    private val compositeDisposable: CompositeDisposable = CompositeDisposable()
 
     fun viewIsReady() {
         getBookmarkVerbList()
@@ -48,10 +46,7 @@ class BookmarkViewModel : ViewModel(), AnkoLogger {
                     }
 
                     override fun onSuccess(t: ArrayList<Verb>) {
-
-                        info { "onSuccess ${t.size}" }
-
-                        bookmarkVerbList.postValue(t)
+                        bookmarkVerbListState.postValue(t)
                     }
 
                     override fun onError(e: Throwable) {
@@ -61,7 +56,6 @@ class BookmarkViewModel : ViewModel(), AnkoLogger {
 
     override fun onCleared() {
         compositeDisposable.clear()
-        info { "BOOKMARK => fun onCleared()" }
         super.onCleared()
     }
 }

@@ -49,20 +49,6 @@ class MainViewModel : ViewModel(), AnkoLogger {
                         }
                     })
         }
-
-//        // Realm
-//        if (databaseState.value == false) {
-//            realmHelper.inflateDatabase(object : CallbackEvent.DatabaseCallback {
-//                override fun onComplete() {
-//                    databaseState.postValue(true)
-//                }
-//
-//                override fun onError(error: Throwable) {
-//                    databaseState.postValue(false)
-//                }
-//            })
-//        }
-
     }
 
 

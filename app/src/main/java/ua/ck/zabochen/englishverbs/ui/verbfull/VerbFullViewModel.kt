@@ -76,6 +76,7 @@ class VerbFullViewModel : ViewModel() {
 
     override fun onCleared() {
         compositeDisposable.clear()
+        speechHelper.clear()
         super.onCleared()
     }
 }

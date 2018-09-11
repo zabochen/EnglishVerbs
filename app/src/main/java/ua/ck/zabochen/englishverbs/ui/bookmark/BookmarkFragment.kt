@@ -31,7 +31,7 @@ class BookmarkFragment : Fragment(), BookmarkView, AnkoLogger {
     @BindView(R.id.fragmentBookmark_recyclerView)
     lateinit var bookmarkRecyclerView: RecyclerView
 
-    lateinit var bookmarkAdapter: BookmarkAdapter
+    val bookmarkAdapter: BookmarkAdapter by lazy { BookmarkAdapter() }
 
     // Current state
     private var refreshState: Boolean = false
@@ -93,7 +93,6 @@ class BookmarkFragment : Fragment(), BookmarkView, AnkoLogger {
             // Layout Manager
             bookmarkRecyclerView.layoutManager = LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
             // Adapter
-            bookmarkAdapter = BookmarkAdapter()
             bookmarkRecyclerView.adapter = bookmarkAdapter
             // Click Listener
             bookmarkRecyclerView.addOnItemTouchListener(RecyclerViewItemTouchListener(

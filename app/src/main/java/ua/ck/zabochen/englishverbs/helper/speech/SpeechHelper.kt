@@ -7,22 +7,28 @@ import java.util.*
 
 class SpeechHelper(private val context: Context) {
 
-    private lateinit var textToSpeech: TextToSpeech
+    private var textToSpeech: TextToSpeech? = null
 
     fun speak(text: String) {
         textToSpeech = TextToSpeech(context) { state ->
             if (state == TextToSpeech.SUCCESS) {
-                textToSpeech.language = Locale.US
-                textToSpeech.setPitch(0.7F)
-                textToSpeech.setSpeechRate(0.5F)
-
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                    textToSpeech.speak(text, TextToSpeech.QUEUE_FLUSH, null, null)
-                } else {
-                    textToSpeech.speak(text, TextToSpeech.QUEUE_FLUSH, null)
+                textToSpeech?.let {
+                    it.language = Locale.US
+                    it.setPitch(0.7F)
+                    it.setSpeechRate(0.5F)
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                        it.speak(text, TextToSpeech.QUEUE_FLUSH, null, null)
+                    } else {
+                        it.speak(text, TextToSpeech.QUEUE_FLUSH, null)
+                    }
                 }
             }
         }
-        //textToSpeech.shutdown()
+    }
+
+    fun clear() {
+        if (textToSpeech != null) {
+            textToSpeech!!.shutdown()
+        }
     }
 }

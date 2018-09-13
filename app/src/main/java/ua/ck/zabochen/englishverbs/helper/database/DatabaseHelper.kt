@@ -8,6 +8,7 @@ import io.reactivex.Completable
 import io.reactivex.Single
 import org.jetbrains.anko.AnkoLogger
 import ua.ck.zabochen.englishverbs.database.db.AppDatabase
+import ua.ck.zabochen.englishverbs.database.entity.Notification
 import ua.ck.zabochen.englishverbs.database.entity.Verb
 import ua.ck.zabochen.englishverbs.model.json.VerbJson
 import ua.ck.zabochen.englishverbs.utils.Constants
@@ -100,20 +101,33 @@ class DatabaseHelper(private val context: Context) : AnkoLogger {
         }
     }
 
-    fun getVerbBookmarkState(id: Int): Single<Boolean> {
-        return Single.create<Boolean> {
+    fun getBookmarkVerbList(): Single<ArrayList<Verb>> {
+        return Single.create {
             try {
-                it.onSuccess(appDatabase.verbDao().getVerb(id).bookmarkState)
+                it.onSuccess(ArrayList(appDatabase.verbDao().getBookmarkVerbList()))
             } catch (t: Throwable) {
                 it.onError(t)
             }
         }
     }
 
-    fun getBookmarkVerbList(): Single<ArrayList<Verb>> {
+    fun setNotificationState(id: Int): Single<Boolean> {
         return Single.create {
             try {
-                it.onSuccess(ArrayList(appDatabase.verbDao().getBookmarkVerbList()))
+                val notification: Notification = appDatabase.notificationDao().getNotification(id)
+                notification.notificationState = !notification.notificationState
+                appDatabase.notificationDao().update(notification)
+                it.onSuccess(notification.notificationState)
+            } catch (t: Throwable) {
+                it.onError(t)
+            }
+        }
+    }
+
+    fun getNotification(id: Int): Single<Notification> {
+        return Single.create {
+            try {
+                it.onSuccess(appDatabase.notificationDao().getNotification(id))
             } catch (t: Throwable) {
                 it.onError(t)
             }

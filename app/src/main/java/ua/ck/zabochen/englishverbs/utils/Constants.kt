@@ -13,6 +13,9 @@ class Constants {
         @JvmStatic
         val DATABASE_NAME: String = "englishVerbs.db"
 
+        @JvmStatic
+        val DATABASE_NOTIFICATION_ID: Int = 1
+
         // Activity for result
         @JvmStatic
         val AFR_VERB_FULL_ACTIVITY_DESTROY: Int = 100

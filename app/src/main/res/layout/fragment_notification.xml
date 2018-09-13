@@ -24,6 +24,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Notification state"
+                android:textColor="#3b3b3c"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -44,8 +45,8 @@
             android:layout_marginRight="60dp"
             android:background="@android:color/darker_gray" />
 
-        <androidx.appcompat.widget.SwitchCompat
-            android:id="@+id/fragmentNotification_switch_notificationStateSwitch"
+        <Switch
+            android:id="@+id/fragmentNotification_switch_notificationState"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
@@ -76,6 +77,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:text="Show words in notification from:"
+            android:textColor="#3b3b3c"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -97,6 +99,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="All words"
+                    android:textColor="#3b3b3c"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
@@ -146,6 +149,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Bookmark words"
+                    android:textColor="#3b3b3c"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 

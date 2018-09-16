@@ -33,7 +33,7 @@ class NotificationHelper {
         val pendingIntent: PendingIntent? = stack.getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT)
         notificationBuilder.setContentIntent(pendingIntent)
 
-        // Notification
+        // Settings
         val notificationManager: NotificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         notificationManager.notify(Constants.NOTIFICATION_ID, notificationBuilder.build())
 

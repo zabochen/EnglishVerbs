@@ -43,7 +43,7 @@ dependencies {
     implementation "androidx.appcompat:appcompat:$android_support_version"
     implementation "androidx.recyclerview:recyclerview:$android_support_version"
     implementation "androidx.cardview:cardview:$android_support_version"
-    implementation "com.google.android.material:material:1.0.0-rc01"
+    implementation "com.google.android.material:material:1.0.0-rc02"
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
 
     // ViewModel & LiveData
@@ -61,17 +61,8 @@ dependencies {
     implementation "android.arch.work:work-runtime:$work_manager_version"
     implementation "android.arch.work:work-firebase:$work_manager_version"
 
-    // Mosby
-    implementation 'com.hannesdorfmann.mosby3:viewstate:3.1.0'
-
     // EventBus
     implementation 'org.greenrobot:eventbus:3.1.1'
-
-    // Moxy
-    implementation 'com.arello-mobile:moxy:1.5.3'
-    implementation 'com.arello-mobile:moxy-android:1.5.3'
-    implementation 'com.arello-mobile:moxy-app-compat:1.5.3'
-    kapt 'com.arello-mobile:moxy-compiler:1.5.3'
 
     // Firebase JobDispatcher
     implementation 'com.firebase:firebase-jobdispatcher:0.8.5'
@@ -94,6 +85,9 @@ dependencies {
 
     // Gson
     implementation 'com.google.code.gson:gson:2.8.5'
+
+    // SpinKit
+    implementation 'com.github.ybq:Android-SpinKit:1.1.0'
 
     // JUnit
     testImplementation 'junit:junit:4.12'

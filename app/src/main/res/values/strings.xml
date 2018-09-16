@@ -1,70 +1,9 @@
 <resources>
     <string name="app_name">English Verbs</string>
 
-    <!-- Settings Activity -->
-    <string name="settingsActivity_toolbar_title">Settings</string>
-
-    <!-- Settings Fragment XML-->
-    <!-- Settings Fragment - VerbJson Notification Group -->
-    <string name="settings_category_notification_title">Notification</string>
-    <!-- Settings Fragment - VerbJson Notification State -->
-    <string name="settings_switchPreference_verbNotificationState_title">Notification state</string>
-    <string name="settings_switchPreference_verbNotificationState_summary">Selecting verb notification state</string>
-    <string name="settings_switchPreference_verbNotificationState_key">settings_switchPreference_verbNotificationState</string>
-    <!-- Settings Fragment - VerbJson Notification Time -->
-    <string name="settings_listPreference_verbNotificationTime_title">Notification time</string>
-    <string name="settings_listPreference_verbNotificationTime_summary">Selecting verb notification time range</string>
-    <string name="settings_listPreference_verbNotificationTime_key">settings_listPreference_verbNotificationTime</string>
-
-    <string-array name="settings_listPreference_verbNotificationTime_entries">
-        <item>10 minutes</item>
-        <item>20 minutes</item>
-        <item>30 minutes</item>
-        <item>40 minutes</item>
-        <item>50 minutes</item>
-        <item>1 hour</item>
-        <item>2 hour</item>
-        <item>3 hour</item>
-        <item>4 hour</item>
-        <item>5 hour</item>
-        <item>6 hour</item>
-        <item>7 hour</item>
-        <item>8 hour</item>
-        <item>9 hour</item>
-        <item>10 hour</item>
-        <item>11 hour</item>
-        <item>12 hour</item>
-    </string-array>
-
-    <string-array name="settings_listPreference_verbNotificationTime_entryValues">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
-        <item>8</item>
-        <item>9</item>
-        <item>10</item>
-        <item>11</item>
-        <item>12</item>
-        <item>13</item>
-        <item>14</item>
-        <item>15</item>
-        <item>16</item>
-    </string-array>
-
-    <!-- Menu Main -->
-    <string name="menuMain_itemSettings_title">Settings</string>
-
     <!-- Bottom Navigation View -->
     <string name="bottomNavigationView_itemHome_title">Home</string>
     <string name="bottomNavigationView_itemBookmarks_title">Bookmarks</string>
-    <string name="bottomNavigationView_itemNotifications_title">Notifications</string>
-
-    <!-- Transition Animation -->
-    <string name="transition_image">imageTransition</string>
+    <string name="bottomNavigationView_itemSettings_title">Settings</string>
 
 </resources>

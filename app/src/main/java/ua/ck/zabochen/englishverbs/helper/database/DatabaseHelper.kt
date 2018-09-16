@@ -7,8 +7,9 @@ import com.google.gson.reflect.TypeToken
 import io.reactivex.Completable
 import io.reactivex.Single
 import org.jetbrains.anko.AnkoLogger
+import org.jetbrains.anko.info
 import ua.ck.zabochen.englishverbs.database.db.AppDatabase
-import ua.ck.zabochen.englishverbs.database.entity.Notification
+import ua.ck.zabochen.englishverbs.database.entity.Settings
 import ua.ck.zabochen.englishverbs.database.entity.Verb
 import ua.ck.zabochen.englishverbs.model.json.VerbJson
 import ua.ck.zabochen.englishverbs.utils.Constants
@@ -31,6 +32,7 @@ class DatabaseHelper(private val context: Context) : AnkoLogger {
         return Completable.create {
             try {
                 if (appDatabase.verbDao().getVerbList().isEmpty()) {
+                    // Insert Verbs
                     val verb = Verb()
                     jsonToObject().forEach {
                         // VerbJson Infinitive
@@ -57,6 +59,10 @@ class DatabaseHelper(private val context: Context) : AnkoLogger {
                         // Inflate database
                         appDatabase.verbDao().insert(verb)
                     }
+
+                    // Insert Settings default values
+                    // TODO: Insert Settings default values
+
                     it.onComplete()
                 } else {
                     it.onComplete()
@@ -114,21 +120,33 @@ class DatabaseHelper(private val context: Context) : AnkoLogger {
     fun setNotificationState(id: Int): Single<Boolean> {
         return Single.create {
             try {
-                val notification: Notification = appDatabase.notificationDao().getNotification(id)
-                notification.notificationState = !notification.notificationState
-                appDatabase.notificationDao().update(notification)
-                it.onSuccess(notification.notificationState)
+                val settings: Settings = appDatabase.settingsDao().getSettings(id)
+                settings.notificationState = !settings.notificationState
+                appDatabase.settingsDao().update(settings)
+                it.onSuccess(settings.notificationState)
             } catch (t: Throwable) {
                 it.onError(t)
             }
         }
     }
 
-    fun getNotification(id: Int): Single<Notification> {
+    fun getNotification(id: Int): Single<Settings> {
         return Single.create {
             try {
-                it.onSuccess(appDatabase.notificationDao().getNotification(id))
+
+                val notification = Settings()
+                notification.id = 10
+                notification.notificationState = true
+                notification.notificationAllWordsState = true
+                notification.notificationBookmarksWordsState = true
+                appDatabase.settingsDao().insert(notification)
+
+                info { "SIZE: ${appDatabase.settingsDao().getSettingsList().size}" }
+
+                //it.onSuccess(appDatabase.settingsDao().getSettings(id))
             } catch (t: Throwable) {
+                info { t.stackTrace.toString() }
+
                 it.onError(t)
             }
         }

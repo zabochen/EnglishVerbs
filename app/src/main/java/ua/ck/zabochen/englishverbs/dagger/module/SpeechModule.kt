@@ -8,9 +8,7 @@ import ua.ck.zabochen.englishverbs.helper.speech.SpeechHelper
 
 @Module
 class SpeechModule {
-
     @Provides
     @ActivityScope
     fun provideSpeechHelper(context: Context) = SpeechHelper(context)
-
 }

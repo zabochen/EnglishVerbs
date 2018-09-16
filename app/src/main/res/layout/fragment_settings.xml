@@ -3,24 +3,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- Notification state -->
+    <!-- ProgressBar -->
+    <include layout="@layout/snippet_progress_bar" />
+
+    <!-- Settings state -->
     <RelativeLayout
-        android:id="@+id/fragmentNotification_relativeLayout_notificationStateGroup"
+        android:id="@+id/fragmentSettings_relativeLayout_notificationStateGroup"
+        style="@style/ClickableBackground"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?android:attr/selectableItemBackground"
-        android:clickable="true"
-        android:focusable="true"
         android:padding="20dp">
 
         <LinearLayout
-            android:id="@+id/fragmentNotification_linearLayout_notificationState"
+            android:id="@+id/fragmentSettings_linearLayout_notificationState"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/fragmentNotification_textView_notificationState"
+                android:id="@+id/fragmentSettings_textView_notificationState"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Notification state"
@@ -29,10 +30,10 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/fragmentNotification_textView_notificationStateDescription"
+                android:id="@+id/fragmentSettings_textView_notificationStateDescription"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="On/Off notification"
+                android:text="On/Off settings"
                 android:textSize="14sp" />
 
         </LinearLayout>
@@ -46,7 +47,7 @@
             android:background="@android:color/darker_gray" />
 
         <Switch
-            android:id="@+id/fragmentNotification_switch_notificationState"
+            android:id="@+id/fragmentSettings_switch_notificationState"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
@@ -58,44 +59,50 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_below="@id/fragmentNotification_relativeLayout_notificationStateGroup"
+        android:layout_below="@id/fragmentSettings_relativeLayout_notificationStateGroup"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:background="@android:color/darker_gray" />
 
-    <!-- Notification Words -->
+    <!-- Settings Words -->
     <RelativeLayout
-        android:id="@+id/fragmentNotification_relativeLayout_notificationWordsGroup"
+        android:id="@+id/fragmentSettings_relativeLayout_notificationWordsGroup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/fragmentNotification_relativeLayout_notificationStateGroup"
-        android:padding="20dp">
+        android:layout_below="@id/fragmentSettings_relativeLayout_notificationStateGroup"
+        android:paddingTop="20dp">
 
         <TextView
-            android:id="@+id/fragmentNotification_textView_notificationWordsTitle"
+            android:id="@+id/fragmentSettings_textView_notificationWordsTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:text="Show words in notification from:"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="Show words in settings from:"
             android:textColor="#3b3b3c"
             android:textSize="16sp"
             android:textStyle="bold" />
 
         <!-- All words -->
         <RelativeLayout
-            android:id="@+id/fragmentNotification_relativeLayout_notificationAllWordsGroup"
+            android:id="@+id/fragmentSettings_relativeLayout_notificationAllWordsGroup"
+            style="@style/ClickableBackground"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/fragmentNotification_textView_notificationWordsTitle">
+            android:layout_below="@id/fragmentSettings_textView_notificationWordsTitle"
+            android:paddingLeft="20dp"
+            android:paddingTop="20dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="20dp">
 
             <LinearLayout
-                android:id="@+id/fragmentNotification_linearLayout_notificationAllWords"
+                android:id="@+id/fragmentSettings_linearLayout_notificationAllWords"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/fragmentNotification_textView_notificationAllWords"
+                    android:id="@+id/fragmentSettings_textView_notificationAllWords"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="All words"
@@ -104,7 +111,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/fragmentNotification_textView_notificationAllWordsDescription"
+                    android:id="@+id/fragmentSettings_textView_notificationAllWordsDescription"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Show any word from dictionary"
@@ -112,13 +119,12 @@
 
             </LinearLayout>
 
-            <androidx.appcompat.widget.AppCompatCheckBox
-                android:id="@+id/fragmentNotification_switch_notificationStateSwitcdh"
+            <Switch
+                android:id="@+id/fragmentSettings_switch_notificationAllWords"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="10dp" />
+                android:layout_centerVertical="true" />
 
             <View
                 android:layout_width="1dp"
@@ -132,20 +138,24 @@
 
         <!-- Bookmark words -->
         <RelativeLayout
-            android:id="@+id/fragmentNotification_relativeLayout_notificationBookmarkWordsGroup"
+            android:id="@+id/fragmentSettings_relativeLayout_notificationBookmarkWordsGroup"
+            style="@style/ClickableBackground"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/fragmentNotification_relativeLayout_notificationAllWordsGroup"
-            android:layout_marginTop="20dp">
+            android:layout_below="@id/fragmentSettings_relativeLayout_notificationAllWordsGroup"
+            android:paddingLeft="20dp"
+            android:paddingTop="20dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="20dp">
 
             <LinearLayout
-                android:id="@+id/fragmentNotification_linearLayout_notificationBookmarkWords"
+                android:id="@+id/fragmentSettings_linearLayout_notificationBookmarkWords"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/fragmentNotification_textView_notificationBookmarkWords"
+                    android:id="@+id/fragmentSettings_textView_notificationBookmarkWords"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Bookmark words"
@@ -154,7 +164,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/fragmentNotification_textView_notificationBookmarkWordsDescription"
+                    android:id="@+id/fragmentSettings_textView_notificationBookmarkWordsDescription"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Show any word from bookmark"
@@ -162,13 +172,12 @@
 
             </LinearLayout>
 
-            <androidx.appcompat.widget.AppCompatCheckBox
-                android:id="@+id/fragmentNotification_switch_notificationBookmarkWords"
+            <Switch
+                android:id="@+id/fragmentSettings_switch_notificationBookmarkWords"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="10dp" />
+                android:layout_centerVertical="true" />
 
             <View
                 android:layout_width="1dp"

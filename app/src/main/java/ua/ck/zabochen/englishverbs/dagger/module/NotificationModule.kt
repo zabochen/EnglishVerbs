@@ -7,9 +7,7 @@ import ua.ck.zabochen.englishverbs.helper.notification.NotificationHelper
 
 @Module
 class NotificationModule {
-
     @Provides
     @ActivityScope
     fun provideNotificationHelper() = NotificationHelper()
-
 }

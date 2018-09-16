@@ -7,11 +7,9 @@ import javax.inject.Singleton
 
 @Module
 class ApplicationContextModule(context: Context) {
-
     private val mContext: Context = context.applicationContext
 
     @Provides
     @Singleton
     fun provideApplicationContext() = mContext
-
 }

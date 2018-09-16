@@ -8,9 +8,7 @@ import ua.ck.zabochen.englishverbs.helper.database.DatabaseHelper
 
 @Module
 class DatabaseModule {
-
     @Provides
     @ActivityScope
     fun provideDatabaseHelper(context: Context) = DatabaseHelper(context)
-
 }

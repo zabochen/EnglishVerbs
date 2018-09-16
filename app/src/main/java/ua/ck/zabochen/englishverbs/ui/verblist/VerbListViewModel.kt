@@ -3,6 +3,7 @@ package ua.ck.zabochen.englishverbs.ui.verblist
 import android.os.Parcelable
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import io.reactivex.CompletableObserver
 import io.reactivex.SingleObserver
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
@@ -28,7 +29,26 @@ class VerbListViewModel : ViewModel() {
     var recyclerViewState: Parcelable? = null
 
     fun viewIsReady() {
-        loadData()
+        databaseInflate()
+    }
+
+    private fun databaseInflate() {
+        databaseHelper.inflateDatabase()
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(object : CompletableObserver {
+                    override fun onSubscribe(d: Disposable) {
+                        compositeDisposable.add(d)
+                    }
+
+                    override fun onComplete() {
+                        // Get verbList
+                        loadData()
+                    }
+
+                    override fun onError(e: Throwable) {
+                    }
+                })
     }
 
     private fun loadData() {

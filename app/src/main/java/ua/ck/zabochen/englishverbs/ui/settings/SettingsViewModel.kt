@@ -1,4 +1,4 @@
-package ua.ck.zabochen.englishverbs.ui.notification
+package ua.ck.zabochen.englishverbs.ui.settings
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -7,18 +7,25 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
-import ua.ck.zabochen.englishverbs.database.entity.Notification
+import org.jetbrains.anko.AnkoLogger
+import org.jetbrains.anko.info
+import ua.ck.zabochen.englishverbs.MainApp
+import ua.ck.zabochen.englishverbs.database.entity.Settings
 import ua.ck.zabochen.englishverbs.helper.database.DatabaseHelper
 import javax.inject.Inject
 
-class NotificationViewModel : ViewModel() {
+class SettingsViewModel : ViewModel(), AnkoLogger {
+
+    init {
+        MainApp.mAppInstance.getFragmentComponent().inject(this)
+    }
 
     @Inject
     lateinit var databaseHelper: DatabaseHelper
 
     private val compositeDisposable: CompositeDisposable = CompositeDisposable()
 
-    val notificationState: MutableLiveData<Notification> = MutableLiveData()
+    val settingsState: MutableLiveData<Settings> = MutableLiveData()
 
     fun viewIsReady(notificationId: Int) {
         getNotification(notificationId)
@@ -29,16 +36,17 @@ class NotificationViewModel : ViewModel() {
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(
-                        object : SingleObserver<Notification> {
+                        object : SingleObserver<Settings> {
                             override fun onSubscribe(d: Disposable) {
                                 compositeDisposable.add(d)
                             }
 
-                            override fun onSuccess(t: Notification) {
-                                notificationState.value = t
+                            override fun onSuccess(t: Settings) {
+                                settingsState.value = t
                             }
 
                             override fun onError(e: Throwable) {
+                                info { "ERROR => ${e.printStackTrace()}" }
                             }
                         }
                 )
@@ -48,7 +56,7 @@ class NotificationViewModel : ViewModel() {
         databaseHelper.setNotificationState(notificationId)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(object : SingleObserver<Boolean>{
+                .subscribe(object : SingleObserver<Boolean> {
                     override fun onSubscribe(d: Disposable) {
                         compositeDisposable.add(d)
                     }

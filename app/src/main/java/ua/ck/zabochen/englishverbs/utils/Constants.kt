@@ -1,7 +1,5 @@
 package ua.ck.zabochen.englishverbs.utils
 
-import ua.ck.zabochen.englishverbs.R
-
 class Constants {
     companion object {
 
@@ -34,11 +32,4 @@ class Constants {
         @JvmStatic
         val NOTIFICATION_CHANNEL_ID: String = "English verbs"
     }
-}
-
-// Bottom Navigation View Item
-enum class BottomNavigationViewItem(val id: Int) {
-    HOME(R.id.menuBottomNavigationView_item_home),
-    BOOKMARKS(R.id.menuBottomNavigationView_item_bookmarks),
-    NOTIFICATION(R.id.menuBottomNavigationView_item_notifications)
 }

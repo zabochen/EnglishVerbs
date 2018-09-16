@@ -6,6 +6,7 @@ import android.os.Parcelable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.FrameLayout
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -22,6 +23,9 @@ import ua.ck.zabochen.englishverbs.utils.listener.RecyclerViewItemTouchListener
 
 class VerbListFragment : Fragment(), VerbListView, AnkoLogger {
 
+    @BindView(R.id.snippetProgressBar_frameLayout_progressBarHolder)
+    lateinit var progressBarHolder: FrameLayout
+
     @BindView(R.id.fragmentVerbList_recyclerView)
     lateinit var verbListRecyclerView: RecyclerView
 
@@ -35,6 +39,9 @@ class VerbListFragment : Fragment(), VerbListView, AnkoLogger {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         addObservers()
+        // Show progressBar
+        showProgressBar(true)
+        // View is ready to show data
         getViewModel().viewIsReady()
     }
 
@@ -55,6 +62,8 @@ class VerbListFragment : Fragment(), VerbListView, AnkoLogger {
         getViewModel().verbListState.observe(this, Observer {
             if (!it.isEmpty()) {
                 setUi(it)
+                // Hide progressBar
+                showProgressBar(false)
             }
         })
     }
@@ -93,5 +102,15 @@ class VerbListFragment : Fragment(), VerbListView, AnkoLogger {
 
     private fun restoreRecyclerViewState(): Parcelable? {
         return getViewModel().recyclerViewState
+    }
+
+    private fun showProgressBar(progressBarState: Boolean) {
+        when (progressBarState) {
+            true -> {
+                progressBarHolder.bringToFront()
+                progressBarHolder.visibility = View.VISIBLE
+            }
+            false -> progressBarHolder.visibility = View.GONE
+        }
     }
 }

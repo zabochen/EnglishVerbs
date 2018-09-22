@@ -12,7 +12,7 @@ class Constants {
         val DATABASE_NAME: String = "englishVerbs.db"
 
         @JvmStatic
-        val DATABASE_NOTIFICATION_ID: Int = 1
+        val DATABASE_TABLE_SETTINGS_ID: Int = 1
 
         // Activity for result
         @JvmStatic

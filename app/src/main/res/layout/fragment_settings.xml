@@ -6,7 +6,7 @@
     <!-- ProgressBar -->
     <include layout="@layout/snippet_progress_bar" />
 
-    <!-- Settings state -->
+    <!-- Setting state -->
     <RelativeLayout
         android:id="@+id/fragmentSettings_relativeLayout_notificationStateGroup"
         style="@style/ClickableBackground"
@@ -64,7 +64,7 @@
         android:layout_marginRight="20dp"
         android:background="@android:color/darker_gray" />
 
-    <!-- Settings Words -->
+    <!-- Setting Words -->
     <RelativeLayout
         android:id="@+id/fragmentSettings_relativeLayout_notificationWordsGroup"
         android:layout_width="match_parent"

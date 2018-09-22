@@ -9,7 +9,7 @@ import io.reactivex.Single
 import org.jetbrains.anko.AnkoLogger
 import org.jetbrains.anko.info
 import ua.ck.zabochen.englishverbs.database.db.AppDatabase
-import ua.ck.zabochen.englishverbs.database.entity.Settings
+import ua.ck.zabochen.englishverbs.database.entity.Setting
 import ua.ck.zabochen.englishverbs.database.entity.Verb
 import ua.ck.zabochen.englishverbs.model.json.VerbJson
 import ua.ck.zabochen.englishverbs.utils.Constants
@@ -32,6 +32,9 @@ class DatabaseHelper(private val context: Context) : AnkoLogger {
         return Completable.create {
             try {
                 if (appDatabase.verbDao().getVerbList().isEmpty()) {
+
+                    info("getVerbList().isEmpty()")
+
                     // Insert Verbs
                     val verb = Verb()
                     jsonToObject().forEach {
@@ -59,16 +62,26 @@ class DatabaseHelper(private val context: Context) : AnkoLogger {
                         // Inflate database
                         appDatabase.verbDao().insert(verb)
                     }
-
-                    // Insert Settings default values
-                    // TODO: Insert Settings default values
-
-                    it.onComplete()
-                } else {
-                    it.onComplete()
                 }
+
+                if (appDatabase.settingsDao().getSettingList().isEmpty()) {
+
+                    info("getSettingList().isEmpty()")
+
+                    // Set settings default values
+                    val settings = Setting()
+                    settings.id = Constants.DATABASE_TABLE_SETTINGS_ID
+                    settings.notificationState = false
+                    settings.notificationAllWordsState = false
+                    settings.notificationBookmarksWordsState = false
+                    // Insert settings
+                    appDatabase.settingsDao().insert(settings)
+                }
+
             } catch (t: Throwable) {
                 it.onError(t)
+            } finally {
+                it.onComplete()
             }
         }
     }
@@ -117,38 +130,25 @@ class DatabaseHelper(private val context: Context) : AnkoLogger {
         }
     }
 
-    fun setNotificationState(id: Int): Single<Boolean> {
+    fun getSettings(): Single<Setting> {
         return Single.create {
             try {
-                val settings: Settings = appDatabase.settingsDao().getSettings(id)
-                settings.notificationState = !settings.notificationState
+                it.onSuccess(appDatabase.settingsDao().getSettings(Constants.DATABASE_TABLE_SETTINGS_ID))
+            } catch (t: Throwable) {
+                it.onError(t)
+            }
+        }
+    }
+
+    fun updateSettings(settings: Setting): Completable {
+        return Completable.create {
+            try {
                 appDatabase.settingsDao().update(settings)
-                it.onSuccess(settings.notificationState)
+                it.onComplete()
             } catch (t: Throwable) {
                 it.onError(t)
             }
         }
     }
 
-    fun getNotification(id: Int): Single<Settings> {
-        return Single.create {
-            try {
-
-                val notification = Settings()
-                notification.id = 10
-                notification.notificationState = true
-                notification.notificationAllWordsState = true
-                notification.notificationBookmarksWordsState = true
-                appDatabase.settingsDao().insert(notification)
-
-                info { "SIZE: ${appDatabase.settingsDao().getSettingsList().size}" }
-
-                //it.onSuccess(appDatabase.settingsDao().getSettings(id))
-            } catch (t: Throwable) {
-                info { t.stackTrace.toString() }
-
-                it.onError(t)
-            }
-        }
-    }
 }

@@ -1,4 +1,4 @@
-package ua.ck.zabochen.englishverbs.ui.settings
+package ua.ck.zabochen.englishverbs.ui.setting
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -15,12 +15,10 @@ import butterknife.ButterKnife
 import butterknife.OnClick
 import butterknife.Unbinder
 import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.info
 import ua.ck.zabochen.englishverbs.R
-import ua.ck.zabochen.englishverbs.database.entity.Settings
-import ua.ck.zabochen.englishverbs.utils.Constants
+import ua.ck.zabochen.englishverbs.database.entity.Setting
 
-class SettingsFragment : Fragment(), SettingsView, AnkoLogger {
+class SettingFragment : Fragment(), SettingView, AnkoLogger {
 
     @BindView(R.id.snippetProgressBar_frameLayout_progressBarHolder)
     lateinit var progressBarHolder: FrameLayout
@@ -43,7 +41,7 @@ class SettingsFragment : Fragment(), SettingsView, AnkoLogger {
     @BindView(R.id.fragmentSettings_switch_notificationBookmarkWords)
     lateinit var notificationBookmarkWordsSwitch: Switch
 
-    lateinit var unbinder: Unbinder
+    private lateinit var unbinder: Unbinder
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Layout & ButterKnife
@@ -54,10 +52,8 @@ class SettingsFragment : Fragment(), SettingsView, AnkoLogger {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        // Show progressBar
         showProgressBar(true)
-
-        getViewModel().viewIsReady(notificationId = Constants.DATABASE_NOTIFICATION_ID)
+        getViewModel().viewIsReady()
     }
 
     override fun onDestroyView() {
@@ -65,19 +61,17 @@ class SettingsFragment : Fragment(), SettingsView, AnkoLogger {
         unbinder.unbind()
     }
 
-    override fun getViewModel(): SettingsViewModel {
-        return ViewModelProviders.of(activity!!).get(SettingsViewModel::class.java)
+    override fun getViewModel(): SettingViewModel {
+        return ViewModelProviders.of(activity!!).get(SettingViewModel::class.java)
     }
 
     override fun addObservers() {
-        notificationStateObserver()
+        settingStateObserver()
     }
 
-    override fun notificationStateObserver() {
+    override fun settingStateObserver() {
         getViewModel().settingsState.observe(this, Observer {
-            if (it != null) {
-                info { "notificationStateObserver() => Settings nonNull" }
-            }
+            // TODO: settingStateObserver()
         })
     }
 
@@ -93,14 +87,14 @@ class SettingsFragment : Fragment(), SettingsView, AnkoLogger {
         }
     }
 
-    private fun setUi(settings: Settings) {
-        // Settings
+    private fun setUi(settings: Setting) {
+        // Setting
         notificationStateSwitch.isChecked = settings.notificationState
 
-        // Settings All Words
+        // Setting All Words
         notificationAllWordsSwitch.isChecked = settings.notificationAllWordsState
 
-        // Settings Bookmark
+        // Setting Bookmark
         notificationBookmarkWordsSwitch.isChecked = settings.notificationBookmarksWordsState
     }
 

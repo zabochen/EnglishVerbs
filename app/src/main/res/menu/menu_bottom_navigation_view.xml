@@ -13,7 +13,7 @@
         android:icon="@drawable/ic_bookmark_white_24dp"
         android:title="@string/bottomNavigationView_itemBookmarks_title" />
 
-    <!-- Settings -->
+    <!-- Setting -->
     <item
         android:id="@+id/menuBottomNavigationView_item_settings"
         android:icon="@drawable/ic_settings_white_24dp"

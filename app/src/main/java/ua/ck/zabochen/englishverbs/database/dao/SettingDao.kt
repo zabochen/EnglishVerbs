@@ -4,23 +4,23 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
-import ua.ck.zabochen.englishverbs.database.entity.Settings
+import ua.ck.zabochen.englishverbs.database.entity.Setting
 
 @Dao
-interface SettingsDao {
+interface SettingDao {
     // Insert settings
     @Insert
-    fun insert(settings: Settings)
+    fun insert(setting: Setting)
 
     // Update settings
     @Update
-    fun update(settings: Settings)
+    fun update(setting: Setting)
 
-    // Get settings list
+    // Get setting list
     @Query("SELECT * FROM settings")
-    fun getSettingsList(): List<Settings>
+    fun getSettingList(): List<Setting>
 
     // Get settings by id
     @Query("SELECT * FROM settings WHERE id = :id")
-    fun getSettings(id: Int): Settings
+    fun getSettings(id: Int): Setting
 }

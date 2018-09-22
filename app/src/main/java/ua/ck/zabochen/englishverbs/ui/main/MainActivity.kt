@@ -13,7 +13,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import org.jetbrains.anko.AnkoLogger
 import ua.ck.zabochen.englishverbs.R
 import ua.ck.zabochen.englishverbs.ui.bookmark.BookmarkFragment
-import ua.ck.zabochen.englishverbs.ui.settings.SettingsFragment
+import ua.ck.zabochen.englishverbs.ui.setting.SettingFragment
 import ua.ck.zabochen.englishverbs.ui.verblist.VerbListFragment
 import ua.ck.zabochen.englishverbs.utils.behavior.BottomNavigationViewBehavior
 
@@ -62,7 +62,7 @@ class MainActivity : AppCompatActivity(), MainView, AnkoLogger {
             when (item.itemId) {
                 R.id.menuBottomNavigationView_item_home -> setFragment(VerbListFragment())
                 R.id.menuBottomNavigationView_item_bookmarks -> setFragment(BookmarkFragment.newInstance())
-                R.id.menuBottomNavigationView_item_settings -> setFragment(SettingsFragment())
+                R.id.menuBottomNavigationView_item_settings -> setFragment(SettingFragment())
             }
             return@setOnNavigationItemSelectedListener true
         }

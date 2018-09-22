@@ -5,7 +5,7 @@ import androidx.room.PrimaryKey
 import org.jetbrains.annotations.NotNull
 
 @Entity(tableName = "settings")
-class Settings {
+class Setting {
     @PrimaryKey
     @NotNull
     var id: Int = 0

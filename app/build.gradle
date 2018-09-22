@@ -43,7 +43,7 @@ dependencies {
     implementation "androidx.appcompat:appcompat:$android_support_version"
     implementation "androidx.recyclerview:recyclerview:$android_support_version"
     implementation "androidx.cardview:cardview:$android_support_version"
-    implementation "com.google.android.material:material:1.0.0-rc02"
+    implementation "com.google.android.material:material:1.0.0"
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
 
     // ViewModel & LiveData
@@ -57,7 +57,7 @@ dependencies {
     kapt "androidx.room:room-compiler:$room_version"
 
     // WorkManager
-    def work_manager_version = "1.0.0-alpha08"
+    def work_manager_version = "1.0.0-alpha09"
     implementation "android.arch.work:work-runtime:$work_manager_version"
     implementation "android.arch.work:work-firebase:$work_manager_version"
 

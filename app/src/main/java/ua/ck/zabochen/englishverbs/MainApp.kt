@@ -1,6 +1,7 @@
 package ua.ck.zabochen.englishverbs
 
 import android.app.Application
+import org.koin.android.ext.android.startKoin
 import ua.ck.zabochen.englishverbs.dagger.component.ActivityComponent
 import ua.ck.zabochen.englishverbs.dagger.component.AppComponent
 import ua.ck.zabochen.englishverbs.dagger.component.DaggerAppComponent
@@ -9,6 +10,7 @@ import ua.ck.zabochen.englishverbs.dagger.module.ApplicationContextModule
 import ua.ck.zabochen.englishverbs.dagger.module.DatabaseModule
 import ua.ck.zabochen.englishverbs.dagger.module.NotificationModule
 import ua.ck.zabochen.englishverbs.dagger.module.SpeechModule
+import ua.ck.zabochen.englishverbs.koin.appModule
 
 class MainApp : Application() {
 
@@ -33,6 +35,10 @@ class MainApp : Application() {
         mAppComponent = DaggerAppComponent.builder()
                 .applicationContextModule(ApplicationContextModule(this))
                 .build()
+    }
+
+    private fun setKoin() {
+        startKoin(this, listOf(appModule))
     }
 
     fun getActivityComponent(): ActivityComponent {

@@ -22,5 +22,5 @@ interface SettingDao {
 
     // Get settings by id
     @Query("SELECT * FROM settings WHERE id = :id")
-    fun getSettings(id: Int): Setting
+    fun getSettingById(id: Int): Setting
 }

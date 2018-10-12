@@ -1,34 +1,25 @@
 package ua.ck.zabochen.englishverbs.ui.verbfull
 
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
+import com.arellomobile.mvp.InjectViewState
+import com.arellomobile.mvp.MvpPresenter
 import io.reactivex.SingleObserver
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
-import ua.ck.zabochen.englishverbs.MainApp
+import org.koin.standalone.KoinComponent
+import org.koin.standalone.inject
 import ua.ck.zabochen.englishverbs.database.entity.Verb
 import ua.ck.zabochen.englishverbs.helper.database.DatabaseHelper
 import ua.ck.zabochen.englishverbs.helper.speech.SpeechHelper
-import javax.inject.Inject
 
-class VerbFullViewModel : ViewModel() {
+@InjectViewState
+class VerbFullPresenter : MvpPresenter<VerbFullView>(), KoinComponent {
 
-    @Inject
-    lateinit var databaseHelper: DatabaseHelper
-
-    @Inject
-    lateinit var speechHelper: SpeechHelper
-
-    init {
-        MainApp.mainAppInstance().getActivityComponent().inject(this)
-    }
+    private val databaseHelper: DatabaseHelper by inject()
+    private val speechHelper: SpeechHelper by inject()
 
     private val compositeDisposable: CompositeDisposable = CompositeDisposable()
-
-    val verbState: MutableLiveData<Verb> = MutableLiveData()
-    val verbBookmarkState: MutableLiveData<Boolean> = MutableLiveData()
 
     fun selectedVerbItem(position: Int) {
         getVerb(position)
@@ -44,7 +35,7 @@ class VerbFullViewModel : ViewModel() {
                     }
 
                     override fun onSuccess(t: Boolean) {
-                        verbBookmarkState.value = t
+                        //verbBookmarkState.value = t
                     }
 
                     override fun onError(e: Throwable) {
@@ -62,7 +53,7 @@ class VerbFullViewModel : ViewModel() {
                     }
 
                     override fun onSuccess(t: Verb) {
-                        verbState.postValue(t)
+                        viewState.setUi(t)
                     }
 
                     override fun onError(e: Throwable) {
@@ -74,9 +65,9 @@ class VerbFullViewModel : ViewModel() {
         speechHelper.speak(text)
     }
 
-    override fun onCleared() {
+    override fun onDestroy() {
+        super.onDestroy()
         compositeDisposable.clear()
         speechHelper.clear()
-        super.onCleared()
     }
 }

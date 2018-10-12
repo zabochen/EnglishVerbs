@@ -29,6 +29,8 @@ class MainApp : Application() {
         mAppInstance = this
 
         setDagger()
+
+        setKoin()
     }
 
     private fun setDagger() {

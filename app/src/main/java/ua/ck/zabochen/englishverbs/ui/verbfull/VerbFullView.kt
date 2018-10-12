@@ -1,8 +1,11 @@
 package ua.ck.zabochen.englishverbs.ui.verbfull
 
-import ua.ck.zabochen.englishverbs.ui.base.BaseView
+import com.arellomobile.mvp.MvpView
+import com.arellomobile.mvp.viewstate.strategy.AddToEndSingleStrategy
+import com.arellomobile.mvp.viewstate.strategy.StateStrategyType
+import ua.ck.zabochen.englishverbs.database.entity.Verb
 
-interface VerbFullView : BaseView<VerbFullViewModel> {
-    fun verbStateObserver()
-    fun bookmarkStateObserver()
+@StateStrategyType(AddToEndSingleStrategy::class)
+interface VerbFullView : MvpView {
+    fun setUi(verb: Verb)
 }

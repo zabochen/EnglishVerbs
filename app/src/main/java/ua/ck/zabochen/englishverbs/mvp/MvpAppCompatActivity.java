@@ -6,12 +6,8 @@ import com.arellomobile.mvp.MvpDelegate;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-/**
- * Date: 25-July-18
- * Time: 2:51
- *
- * @author Vova Stelmashchuk
- */
+// TODO: Moxy - Support AndroidX before update library.
+
 @SuppressWarnings("unused")
 public class MvpAppCompatActivity extends AppCompatActivity {
     private MvpDelegate<? extends MvpAppCompatActivity> mMvpDelegate;

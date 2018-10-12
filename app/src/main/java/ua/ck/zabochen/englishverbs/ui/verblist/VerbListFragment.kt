@@ -2,26 +2,27 @@ package ua.ck.zabochen.englishverbs.ui.verblist
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.Parcelable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
-import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import butterknife.BindView
 import butterknife.ButterKnife
+import com.arellomobile.mvp.presenter.InjectPresenter
 import org.jetbrains.anko.AnkoLogger
 import ua.ck.zabochen.englishverbs.R
 import ua.ck.zabochen.englishverbs.database.entity.Verb
+import ua.ck.zabochen.englishverbs.mvp.MvpAppCompatFragment
 import ua.ck.zabochen.englishverbs.ui.verbfull.VerbFullActivity
 import ua.ck.zabochen.englishverbs.utils.Constants
 import ua.ck.zabochen.englishverbs.utils.listener.RecyclerViewItemTouchListener
 
-class VerbListFragment : Fragment(), VerbListView, AnkoLogger {
+class VerbListFragment : MvpAppCompatFragment(), VerbListView, AnkoLogger {
+
+    @InjectPresenter
+    lateinit var verbListPresenter: VerbListPresenter
 
     @BindView(R.id.snippetProgressBar_frameLayout_progressBarHolder)
     lateinit var progressBarHolder: FrameLayout
@@ -38,37 +39,28 @@ class VerbListFragment : Fragment(), VerbListView, AnkoLogger {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        addObservers()
-        // Show progressBar
-        showProgressBar(true)
+        showProgressBar()
+
         // View is ready to show data
-        getViewModel().viewIsReady()
+        verbListPresenter.viewIsReady()
     }
 
     override fun onDestroyView() {
-        saveRecyclerViewState()
         super.onDestroyView()
+        //saveRecyclerViewState()
     }
 
-    override fun getViewModel(): VerbListViewModel {
-        return ViewModelProviders.of(activity!!).get(VerbListViewModel::class.java)
+    override fun showProgressBar() {
+        progressBarHolder.bringToFront()
+        progressBarHolder.visibility = View.VISIBLE
     }
 
-    override fun addObservers() {
-        verbListState()
+    override fun hideProgressBar() {
+        progressBarHolder.visibility = View.GONE
     }
 
-    override fun verbListState() {
-        getViewModel().verbListState.observe(this, Observer {
-            if (!it.isEmpty()) {
-                setUi(it)
-                // Hide progressBar
-                showProgressBar(false)
-            }
-        })
-    }
-
-    private fun setUi(verbList: ArrayList<Verb>) {
+    override fun setUi(verbList: ArrayList<Verb>) {
+        hideProgressBar()
         verbListRecyclerView.layoutManager = LinearLayoutManager(activity)
         verbListRecyclerView.adapter = VerbListAdapter(verbList)
         verbListRecyclerView.addOnItemTouchListener(RecyclerViewItemTouchListener(
@@ -85,9 +77,9 @@ class VerbListFragment : Fragment(), VerbListView, AnkoLogger {
         ))
 
         // Restore RecyclerView state
-        if (restoreRecyclerViewState() != null) {
-            verbListRecyclerView.layoutManager?.onRestoreInstanceState(restoreRecyclerViewState())
-        }
+//        if (restoreRecyclerViewState() != null) {
+//            verbListRecyclerView.layoutManager?.onRestoreInstanceState(restoreRecyclerViewState())
+//        }
     }
 
     fun onClickVerbItem(id: Int) {
@@ -96,21 +88,12 @@ class VerbListFragment : Fragment(), VerbListView, AnkoLogger {
         startActivity(intentVerbFullActivity)
     }
 
-    private fun saveRecyclerViewState() {
-        getViewModel().recyclerViewState = verbListRecyclerView.layoutManager?.onSaveInstanceState()
-    }
+//    private fun saveRecyclerViewState() {
+//        getViewModel().recyclerViewState = verbListRecyclerView.layoutManager?.onSaveInstanceState()
+//    }
 
-    private fun restoreRecyclerViewState(): Parcelable? {
-        return getViewModel().recyclerViewState
-    }
+//    private fun restoreRecyclerViewState(): Parcelable? {
+//        return getViewModel().recyclerViewState
+//    }
 
-    private fun showProgressBar(progressBarState: Boolean) {
-        when (progressBarState) {
-            true -> {
-                progressBarHolder.bringToFront()
-                progressBarHolder.visibility = View.VISIBLE
-            }
-            false -> progressBarHolder.visibility = View.GONE
-        }
-    }
 }

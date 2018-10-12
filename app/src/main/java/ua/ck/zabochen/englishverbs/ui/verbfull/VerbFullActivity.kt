@@ -5,22 +5,23 @@ import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContextCompat
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
 import butterknife.BindView
 import butterknife.ButterKnife
 import butterknife.OnClick
+import com.arellomobile.mvp.presenter.InjectPresenter
 import org.jetbrains.anko.AnkoLogger
 import ua.ck.zabochen.englishverbs.R
 import ua.ck.zabochen.englishverbs.database.entity.Verb
+import ua.ck.zabochen.englishverbs.mvp.MvpAppCompatActivity
 import ua.ck.zabochen.englishverbs.utils.Constants
 import ua.ck.zabochen.englishverbs.utils.Tools
-import ua.ck.zabochen.englishverbs.utils.showToast
 
-class VerbFullActivity : AppCompatActivity(), VerbFullView, AnkoLogger {
+class VerbFullActivity : MvpAppCompatActivity(), VerbFullView, AnkoLogger {
+
+    @InjectPresenter
+    lateinit var verbFullPresenter: VerbFullPresenter
 
     @BindView(R.id.snippet_toolbar)
     lateinit var toolbar: Toolbar
@@ -65,37 +66,18 @@ class VerbFullActivity : AppCompatActivity(), VerbFullView, AnkoLogger {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         getIntentValues()
-        addObservers()
     }
 
-    override fun getViewModel(): VerbFullViewModel {
-        return ViewModelProviders.of(this).get(VerbFullViewModel::class.java)
-    }
-
-    override fun addObservers() {
-        verbStateObserver()
-        bookmarkStateObserver()
-    }
-
-    override fun verbStateObserver() {
-        getViewModel().verbState.observe(this, Observer { verb ->
-            // Save current verb
-            this.verbInstance = verb
-            // Set data
-            setUi(verb)
-        })
-    }
-
-    override fun bookmarkStateObserver() {
-        getViewModel().verbBookmarkState.observe(this, Observer {
-            setBookmarkView(it)
-            // Show toast
-            when (it) {
-                true -> showToast("Add to Bookmark")
-                false -> showToast("Remove from Bookmark")
-            }
-        })
-    }
+//    override fun bookmarkStateObserver() {
+//        getViewModel().verbBookmarkState.observe(this, Observer {
+//            setBookmarkView(it)
+//            // Show toast
+//            when (it) {
+//                true -> showToast("Add to Bookmark")
+//                false -> showToast("Remove from Bookmark")
+//            }
+//        })
+//    }
 
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
@@ -109,10 +91,13 @@ class VerbFullActivity : AppCompatActivity(), VerbFullView, AnkoLogger {
 
     private fun getIntentValues() {
         verbId = intent.getIntExtra(Constants.INTENT_SELECTED_VERB_ID, 0)
-        getViewModel().selectedVerbItem(verbId)
+        verbFullPresenter.selectedVerbItem(verbId)
     }
 
-    private fun setUi(verb: Verb) {
+    override fun setUi(verb: Verb) {
+
+        this.verbInstance = verb
+
         // Layout & ButterKnife
         setContentView(R.layout.activity_verb_full)
         ButterKnife.bind(this)
@@ -159,7 +144,7 @@ class VerbFullActivity : AppCompatActivity(), VerbFullView, AnkoLogger {
 
     @OnClick(R.id.activityVerbFull_imageView_bookmarkAddOrRemove)
     fun onClickBookmark() {
-        getViewModel().setVerbBookmarkState(verbId)
+        //getViewModel().setVerbBookmarkState(verbId)
     }
 
     @OnClick(R.id.activityVerbFull_verbInfinitiveGroup_verbInfinitivePlay,
@@ -167,9 +152,9 @@ class VerbFullActivity : AppCompatActivity(), VerbFullView, AnkoLogger {
             R.id.activityVerbFull_verbPastTenseGroup_verbPastTensePlay)
     fun onClickPlay(view: View) {
         when (view.id) {
-            R.id.activityVerbFull_verbInfinitiveGroup_verbInfinitivePlay -> getViewModel().speak(verbInstance!!.verbInfinitive)
-            R.id.activityVerbFull_verbPastParticipleGroup_verbPastParticiplePlay -> getViewModel().speak(verbInstance!!.verbPastParticiple)
-            R.id.activityVerbFull_verbPastTenseGroup_verbPastTensePlay -> getViewModel().speak(verbInstance!!.verbPastTense)
+//            R.id.activityVerbFull_verbInfinitiveGroup_verbInfinitivePlay -> getViewModel().speak(verbInstance!!.verbInfinitive)
+//            R.id.activityVerbFull_verbPastParticipleGroup_verbPastParticiplePlay -> getViewModel().speak(verbInstance!!.verbPastParticiple)
+//            R.id.activityVerbFull_verbPastTenseGroup_verbPastTensePlay -> getViewModel().speak(verbInstance!!.verbPastTense)
         }
     }
 

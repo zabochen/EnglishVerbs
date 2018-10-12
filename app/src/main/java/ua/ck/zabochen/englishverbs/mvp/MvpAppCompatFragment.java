@@ -6,12 +6,7 @@ import com.arellomobile.mvp.MvpDelegate;
 
 import androidx.fragment.app.Fragment;
 
-/**
- * Date: 25-July-18
- * Time: 4:43
- *
- * @author Vova Stelmashchuk
- */
+// TODO: Moxy - Support AndroidX before update library.
 
 @SuppressWarnings({"ConstantConditions", "unused"})
 public class MvpAppCompatFragment extends Fragment {

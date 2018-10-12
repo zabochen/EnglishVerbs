@@ -5,8 +5,6 @@ import ua.ck.zabochen.englishverbs.dagger.module.DatabaseModule
 import ua.ck.zabochen.englishverbs.dagger.module.NotificationModule
 import ua.ck.zabochen.englishverbs.dagger.module.SpeechModule
 import ua.ck.zabochen.englishverbs.dagger.scope.ActivityScope
-import ua.ck.zabochen.englishverbs.ui.main.MainViewModel
-import ua.ck.zabochen.englishverbs.ui.verbfull.VerbFullViewModel
 
 @Subcomponent(modules = [
     DatabaseModule::class,
@@ -23,9 +21,4 @@ interface ActivityComponent {
         fun speechModule(speechModule: SpeechModule): ActivityComponent.Builder
         fun build(): ActivityComponent
     }
-
-    // Dependent views
-    fun inject(mainViewModel: MainViewModel)
-
-    fun inject(verbFullViewModel: VerbFullViewModel)
 }

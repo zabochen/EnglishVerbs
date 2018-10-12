@@ -133,7 +133,7 @@ class DatabaseHelper(private val context: Context) : AnkoLogger {
     fun getSettings(): Single<Setting> {
         return Single.create {
             try {
-                it.onSuccess(appDatabase.settingsDao().getSettings(Constants.DATABASE_TABLE_SETTINGS_ID))
+                it.onSuccess(appDatabase.settingsDao().getSettingById(Constants.DATABASE_TABLE_SETTINGS_ID))
             } catch (t: Throwable) {
                 it.onError(t)
             }

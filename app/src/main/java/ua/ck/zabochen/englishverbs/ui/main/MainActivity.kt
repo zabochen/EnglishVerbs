@@ -2,22 +2,25 @@ package ua.ck.zabochen.englishverbs.ui.main
 
 import android.os.Bundle
 import android.widget.FrameLayout
-import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProviders
 import butterknife.BindView
 import butterknife.ButterKnife
+import com.arellomobile.mvp.presenter.InjectPresenter
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import org.jetbrains.anko.AnkoLogger
 import ua.ck.zabochen.englishverbs.R
+import ua.ck.zabochen.englishverbs.mvp.MvpAppCompatActivity
 import ua.ck.zabochen.englishverbs.ui.bookmark.BookmarkFragment
 import ua.ck.zabochen.englishverbs.ui.setting.SettingFragment
 import ua.ck.zabochen.englishverbs.ui.verblist.VerbListFragment
 import ua.ck.zabochen.englishverbs.utils.behavior.BottomNavigationViewBehavior
 
-class MainActivity : AppCompatActivity(), MainView, AnkoLogger {
+class MainActivity : MvpAppCompatActivity(), MainView, AnkoLogger {
+
+    @InjectPresenter
+    lateinit var mainPresenter: MainPresenter
 
     @BindView(R.id.snippet_toolbar)
     lateinit var toolbar: Toolbar
@@ -31,14 +34,6 @@ class MainActivity : AppCompatActivity(), MainView, AnkoLogger {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setUi()
-        addObservers()
-    }
-
-    override fun getViewModel(): MainViewModel {
-        return ViewModelProviders.of(this).get(MainViewModel::class.java)
-    }
-
-    override fun addObservers() {
     }
 
     private fun setUi() {

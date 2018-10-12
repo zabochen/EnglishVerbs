@@ -1,31 +1,27 @@
 package ua.ck.zabochen.englishverbs.ui.verblist
 
 import android.os.Parcelable
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
+import com.arellomobile.mvp.InjectViewState
+import com.arellomobile.mvp.MvpPresenter
 import io.reactivex.CompletableObserver
 import io.reactivex.SingleObserver
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
-import ua.ck.zabochen.englishverbs.MainApp
+import org.koin.standalone.KoinComponent
+import org.koin.standalone.inject
 import ua.ck.zabochen.englishverbs.database.entity.Verb
 import ua.ck.zabochen.englishverbs.helper.database.DatabaseHelper
-import javax.inject.Inject
 
-class VerbListViewModel : ViewModel() {
+@InjectViewState
+class VerbListPresenter : MvpPresenter<VerbListView>(), KoinComponent {
 
-    init {
-        MainApp.mainAppInstance().getFragmentComponent().inject(this)
-    }
-
-    @Inject
-    lateinit var databaseHelper: DatabaseHelper
+    private val databaseHelper: DatabaseHelper by inject()
 
     private val compositeDisposable: CompositeDisposable = CompositeDisposable()
 
-    val verbListState: MutableLiveData<ArrayList<Verb>> = MutableLiveData()
+    // TODO: Save recyclerView State
     var recyclerViewState: Parcelable? = null
 
     fun viewIsReady() {
@@ -61,7 +57,7 @@ class VerbListViewModel : ViewModel() {
                     }
 
                     override fun onSuccess(t: ArrayList<Verb>) {
-                        verbListState.postValue(t)
+                        viewState.setUi(t)
                     }
 
                     override fun onError(e: Throwable) {
@@ -69,8 +65,8 @@ class VerbListViewModel : ViewModel() {
                 })
     }
 
-    override fun onCleared() {
-        super.onCleared()
+    override fun onDestroy() {
+        super.onDestroy()
         compositeDisposable.clear()
     }
 }

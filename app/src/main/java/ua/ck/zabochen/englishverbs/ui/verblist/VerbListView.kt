@@ -1,7 +1,13 @@
 package ua.ck.zabochen.englishverbs.ui.verblist
 
-import ua.ck.zabochen.englishverbs.ui.base.BaseView
+import com.arellomobile.mvp.MvpView
+import com.arellomobile.mvp.viewstate.strategy.AddToEndSingleStrategy
+import com.arellomobile.mvp.viewstate.strategy.StateStrategyType
+import ua.ck.zabochen.englishverbs.database.entity.Verb
 
-interface VerbListView : BaseView<VerbListViewModel> {
-    fun verbListState()
+@StateStrategyType(AddToEndSingleStrategy::class)
+interface VerbListView : MvpView {
+    fun setUi(verbList: ArrayList<Verb>)
+    fun showProgressBar()
+    fun hideProgressBar()
 }

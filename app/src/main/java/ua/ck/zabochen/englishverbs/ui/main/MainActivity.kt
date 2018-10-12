@@ -7,6 +7,7 @@ import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.fragment.app.Fragment
 import butterknife.BindView
 import butterknife.ButterKnife
+import butterknife.Unbinder
 import com.arellomobile.mvp.presenter.InjectPresenter
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import org.jetbrains.anko.AnkoLogger
@@ -22,6 +23,8 @@ class MainActivity : MvpAppCompatActivity(), MainView, AnkoLogger {
     @InjectPresenter
     lateinit var mainPresenter: MainPresenter
 
+    lateinit var unbinder: Unbinder
+
     @BindView(R.id.snippet_toolbar)
     lateinit var toolbar: Toolbar
 
@@ -33,20 +36,27 @@ class MainActivity : MvpAppCompatActivity(), MainView, AnkoLogger {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setUi()
+        setUi(savedInstanceState)
     }
 
-    private fun setUi() {
+    override fun onDestroy() {
+        super.onDestroy()
+        unbinder.unbind()
+    }
+
+    private fun setUi(savedInstanceState: Bundle?) {
         // Layout & ButterKnife
         setContentView(R.layout.activity_main)
-        ButterKnife.bind(this)
+        unbinder = ButterKnife.bind(this)
 
         // Toolbar
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayShowTitleEnabled(false)
 
-        // Set Default Fragment
-        setFragment(VerbListFragment())
+        // Set default fragment
+        if (savedInstanceState == null) {
+            setFragment(VerbListFragment())
+        }
 
         // Bottom Navigation View - Behavior (Show/Hide)
         val layoutParams: CoordinatorLayout.LayoutParams = bottomNavigationView.layoutParams as CoordinatorLayout.LayoutParams

@@ -1,32 +1,24 @@
 package ua.ck.zabochen.englishverbs.ui.bookmark
 
 import android.os.Parcelable
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
+import com.arellomobile.mvp.InjectViewState
+import com.arellomobile.mvp.MvpPresenter
 import io.reactivex.SingleObserver
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
-import org.jetbrains.anko.AnkoLogger
-import ua.ck.zabochen.englishverbs.MainApp
+import org.koin.standalone.KoinComponent
+import org.koin.standalone.inject
 import ua.ck.zabochen.englishverbs.database.entity.Verb
 import ua.ck.zabochen.englishverbs.helper.database.DatabaseHelper
-import javax.inject.Inject
 
-class BookmarkViewModel : ViewModel(), AnkoLogger {
+@InjectViewState
+class BookmarkPresenter : MvpPresenter<BookmarkView>(), KoinComponent {
 
-    init {
-        MainApp.mainAppInstance().getFragmentComponent().inject(this)
-    }
-
-    @Inject
-    lateinit var databaseHelper: DatabaseHelper
-
-    val bookmarkVerbListState: MutableLiveData<ArrayList<Verb>> = MutableLiveData()
-    var recyclerViewState: Parcelable? = null
-
+    private val databaseHelper: DatabaseHelper by inject()
     private val compositeDisposable: CompositeDisposable = CompositeDisposable()
+    private var recyclerViewState: Parcelable? = null
 
     fun viewIsReady() {
         getBookmarkVerbList()
@@ -46,7 +38,7 @@ class BookmarkViewModel : ViewModel(), AnkoLogger {
                     }
 
                     override fun onSuccess(t: ArrayList<Verb>) {
-                        bookmarkVerbListState.postValue(t)
+                        //bookmarkVerbListState.postValue(t)
                     }
 
                     override fun onError(e: Throwable) {
@@ -54,8 +46,8 @@ class BookmarkViewModel : ViewModel(), AnkoLogger {
                 })
     }
 
-    override fun onCleared() {
+    override fun onDestroy() {
+        super.onDestroy()
         compositeDisposable.clear()
-        super.onCleared()
     }
 }

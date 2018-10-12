@@ -2,31 +2,35 @@ package ua.ck.zabochen.englishverbs.ui.bookmark
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.Parcelable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import butterknife.BindView
 import butterknife.ButterKnife
+import butterknife.Unbinder
+import com.arellomobile.mvp.presenter.InjectPresenter
 import org.jetbrains.anko.AnkoLogger
 import ua.ck.zabochen.englishverbs.R
 import ua.ck.zabochen.englishverbs.database.entity.Verb
+import ua.ck.zabochen.englishverbs.mvp.MvpAppCompatFragment
 import ua.ck.zabochen.englishverbs.ui.verbfull.VerbFullActivity
 import ua.ck.zabochen.englishverbs.utils.Constants
 import ua.ck.zabochen.englishverbs.utils.listener.RecyclerViewItemTouchListener
 
-class BookmarkFragment : Fragment(), BookmarkView, AnkoLogger {
+class BookmarkFragment : MvpAppCompatFragment(), BookmarkView, AnkoLogger {
 
     companion object {
         fun newInstance(): BookmarkFragment {
             return BookmarkFragment()
         }
     }
+
+    @InjectPresenter
+    lateinit var bookmarkPresenter: BookmarkPresenter
+
+    lateinit var unbinder: Unbinder
 
     @BindView(R.id.fragmentBookmark_recyclerView)
     lateinit var bookmarkRecyclerView: RecyclerView
@@ -40,19 +44,21 @@ class BookmarkFragment : Fragment(), BookmarkView, AnkoLogger {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Layout & ButterKnife
         val view: View = inflater.inflate(R.layout.fragment_bookmark, container, false)
-        ButterKnife.bind(this, view)
+        unbinder = ButterKnife.bind(this, view)
         return view
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        addObservers()
-        getViewModel().viewIsReady()
+
+        // TODO: viewIsReady()
+
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
-        saveRecyclerViewState()
+        unbinder.unbind()
+        // saveRecyclerViewState()
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -64,29 +70,20 @@ class BookmarkFragment : Fragment(), BookmarkView, AnkoLogger {
                         true)
                 if (!verbBookmarkState) {
                     refreshState = true
-                    getViewModel().refreshView()
+                    // TODO: refreshView
                 }
             }
         }
     }
 
-    override fun getViewModel(): BookmarkViewModel {
-        return ViewModelProviders.of(activity!!).get(BookmarkViewModel::class.java)
-    }
-
-    override fun addObservers() {
-        bookmarkVerbListObserver()
-    }
-
-    override fun bookmarkVerbListObserver() {
-        getViewModel().bookmarkVerbListState.observe(this, Observer<ArrayList<Verb>> {
-            if (!it.isEmpty() && !refreshState) {
-                setUi(it)
-            } else if (refreshState) {
-                setUi(it, refreshState)
-            }
-        })
-    }
+//    override fun bookmarkVerbListObserver() {
+//
+//            if (!it.isEmpty() && !refreshState) {
+//                setUi(it)
+//            } else if (refreshState) {
+//                setUi(it, refreshState)
+//            }
+//    }
 
     private fun setUi(bookmarkVerbList: ArrayList<Verb>, refreshState: Boolean = false) {
         if (bookmarkRecyclerView.adapter == null) {
@@ -111,9 +108,9 @@ class BookmarkFragment : Fragment(), BookmarkView, AnkoLogger {
         }
 
         // Restore RecyclerView state
-        if (restoreRecyclerViewState() != null) {
-            bookmarkRecyclerView.layoutManager?.onRestoreInstanceState(restoreRecyclerViewState())
-        }
+//        if (restoreRecyclerViewState() != null) {
+//            bookmarkRecyclerView.layoutManager?.onRestoreInstanceState(restoreRecyclerViewState())
+//        }
 
         when (refreshState) {
             true -> {
@@ -133,11 +130,11 @@ class BookmarkFragment : Fragment(), BookmarkView, AnkoLogger {
         startActivityForResult(intentVerbFullActivity, 88)
     }
 
-    private fun saveRecyclerViewState() {
-        getViewModel().recyclerViewState = bookmarkRecyclerView.layoutManager?.onSaveInstanceState()
-    }
-
-    private fun restoreRecyclerViewState(): Parcelable? {
-        return getViewModel().recyclerViewState
-    }
+//    private fun saveRecyclerViewState() {
+//        getViewModel().recyclerViewState = bookmarkRecyclerView.layoutManager?.onSaveInstanceState()
+//    }
+//
+//    private fun restoreRecyclerViewState(): Parcelable? {
+//        return getViewModel().recyclerViewState
+//    }
 }

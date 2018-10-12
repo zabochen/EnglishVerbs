@@ -1,7 +1,9 @@
 package ua.ck.zabochen.englishverbs.ui.bookmark
 
-import ua.ck.zabochen.englishverbs.ui.base.BaseView
+import com.arellomobile.mvp.MvpView
+import com.arellomobile.mvp.viewstate.strategy.AddToEndSingleStrategy
+import com.arellomobile.mvp.viewstate.strategy.StateStrategyType
 
-interface BookmarkView : BaseView<BookmarkViewModel> {
-    fun bookmarkVerbListObserver()
+@StateStrategyType(AddToEndSingleStrategy::class)
+interface BookmarkView : MvpView {
 }

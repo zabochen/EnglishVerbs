@@ -3,19 +3,19 @@
 
     <!-- Home -->
     <item
-        android:id="@+id/menuBottomNavigationView_item_home"
+        android:id="@+id/verbListFragment"
         android:icon="@drawable/ic_home_white_24dp"
         android:title="@string/bottomNavigationView_itemHome_title" />
 
     <!-- Bookmarks -->
     <item
-        android:id="@+id/menuBottomNavigationView_item_bookmarks"
+        android:id="@+id/bookmarkFragment"
         android:icon="@drawable/ic_bookmark_white_24dp"
         android:title="@string/bottomNavigationView_itemBookmarks_title" />
 
     <!-- Setting -->
     <item
-        android:id="@+id/menuBottomNavigationView_item_settings"
+        android:id="@+id/settingFragment"
         android:icon="@drawable/ic_settings_white_24dp"
         android:title="@string/bottomNavigationView_itemSettings_title" />
 

@@ -13,22 +13,26 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <!-- Fragment Holder -->
-    <FrameLayout
-        android:id="@+id/activityMain_frameLayout_fragmentHolder"
+    <!-- Navigation Host -->
+    <fragment
+        android:id="@+id/activityMain_fragment_navigationHost"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        android:layout_marginTop="?attr/actionBarSize"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/main_graph" />
 
-    <!-- Bottom Navigation View -->
+    <!-- Bottom Navigation -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/activityMain_bottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
+        android:background="?android:attr/windowBackground"
         app:itemBackground="@color/bottomNavigationView_itemBackground"
         app:itemIconTint="@color/bottomNavigationView_iconTint"
         app:itemTextColor="@color/bottomNavigationView_textColor"
-        app:menu="@menu/menu_bottom_navigation_view" />
+        app:menu="@menu/menu_bottom_navigation" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

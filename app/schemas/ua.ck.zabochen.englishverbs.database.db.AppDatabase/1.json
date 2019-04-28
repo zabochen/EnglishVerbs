@@ -1,0 +1,132 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "37afc1b01b4fda526d6d8667c83ac584",
+    "entities": [
+      {
+        "tableName": "verb",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `verbInfinitive` TEXT NOT NULL, `verbInfinitiveTranscription` TEXT NOT NULL, `verbPastTense` TEXT NOT NULL, `verbPastTenseTranscription` TEXT NOT NULL, `verbPastParticiple` TEXT NOT NULL, `verbPastParticipleTranscription` TEXT NOT NULL, `verbTranslation` TEXT NOT NULL, `verbImage` TEXT NOT NULL, `verbExample` TEXT NOT NULL, `bookmarkState` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "verbInfinitive",
+            "columnName": "verbInfinitive",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "verbInfinitiveTranscription",
+            "columnName": "verbInfinitiveTranscription",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "verbPastTense",
+            "columnName": "verbPastTense",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "verbPastTenseTranscription",
+            "columnName": "verbPastTenseTranscription",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "verbPastParticiple",
+            "columnName": "verbPastParticiple",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "verbPastParticipleTranscription",
+            "columnName": "verbPastParticipleTranscription",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "verbTranslation",
+            "columnName": "verbTranslation",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "verbImage",
+            "columnName": "verbImage",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "verbExample",
+            "columnName": "verbExample",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "bookmarkState",
+            "columnName": "bookmarkState",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "settings",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `notificationState` INTEGER NOT NULL, `notificationAllWordsState` INTEGER NOT NULL, `notificationBookmarksWordsState` INTEGER NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "notificationState",
+            "columnName": "notificationState",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "notificationAllWordsState",
+            "columnName": "notificationAllWordsState",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "notificationBookmarksWordsState",
+            "columnName": "notificationBookmarksWordsState",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"37afc1b01b4fda526d6d8667c83ac584\")"
+    ]
+  }
+}

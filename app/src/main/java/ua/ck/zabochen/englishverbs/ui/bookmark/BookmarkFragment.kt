@@ -5,37 +5,24 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import butterknife.BindView
 import butterknife.ButterKnife
 import butterknife.Unbinder
-import com.arellomobile.mvp.presenter.InjectPresenter
 import org.jetbrains.anko.AnkoLogger
 import ua.ck.zabochen.englishverbs.R
 import ua.ck.zabochen.englishverbs.database.entity.Verb
-import ua.ck.zabochen.englishverbs.mvp.MvpAppCompatFragment
+import ua.ck.zabochen.englishverbs.ui.base.BaseFragment
 import ua.ck.zabochen.englishverbs.ui.verbfull.VerbFullActivity
 import ua.ck.zabochen.englishverbs.utils.Constants
-import ua.ck.zabochen.englishverbs.utils.listener.RecyclerViewItemTouchListener
 
-class BookmarkFragment : MvpAppCompatFragment(), BookmarkView, AnkoLogger {
+class BookmarkFragment : BaseFragment(), AnkoLogger {
 
     companion object {
-        fun newInstance(): BookmarkFragment {
-            return BookmarkFragment()
-        }
+        fun newInstance() = BookmarkFragment()
     }
 
-    @InjectPresenter
-    lateinit var bookmarkPresenter: BookmarkPresenter
-
+    // Views
     lateinit var unbinder: Unbinder
-
-    @BindView(R.id.fragmentBookmark_recyclerView)
-    lateinit var bookmarkRecyclerView: RecyclerView
-
-    val bookmarkAdapter: BookmarkAdapter by lazy { BookmarkAdapter() }
+    private val bookmarkAdapter: BookmarkAdapter by lazy { BookmarkAdapter() }
 
     // Current state
     private var refreshState: Boolean = false
@@ -43,22 +30,20 @@ class BookmarkFragment : MvpAppCompatFragment(), BookmarkView, AnkoLogger {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Layout & ButterKnife
-        val view: View = inflater.inflate(R.layout.fragment_bookmark, container, false)
-        unbinder = ButterKnife.bind(this, view)
-        return view
+        return inflater.inflate(R.layout.fragment_bookmark, container, false).also {
+            unbinder = ButterKnife.bind(this, it)
+        }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         // TODO: viewIsReady()
-
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
-        unbinder.unbind()
         // saveRecyclerViewState()
+        unbinder.unbind()
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -86,27 +71,27 @@ class BookmarkFragment : MvpAppCompatFragment(), BookmarkView, AnkoLogger {
 //    }
 
     private fun setUi(bookmarkVerbList: ArrayList<Verb>, refreshState: Boolean = false) {
-        if (bookmarkRecyclerView.adapter == null) {
-            // Layout Manager
-            bookmarkRecyclerView.layoutManager = LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
-            // Adapter
-            bookmarkRecyclerView.adapter = bookmarkAdapter
-            // Click Listener
-            bookmarkRecyclerView.addOnItemTouchListener(RecyclerViewItemTouchListener(
-                    context = activity,
-                    recyclerView = bookmarkRecyclerView,
-                    clickListener = object : RecyclerViewItemTouchListener.ClickListener {
-                        override fun onClick(view: View, position: Int) {
-                            selectedVerbPosition = position
-                            onClickVerbItem(bookmarkAdapter.getData()[position].id)
-                        }
-
-                        override fun onLongClick(view: View, position: Int) {
-                        }
-                    }
-            ))
-        }
-
+//        if (bookmarkRecyclerView.adapter == null) {
+//            // Layout Manager
+//            bookmarkRecyclerView.layoutManager = LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
+//            // Adapter
+//            bookmarkRecyclerView.adapter = bookmarkAdapter
+//            // Click Listener
+//            bookmarkRecyclerView.addOnItemTouchListener(RecyclerViewItemTouchListener(
+//                    context = activity,
+//                    recyclerView = bookmarkRecyclerView,
+//                    clickListener = object : RecyclerViewItemTouchListener.ClickListener {
+//                        override fun onClick(view: View, position: Int) {
+//                            selectedVerbPosition = position
+//                            onClickVerbItem(bookmarkAdapter.getData()[position].id)
+//                        }
+//
+//                        override fun onLongClick(view: View, position: Int) {
+//                        }
+//                    }
+//            ))
+//        }
+//
         // Restore RecyclerView state
 //        if (restoreRecyclerViewState() != null) {
 //            bookmarkRecyclerView.layoutManager?.onRestoreInstanceState(restoreRecyclerViewState())

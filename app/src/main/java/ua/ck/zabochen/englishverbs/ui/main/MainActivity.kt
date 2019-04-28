@@ -1,42 +1,33 @@
 package ua.ck.zabochen.englishverbs.ui.main
 
 import android.os.Bundle
-import android.widget.FrameLayout
 import androidx.appcompat.widget.Toolbar
-import androidx.coordinatorlayout.widget.CoordinatorLayout
-import androidx.fragment.app.Fragment
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
+import androidx.navigation.ui.NavigationUI
 import butterknife.BindView
 import butterknife.ButterKnife
 import butterknife.Unbinder
-import com.arellomobile.mvp.presenter.InjectPresenter
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import org.jetbrains.anko.AnkoLogger
 import ua.ck.zabochen.englishverbs.R
 import ua.ck.zabochen.englishverbs.mvp.MvpAppCompatActivity
-import ua.ck.zabochen.englishverbs.ui.bookmark.BookmarkFragment
-import ua.ck.zabochen.englishverbs.ui.setting.SettingFragment
-import ua.ck.zabochen.englishverbs.ui.verblist.VerbListFragment
-import ua.ck.zabochen.englishverbs.utils.behavior.BottomNavigationViewBehavior
 
-class MainActivity : MvpAppCompatActivity(), MainView, AnkoLogger {
-
-    @InjectPresenter
-    lateinit var mainPresenter: MainPresenter
+class MainActivity : MvpAppCompatActivity(), AnkoLogger {
 
     lateinit var unbinder: Unbinder
 
     @BindView(R.id.snippet_toolbar)
     lateinit var toolbar: Toolbar
 
-    @BindView(R.id.activityMain_frameLayout_fragmentHolder)
-    lateinit var fragmentHolder: FrameLayout
-
     @BindView(R.id.activityMain_bottomNavigationView)
     lateinit var bottomNavigationView: BottomNavigationView
 
+    private lateinit var navigationController: NavController
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setUi(savedInstanceState)
+        setUi()
     }
 
     override fun onDestroy() {
@@ -44,38 +35,21 @@ class MainActivity : MvpAppCompatActivity(), MainView, AnkoLogger {
         unbinder.unbind()
     }
 
-    private fun setUi(savedInstanceState: Bundle?) {
+    private fun setUi() {
         // Layout & ButterKnife
         setContentView(R.layout.activity_main)
-        unbinder = ButterKnife.bind(this)
+        this.unbinder = ButterKnife.bind(this)
 
         // Toolbar
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayShowTitleEnabled(false)
 
-        // Set default fragment
-        if (savedInstanceState == null) {
-            setFragment(VerbListFragment())
-        }
-
         // Bottom Navigation View - Behavior (Show/Hide)
-        val layoutParams: CoordinatorLayout.LayoutParams = bottomNavigationView.layoutParams as CoordinatorLayout.LayoutParams
-        layoutParams.behavior = BottomNavigationViewBehavior()
+        // val layoutParams: CoordinatorLayout.LayoutParams = bottomNavigationView.layoutParams as CoordinatorLayout.LayoutParams
+        // layoutParams.behavior = BottomNavigationViewBehavior()
 
-        // Bottom Navigation View - Listener (Item selected)
-        bottomNavigationView.setOnNavigationItemSelectedListener { item ->
-            when (item.itemId) {
-                R.id.menuBottomNavigationView_item_home -> setFragment(VerbListFragment())
-                R.id.menuBottomNavigationView_item_bookmarks -> setFragment(BookmarkFragment.newInstance())
-                R.id.menuBottomNavigationView_item_settings -> setFragment(SettingFragment())
-            }
-            return@setOnNavigationItemSelectedListener true
-        }
-    }
-
-    private fun setFragment(fragment: Fragment) {
-        supportFragmentManager.beginTransaction()
-                .replace(fragmentHolder.id, fragment)
-                .commit()
+        // Navigation
+        this.navigationController = Navigation.findNavController(this, R.id.activityMain_fragment_navigationHost)
+        NavigationUI.setupWithNavController(bottomNavigationView, navigationController)
     }
 }

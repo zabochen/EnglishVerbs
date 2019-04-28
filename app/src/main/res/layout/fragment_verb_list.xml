@@ -7,6 +7,16 @@
     <!-- ProgressBar -->
     <include layout="@layout/snippet_progress_bar" />
 
+    <!-- DEBUG -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="VerbList"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+    <!-- /DEBUG -->
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/fragmentVerbList_recyclerView"
         android:layout_width="match_parent"

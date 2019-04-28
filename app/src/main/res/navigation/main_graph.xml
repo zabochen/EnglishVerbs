@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/main_graph"
+    app:startDestination="@id/verbListFragment">
+
+    <fragment
+        android:id="@+id/verbListFragment"
+        android:name="ua.ck.zabochen.englishverbs.ui.verblist.VerbListFragment"
+        android:label="VerbListFragment" />
+    <fragment
+        android:id="@+id/bookmarkFragment"
+        android:name="ua.ck.zabochen.englishverbs.ui.bookmark.BookmarkFragment"
+        android:label="BookmarkFragment" />
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="ua.ck.zabochen.englishverbs.ui.setting.SettingFragment"
+        android:label="SettingFragment" />
+</navigation>
